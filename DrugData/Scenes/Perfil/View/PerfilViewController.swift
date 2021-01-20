@@ -10,5 +10,11 @@ import UIKit
 class PerfilViewController: UIViewController {
 
    
+    //@IBOutlet weak var tableViewUser: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+       
+    }
 }

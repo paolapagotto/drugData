@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class LocalizacaoViewController: UIViewController {
 
@@ -13,7 +14,11 @@ class LocalizacaoViewController: UIViewController {
     @IBOutlet weak var imageViewAvatar: UIImageView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelLocation: UILabel!
-    @IBOutlet weak var imageViewMap: UIImageView!
+    //@IBOutlet weak var imageViewMap: UIImageView!
+    
+    
+    @IBOutlet weak var mapkitMap: MKMapView!
+    
     var array = [Cabecalho] ()
     
     func setup(dados: Cabecalho) {
@@ -25,26 +30,31 @@ class LocalizacaoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inicialLocation()
 
         setup(dados: (Cabecalho(name: "Maria", location: "São Paulo - SP", profileImage: "1.png")))
         
-        let alert = UIAlertController(title: "PERMITIR QUE A DROG DATA UTILIZE A SUA LOCALIZAÇÃO?",
-                                      message: "A sua localização atual será apresentada no mapa  e usada para fornecer a farmácia mais proxima de você. ",
-                                      preferredStyle: .alert)
-      
-        
-        let cancelButton = UIAlertAction(title: "Permitir durante localização", style: .default, handler: nil)
-        let cancelButton0 = UIAlertAction(title: "Permitir uma vez", style: .default, handler: nil)
-        let addButton = UIAlertAction(title: "Não permitir", style: .default)
-        
-        alert.addAction(cancelButton)
-        alert.addAction(cancelButton0)
-        alert.addAction(addButton)
-        
-        present(alert, animated: true, completion: nil)
     }
     
     // MARK: Métodos
+    func inicialLocation() {
+        Location().convertLocation(endereco: "São Paulo - São Paulo") { (findLocation) in
+            let pino = self.confPino(name: "Maria", location: findLocation)
+            
+            let place = MKCoordinateRegion(center: pino.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
+            self.mapkitMap.setRegion(place, animated: true)
+            self.mapkitMap.addAnnotation(pino)
+        }
+    }
+    
+    func confPino(name: String, location: CLPlacemark) -> MKPointAnnotation {
+        let pino = MKPointAnnotation()
+        pino.title = name
+        pino.coordinate = location.location!.coordinate
+        
+        
+        return pino
+    }
     
 }
     
