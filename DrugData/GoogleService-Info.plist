@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>916024135351-hgfqncgu2jsehgd394qll8shlq0pul8p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.916024135351-hgfqncgu2jsehgd394qll8shlq0pul8p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA3aSpe7OGB5FGiu0wU9umlr3P6Z3EToEo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>916024135351</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.github-bertiGrazi.DrugData</string>
+	<key>PROJECT_ID</key>
+	<string>dhdrugdata</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dhdrugdata.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:916024135351:ios:4ca1bbbf1e605047eb4732</string>
+</dict>
+</plist>

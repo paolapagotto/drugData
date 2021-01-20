@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ef7-BY-33G">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detalhes Medicamento View Controller-->
+        <scene sceneID="uFU-5b-LlO">
+            <objects>
+                <viewController id="ef7-BY-33G" customClass="DetalhesMedicamentoViewController" customModule="DrugData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ttw-Xy-3Ag">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrM-Fb-i66">
+                                <rect key="frame" x="142" y="223" width="256" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.87854863559999996" green="0.77647058820000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy9-6G-wal">
+                                <rect key="frame" x="142" y="260" width="256" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfQ-Jb-bpH">
+                                <rect key="frame" x="142" y="289" width="256" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-xg-zVZ">
+                                <rect key="frame" x="142" y="319" width="228" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qug-he-kjd">
+                                <rect key="frame" x="20" y="223" width="114" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="YEd-We-4Fp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XA-pM-LjE">
+                                <rect key="frame" x="376" y="317" width="22" height="22"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XTe-JL-onl"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qug-he-kjd" firstAttribute="leading" secondItem="XTe-JL-onl" secondAttribute="leading" constant="20" id="0nL-Ht-Jce"/>
+                            <constraint firstItem="kfQ-Jb-bpH" firstAttribute="top" secondItem="Xy9-6G-wal" secondAttribute="bottom" constant="8.5" id="BwB-Og-1fS"/>
+                            <constraint firstItem="rSS-xg-zVZ" firstAttribute="top" secondItem="kfQ-Jb-bpH" secondAttribute="bottom" constant="9.5" id="EDW-n1-mrX"/>
+                            <constraint firstItem="XTe-JL-onl" firstAttribute="trailing" secondItem="5XA-pM-LjE" secondAttribute="trailing" constant="16" id="NKh-tL-Oa0"/>
+                            <constraint firstItem="XTe-JL-onl" firstAttribute="trailing" secondItem="kfQ-Jb-bpH" secondAttribute="trailing" constant="16" id="OhH-va-2LT"/>
+                            <constraint firstItem="XTe-JL-onl" firstAttribute="trailing" secondItem="rSS-xg-zVZ" secondAttribute="trailing" constant="44" id="aFY-vY-AGq"/>
+                            <constraint firstItem="rSS-xg-zVZ" firstAttribute="leading" secondItem="XTe-JL-onl" secondAttribute="leading" constant="142" id="cLh-bk-miL"/>
+                            <constraint firstItem="XTe-JL-onl" firstAttribute="trailing" secondItem="5XA-pM-LjE" secondAttribute="trailing" constant="16" id="dH7-i4-WWY"/>
+                            <constraint firstItem="Xy9-6G-wal" firstAttribute="top" secondItem="mrM-Fb-i66" secondAttribute="bottom" constant="16.5" id="fvT-IV-qfF"/>
+                            <constraint firstItem="XTe-JL-onl" firstAttribute="trailing" secondItem="Xy9-6G-wal" secondAttribute="trailing" constant="16" id="g9M-f7-GGU"/>
+                            <constraint firstItem="mrM-Fb-i66" firstAttribute="top" secondItem="XTe-JL-onl" secondAttribute="top" constant="179" id="kjT-G9-buN"/>
+                            <constraint firstItem="XTe-JL-onl" firstAttribute="trailing" secondItem="mrM-Fb-i66" secondAttribute="trailing" constant="16" id="nJ3-Ii-Qu7"/>
+                            <constraint firstItem="Xy9-6G-wal" firstAttribute="leading" secondItem="XTe-JL-onl" secondAttribute="leading" constant="142" id="osE-qf-0jZ"/>
+                            <constraint firstItem="mrM-Fb-i66" firstAttribute="leading" secondItem="XTe-JL-onl" secondAttribute="leading" constant="142" id="pLI-X0-JbX"/>
+                            <constraint firstItem="kfQ-Jb-bpH" firstAttribute="leading" secondItem="XTe-JL-onl" secondAttribute="leading" constant="142" id="tGA-Dk-KpB"/>
+                            <constraint firstItem="XTe-JL-onl" firstAttribute="trailing" secondItem="Qug-he-kjd" secondAttribute="trailing" constant="280" id="tYA-zq-4gX"/>
+                            <constraint firstItem="5XA-pM-LjE" firstAttribute="top" secondItem="kfQ-Jb-bpH" secondAttribute="bottom" constant="7.5" id="xX1-xm-RUm"/>
+                            <constraint firstItem="5XA-pM-LjE" firstAttribute="leading" secondItem="rSS-xg-zVZ" secondAttribute="trailing" constant="6" id="xvN-Ob-zuz"/>
+                            <constraint firstItem="Qug-he-kjd" firstAttribute="top" secondItem="XTe-JL-onl" secondAttribute="top" constant="179" id="y7P-8a-pZh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryDrug" destination="kfQ-Jb-bpH" id="N5b-yB-rOr"/>
+                        <outlet property="imageView" destination="Qug-he-kjd" id="X78-i5-4BE"/>
+                        <outlet property="laboratoryName" destination="Xy9-6G-wal" id="lCb-Yx-zw5"/>
+                        <outlet property="nameDrug" destination="mrM-Fb-i66" id="ok0-5A-ajS"/>
+                        <outlet property="priceDrug" destination="rSS-xg-zVZ" id="b31-8f-1gq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQ3-S1-mf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236.23188405797103" y="104.46428571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

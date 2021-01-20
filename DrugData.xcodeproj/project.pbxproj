@@ -1,0 +1,1531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58990A8382660EB73440A4EF /* Pods_DrugData_DrugDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B93F1C2797407C475AAF07 /* Pods_DrugData_DrugDataUITests.framework */; };
+		842DFDB225ABEDF4005692E4 /* drug06.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DFDB125ABEDF3005692E4 /* drug06.png */; };
+		E00D826CB978BA7A11BA3076 /* Pods_DrugData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */; };
+		E3DBB907256DF81900A1869B /* Cabecalho.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBB9742565B5D100A5550E /* Cabecalho.swift */; };
+		E3DBB90B256DF81E00A1869B /* Remedios.swift in Sources */ = {isa = PBXBuildFile; fileRef = F232BC03256B30BD00460ADF /* Remedios.swift */; };
+		E3DBB910256E04D500A1869B /* LaboratorioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBB90F256E04D500A1869B /* LaboratorioTableViewCell.swift */; };
+		E3DBB915256E088900A1869B /* GenericoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBB914256E088900A1869B /* GenericoTableViewCell.swift */; };
+		E3DBB91A256E0E9D00A1869B /* ControladosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBB919256E0E9D00A1869B /* ControladosTableViewCell.swift */; };
+		E3DBB91F256E11B400A1869B /* OrganicoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBB91E256E11B400A1869B /* OrganicoTableViewCell.swift */; };
+		EE051C3924FC2C75D6161822 /* Pods_DrugDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFE2A49EE04C00DF77B0AE62 /* Pods_DrugDataTests.framework */; };
+		F206AECF25B1C05000FDE97A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F206AECE25B1C04F00FDE97A /* GoogleService-Info.plist */; };
+		F207766F25A8A00200326400 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207766E25A8A00200326400 /* Categoria.swift */; };
+		F207767425A8A08700326400 /* CategoriaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207767325A8A08700326400 /* CategoriaViewModel.swift */; };
+		F232BBF4256B2B6B00460ADF /* LocalizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F232BBF3256B2B6B00460ADF /* LocalizacaoViewController.swift */; };
+		F232BBFC256B2B7900460ADF /* LocalizacaoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F232BBFB256B2B7900460ADF /* LocalizacaoViewController.storyboard */; };
+		F232BC0F256B323900460ADF /* NomeRemediosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F232BC0E256B323900460ADF /* NomeRemediosTableViewCell.swift */; };
+		F232BC21256B382100460ADF /* DetalhesMedicamentoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F232BC20256B382100460ADF /* DetalhesMedicamentoViewController.storyboard */; };
+		F232BC2A256B391400460ADF /* DetalheMedicamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F232BC29256B391400460ADF /* DetalheMedicamentoTableViewCell.swift */; };
+		F233D0A42559E99500D5CE2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233D0A32559E99500D5CE2D /* AppDelegate.swift */; };
+		F233D0A62559E99500D5CE2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233D0A52559E99500D5CE2D /* SceneDelegate.swift */; };
+		F233D0A82559E99500D5CE2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233D0A72559E99500D5CE2D /* ViewController.swift */; };
+		F233D0AB2559E99500D5CE2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F233D0A92559E99500D5CE2D /* Main.storyboard */; };
+		F233D0AD2559E99900D5CE2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F233D0AC2559E99900D5CE2D /* Assets.xcassets */; };
+		F233D0B02559E99900D5CE2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F233D0AE2559E99900D5CE2D /* LaunchScreen.storyboard */; };
+		F233D0BB2559E99900D5CE2D /* DrugDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233D0BA2559E99900D5CE2D /* DrugDataTests.swift */; };
+		F233D0C62559E99900D5CE2D /* DrugDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233D0C52559E99900D5CE2D /* DrugDataUITests.swift */; };
+		F233D0DC2559F3BB00D5CE2D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233D0DB2559F3BB00D5CE2D /* File.swift */; };
+		F23C32812562F47700F25304 /* ResultadoPesquisaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C32802562F47700F25304 /* ResultadoPesquisaViewController.storyboard */; };
+		F23C32862562F4A500F25304 /* ResultadoPesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C32852562F4A500F25304 /* ResultadoPesquisaViewController.swift */; };
+		F23C32A02562FCCF00F25304 /* PesquisaLaboratorioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C329F2562FCCF00F25304 /* PesquisaLaboratorioViewController.swift */; };
+		F23C5C3925A79C4F00D7C86A /* ResultadoPesquisaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5C3825A79C4F00D7C86A /* ResultadoPesquisaViewModel.swift */; };
+		F23C5C3E25A79CA900D7C86A /* Remedio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5C3D25A79CA900D7C86A /* Remedio.swift */; };
+		F23C8EDC256ACFD90094FA87 /* OrganicoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C8EDB256ACFD90094FA87 /* OrganicoViewController.storyboard */; };
+		F23C8EE1256ACFF60094FA87 /* OrganicoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C8EE0256ACFF60094FA87 /* OrganicoViewController.swift */; };
+		F23C8EE9256AD13F0094FA87 /* GenericoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C8EE8256AD13F0094FA87 /* GenericoViewController.swift */; };
+		F23C8EEE256AD14D0094FA87 /* GenericoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C8EED256AD14D0094FA87 /* GenericoViewController.storyboard */; };
+		F23C8EF5256AD2A70094FA87 /* ControladosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C8EF4256AD2A70094FA87 /* ControladosViewController.storyboard */; };
+		F23C8EFD256AD2EC0094FA87 /* ControladosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C8EFC256AD2EC0094FA87 /* ControladosViewController.swift */; };
+		F23C8F0D256ADD180094FA87 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C8F0C256ADD180094FA87 /* PerfilViewController.swift */; };
+		F23C8F15256ADD240094FA87 /* PerfilViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23C8F14256ADD240094FA87 /* PerfilViewController.storyboard */; };
+		F247408325670F0B00D18DE0 /* ControladosGeralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F247408125670F0B00D18DE0 /* ControladosGeralTableViewCell.swift */; };
+		F247408425670F0B00D18DE0 /* ControladosGeralTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F247408225670F0B00D18DE0 /* ControladosGeralTableViewCell.xib */; };
+		F247408925670FF400D18DE0 /* PesquisaLaboratorioViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F247408825670FF400D18DE0 /* PesquisaLaboratorioViewController.storyboard */; };
+		F29BE70625B0B71B0088B274 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29BE70525B0B71B0088B274 /* ImagePicker.swift */; };
+		F2D2D55B255E08110025BEF3 /* PesquisarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D55A255E08110025BEF3 /* PesquisarViewController.swift */; };
+		F2D2D563255E08280025BEF3 /* PesquisarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D2D562255E08280025BEF3 /* PesquisarViewController.storyboard */; };
+		F2D2D571255E0C420025BEF3 /* CategoriaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D2D570255E0C420025BEF3 /* CategoriaViewController.storyboard */; };
+		F2D2D577255E0F510025BEF3 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D576255E0F510025BEF3 /* FavoritosViewController.swift */; };
+		F2D2D57F255E0F800025BEF3 /* FavoritosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2D2D57E255E0F800025BEF3 /* FavoritosViewController.storyboard */; };
+		F2DBB9702565B1BF00A5550E /* CategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBB96F2565B1BF00A5550E /* CategoriaViewController.swift */; };
+		F2DF0F64255C92A500F43B54 /* EsqueceuASenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DF0F63255C92A500F43B54 /* EsqueceuASenhaViewController.swift */; };
+		F2DF0F6C255C92B600F43B54 /* EsqueceuASenhaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DF0F6B255C92B600F43B54 /* EsqueceuASenhaViewController.storyboard */; };
+		F2E282BB255C882800460304 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E282BA255C882800460304 /* LoginViewController.swift */; };
+		F2E282C0255C89BB00460304 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E282BF255C89BB00460304 /* LoginViewController.storyboard */; };
+		F2E282D0255C8DAB00460304 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E282CF255C8DAB00460304 /* CadastroViewController.swift */; };
+		F2E282D8255C8DBD00460304 /* CadastroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E282D7255C8DBD00460304 /* CadastroViewController.storyboard */; };
+		F2E2C926258BE94700FF0982 /* drug02.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E2C924258BE94700FF0982 /* drug02.png */; };
+		F2E2C927258BE94700FF0982 /* drug01.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E2C925258BE94700FF0982 /* drug01.png */; };
+		F2E2C92C258BF22200FF0982 /* drug03.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E2C92B258BF22200FF0982 /* drug03.png */; };
+		F2E2C931258BFC4900FF0982 /* drug04.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E2C930258BFC4900FF0982 /* drug04.png */; };
+		F2E745C3256C44D60031D731 /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E745C2256C44D60031D731 /* EditarPerfilViewController.swift */; };
+		F2E745C8256C44E60031D731 /* EditarPerfilViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E745C7256C44E60031D731 /* EditarPerfilViewController.storyboard */; };
+		F2E745DA256C54E80031D731 /* DetalhesMedicamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E745D9256C54E80031D731 /* DetalhesMedicamentoViewController.swift */; };
+		F2F314F725B7126200D6B5A1 /* Drugs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2F314F425B7126200D6B5A1 /* Drugs.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F233D0B72559E99900D5CE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F233D0982559E99500D5CE2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F233D09F2559E99500D5CE2D;
+			remoteInfo = DrugData;
+		};
+		F233D0C22559E99900D5CE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F233D0982559E99500D5CE2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F233D09F2559E99500D5CE2D;
+			remoteInfo = DrugData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C157B864814879795A122AD /* Pods-DrugData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData.debug.xcconfig"; path = "Target Support Files/Pods-DrugData/Pods-DrugData.debug.xcconfig"; sourceTree = "<group>"; };
+		5D7E08AFB0D948E57B22B260 /* Pods-DrugDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugDataTests.debug.xcconfig"; path = "Target Support Files/Pods-DrugDataTests/Pods-DrugDataTests.debug.xcconfig"; sourceTree = "<group>"; };
+		842DFDB125ABEDF3005692E4 /* drug06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drug06.png; sourceTree = "<group>"; };
+		98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4626E0A19BD7FDA142D5ABB /* Pods-DrugData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData.release.xcconfig"; path = "Target Support Files/Pods-DrugData/Pods-DrugData.release.xcconfig"; sourceTree = "<group>"; };
+		B7005B2C3AE8F4F5FDC304FE /* Pods-DrugData-DrugDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData-DrugDataUITests.release.xcconfig"; path = "Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B7B93F1C2797407C475AAF07 /* Pods_DrugData_DrugDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugData_DrugDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA74E4B80885D1597A8D66F5 /* Pods-DrugData-DrugDataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData-DrugDataUITests.debug.xcconfig"; path = "Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5403A5767A5804F982BC7F9 /* Pods-DrugDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugDataTests.release.xcconfig"; path = "Target Support Files/Pods-DrugDataTests/Pods-DrugDataTests.release.xcconfig"; sourceTree = "<group>"; };
+		E3DBB90F256E04D500A1869B /* LaboratorioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratorioTableViewCell.swift; sourceTree = "<group>"; };
+		E3DBB914256E088900A1869B /* GenericoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericoTableViewCell.swift; sourceTree = "<group>"; };
+		E3DBB919256E0E9D00A1869B /* ControladosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladosTableViewCell.swift; sourceTree = "<group>"; };
+		E3DBB91E256E11B400A1869B /* OrganicoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicoTableViewCell.swift; sourceTree = "<group>"; };
+		F206AECE25B1C04F00FDE97A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F207766E25A8A00200326400 /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
+		F207767325A8A08700326400 /* CategoriaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewModel.swift; sourceTree = "<group>"; };
+		F232BBF3256B2B6B00460ADF /* LocalizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizacaoViewController.swift; sourceTree = "<group>"; };
+		F232BBFB256B2B7900460ADF /* LocalizacaoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocalizacaoViewController.storyboard; sourceTree = "<group>"; };
+		F232BC03256B30BD00460ADF /* Remedios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remedios.swift; sourceTree = "<group>"; };
+		F232BC0E256B323900460ADF /* NomeRemediosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomeRemediosTableViewCell.swift; sourceTree = "<group>"; };
+		F232BC20256B382100460ADF /* DetalhesMedicamentoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetalhesMedicamentoViewController.storyboard; sourceTree = "<group>"; };
+		F232BC29256B391400460ADF /* DetalheMedicamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheMedicamentoTableViewCell.swift; sourceTree = "<group>"; };
+		F233D0A02559E99500D5CE2D /* DrugData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrugData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F233D0A32559E99500D5CE2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F233D0A52559E99500D5CE2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F233D0A72559E99500D5CE2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F233D0AA2559E99500D5CE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F233D0AC2559E99900D5CE2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F233D0AF2559E99900D5CE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F233D0B12559E99900D5CE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F233D0B62559E99900D5CE2D /* DrugDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrugDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F233D0BA2559E99900D5CE2D /* DrugDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDataTests.swift; sourceTree = "<group>"; };
+		F233D0BC2559E99900D5CE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F233D0C12559E99900D5CE2D /* DrugDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrugDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F233D0C52559E99900D5CE2D /* DrugDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDataUITests.swift; sourceTree = "<group>"; };
+		F233D0C72559E99900D5CE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F233D0DB2559F3BB00D5CE2D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		F23C32802562F47700F25304 /* ResultadoPesquisaViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultadoPesquisaViewController.storyboard; sourceTree = "<group>"; };
+		F23C32852562F4A500F25304 /* ResultadoPesquisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoPesquisaViewController.swift; sourceTree = "<group>"; };
+		F23C329F2562FCCF00F25304 /* PesquisaLaboratorioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisaLaboratorioViewController.swift; sourceTree = "<group>"; };
+		F23C5C3825A79C4F00D7C86A /* ResultadoPesquisaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoPesquisaViewModel.swift; sourceTree = "<group>"; };
+		F23C5C3D25A79CA900D7C86A /* Remedio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remedio.swift; sourceTree = "<group>"; };
+		F23C8EDB256ACFD90094FA87 /* OrganicoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrganicoViewController.storyboard; sourceTree = "<group>"; };
+		F23C8EE0256ACFF60094FA87 /* OrganicoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicoViewController.swift; sourceTree = "<group>"; };
+		F23C8EE8256AD13F0094FA87 /* GenericoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericoViewController.swift; sourceTree = "<group>"; };
+		F23C8EED256AD14D0094FA87 /* GenericoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GenericoViewController.storyboard; sourceTree = "<group>"; };
+		F23C8EF4256AD2A70094FA87 /* ControladosViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ControladosViewController.storyboard; sourceTree = "<group>"; };
+		F23C8EFC256AD2EC0094FA87 /* ControladosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladosViewController.swift; sourceTree = "<group>"; };
+		F23C8F0C256ADD180094FA87 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		F23C8F14256ADD240094FA87 /* PerfilViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfilViewController.storyboard; sourceTree = "<group>"; };
+		F247408125670F0B00D18DE0 /* ControladosGeralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControladosGeralTableViewCell.swift; sourceTree = "<group>"; };
+		F247408225670F0B00D18DE0 /* ControladosGeralTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControladosGeralTableViewCell.xib; sourceTree = "<group>"; };
+		F247408825670FF400D18DE0 /* PesquisaLaboratorioViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PesquisaLaboratorioViewController.storyboard; sourceTree = "<group>"; };
+		F29BE70525B0B71B0088B274 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		F2D2D55A255E08110025BEF3 /* PesquisarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesquisarViewController.swift; sourceTree = "<group>"; };
+		F2D2D562255E08280025BEF3 /* PesquisarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PesquisarViewController.storyboard; sourceTree = "<group>"; };
+		F2D2D570255E0C420025BEF3 /* CategoriaViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriaViewController.storyboard; sourceTree = "<group>"; };
+		F2D2D576255E0F510025BEF3 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		F2D2D57E255E0F800025BEF3 /* FavoritosViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritosViewController.storyboard; sourceTree = "<group>"; };
+		F2DBB96F2565B1BF00A5550E /* CategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewController.swift; sourceTree = "<group>"; };
+		F2DBB9742565B5D100A5550E /* Cabecalho.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cabecalho.swift; sourceTree = "<group>"; };
+		F2DF0F63255C92A500F43B54 /* EsqueceuASenhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsqueceuASenhaViewController.swift; sourceTree = "<group>"; };
+		F2DF0F6B255C92B600F43B54 /* EsqueceuASenhaViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EsqueceuASenhaViewController.storyboard; sourceTree = "<group>"; };
+		F2E282BA255C882800460304 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F2E282BF255C89BB00460304 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		F2E282CF255C8DAB00460304 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		F2E282D7255C8DBD00460304 /* CadastroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CadastroViewController.storyboard; sourceTree = "<group>"; };
+		F2E2C924258BE94700FF0982 /* drug02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drug02.png; sourceTree = "<group>"; };
+		F2E2C925258BE94700FF0982 /* drug01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drug01.png; sourceTree = "<group>"; };
+		F2E2C92B258BF22200FF0982 /* drug03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drug03.png; sourceTree = "<group>"; };
+		F2E2C930258BFC4900FF0982 /* drug04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drug04.png; sourceTree = "<group>"; };
+		F2E745C2256C44D60031D731 /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
+		F2E745C7256C44E60031D731 /* EditarPerfilViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditarPerfilViewController.storyboard; sourceTree = "<group>"; };
+		F2E745D9256C54E80031D731 /* DetalhesMedicamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesMedicamentoViewController.swift; sourceTree = "<group>"; };
+		F2F314F525B7126200D6B5A1 /* Drugs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drugs.xcdatamodel; sourceTree = "<group>"; };
+		F2F314F625B7126200D6B5A1 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		FFE2A49EE04C00DF77B0AE62 /* Pods_DrugDataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugDataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F233D09D2559E99500D5CE2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E00D826CB978BA7A11BA3076 /* Pods_DrugData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F233D0B32559E99900D5CE2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE051C3924FC2C75D6161822 /* Pods_DrugDataTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F233D0BE2559E99900D5CE2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58990A8382660EB73440A4EF /* Pods_DrugData_DrugDataUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C75F1B64F1FD24F2D4B4113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */,
+				B7B93F1C2797407C475AAF07 /* Pods_DrugData_DrugDataUITests.framework */,
+				FFE2A49EE04C00DF77B0AE62 /* Pods_DrugDataTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB74E95A9446CBEC8BDD4E2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C157B864814879795A122AD /* Pods-DrugData.debug.xcconfig */,
+				B4626E0A19BD7FDA142D5ABB /* Pods-DrugData.release.xcconfig */,
+				BA74E4B80885D1597A8D66F5 /* Pods-DrugData-DrugDataUITests.debug.xcconfig */,
+				B7005B2C3AE8F4F5FDC304FE /* Pods-DrugData-DrugDataUITests.release.xcconfig */,
+				5D7E08AFB0D948E57B22B260 /* Pods-DrugDataTests.debug.xcconfig */,
+				D5403A5767A5804F982BC7F9 /* Pods-DrugDataTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3DBB8F2256DD63200A1869B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F232BC03256B30BD00460ADF /* Remedios.swift */,
+				F2DBB9742565B5D100A5550E /* Cabecalho.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F232BBF2256B2B4900460ADF /* Localização */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F44D258A574900E693EB /* Model */,
+				F2F5F44C258A574100E693EB /* ViewModel */,
+				F2F5F448258A573700E693EB /* View */,
+			);
+			name = "Localização";
+			path = "Localizaçã0";
+			sourceTree = "<group>";
+		};
+		F232BC13256B326500460ADF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F232BC0E256B323900460ADF /* NomeRemediosTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F232BC17256B37E700460ADF /* DetalhesMedicamento */ = {
+			isa = PBXGroup;
+			children = (
+				F232BC25256B388A00460ADF /* Cell - Detalhe do Medicamento */,
+				F232BC20256B382100460ADF /* DetalhesMedicamentoViewController.storyboard */,
+				F2E745D9256C54E80031D731 /* DetalhesMedicamentoViewController.swift */,
+			);
+			path = DetalhesMedicamento;
+			sourceTree = "<group>";
+		};
+		F232BC25256B388A00460ADF /* Cell - Detalhe do Medicamento */ = {
+			isa = PBXGroup;
+			children = (
+				F232BC29256B391400460ADF /* DetalheMedicamentoTableViewCell.swift */,
+			);
+			path = "Cell - Detalhe do Medicamento";
+			sourceTree = "<group>";
+		};
+		F233D0972559E99500D5CE2D = {
+			isa = PBXGroup;
+			children = (
+				F2F314F425B7126200D6B5A1 /* Drugs.xcdatamodeld */,
+				F233D0A22559E99500D5CE2D /* DrugData */,
+				F233D0B92559E99900D5CE2D /* DrugDataTests */,
+				F233D0C42559E99900D5CE2D /* DrugDataUITests */,
+				F233D0A12559E99500D5CE2D /* Products */,
+				AB74E95A9446CBEC8BDD4E2F /* Pods */,
+				4C75F1B64F1FD24F2D4B4113 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F233D0A12559E99500D5CE2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F233D0A02559E99500D5CE2D /* DrugData.app */,
+				F233D0B62559E99900D5CE2D /* DrugDataTests.xctest */,
+				F233D0C12559E99900D5CE2D /* DrugDataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F233D0A22559E99500D5CE2D /* DrugData */ = {
+			isa = PBXGroup;
+			children = (
+				F25AC4AB25A6346F005EB742 /* Image */,
+				F233D0A52559E99500D5CE2D /* SceneDelegate.swift */,
+				F233D0AC2559E99900D5CE2D /* Assets.xcassets */,
+				F233D0AE2559E99900D5CE2D /* LaunchScreen.storyboard */,
+				F233D0A32559E99500D5CE2D /* AppDelegate.swift */,
+				F233D0B12559E99900D5CE2D /* Info.plist */,
+				F206AECE25B1C04F00FDE97A /* GoogleService-Info.plist */,
+				F2F5F475258A5AF700E693EB /* Scenes */,
+			);
+			path = DrugData;
+			sourceTree = "<group>";
+		};
+		F233D0B92559E99900D5CE2D /* DrugDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				F233D0BA2559E99900D5CE2D /* DrugDataTests.swift */,
+				F233D0BC2559E99900D5CE2D /* Info.plist */,
+			);
+			path = DrugDataTests;
+			sourceTree = "<group>";
+		};
+		F233D0C42559E99900D5CE2D /* DrugDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F233D0C52559E99900D5CE2D /* DrugDataUITests.swift */,
+				F233D0C72559E99900D5CE2D /* Info.plist */,
+			);
+			path = DrugDataUITests;
+			sourceTree = "<group>";
+		};
+		F233D0D62559E9AA00D5CE2D /* Página Inicial  */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F3F7258A521F00E693EB /* Model */,
+				F2F5F3F6258A521600E693EB /* ViewModel */,
+				F2F5F3F5258A520A00E693EB /* View */,
+			);
+			name = "Página Inicial ";
+			path = "Página Inicial ";
+			sourceTree = "<group>";
+		};
+		F233D0DA2559F3A400D5CE2D /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				F233D0DB2559F3BB00D5CE2D /* File.swift */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
+		F23C327F2562F45900F25304 /* ResultadoPesquisa */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F419258A547B00E693EB /* Model */,
+				F2F5F418258A547500E693EB /* ViewModel */,
+				F2F5F417258A547100E693EB /* View */,
+			);
+			path = ResultadoPesquisa;
+			sourceTree = "<group>";
+		};
+		F23C328A2562F59F00F25304 /* LaboratórioView */ = {
+			isa = PBXGroup;
+			children = (
+				F23C329F2562FCCF00F25304 /* PesquisaLaboratorioViewController.swift */,
+				F247408825670FF400D18DE0 /* PesquisaLaboratorioViewController.storyboard */,
+			);
+			name = "LaboratórioView";
+			path = "Laboratório";
+			sourceTree = "<group>";
+		};
+		F23C8ECF256ACF330094FA87 /* OrgânicoView */ = {
+			isa = PBXGroup;
+			children = (
+				F23C8EDB256ACFD90094FA87 /* OrganicoViewController.storyboard */,
+				F23C8EE0256ACFF60094FA87 /* OrganicoViewController.swift */,
+			);
+			name = "OrgânicoView";
+			path = "Orgânico";
+			sourceTree = "<group>";
+		};
+		F23C8ED1256ACF4F0094FA87 /* GenéricoView */ = {
+			isa = PBXGroup;
+			children = (
+				F23C8EE8256AD13F0094FA87 /* GenericoViewController.swift */,
+				F23C8EED256AD14D0094FA87 /* GenericoViewController.storyboard */,
+			);
+			name = "GenéricoView";
+			path = "Genérico";
+			sourceTree = "<group>";
+		};
+		F23C8EF3256AD28E0094FA87 /* ControladosView */ = {
+			isa = PBXGroup;
+			children = (
+				F23C8EF4256AD2A70094FA87 /* ControladosViewController.storyboard */,
+				F23C8EFC256AD2EC0094FA87 /* ControladosViewController.swift */,
+			);
+			path = ControladosView;
+			sourceTree = "<group>";
+		};
+		F23C8F0B256ADCF40094FA87 /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				F29BE71025B0D47C0088B274 /* Cell */,
+				F2F5F40C258A532700E693EB /* Model */,
+				F2F5F40B258A531D00E693EB /* ViewModel */,
+				F2F5F40A258A531100E693EB /* View */,
+			);
+			path = Perfil;
+			sourceTree = "<group>";
+		};
+		F247408D2567100500D18DE0 /* MenuCategoriaCell.Xib */ = {
+			isa = PBXGroup;
+			children = (
+				F247408125670F0B00D18DE0 /* ControladosGeralTableViewCell.swift */,
+				F247408225670F0B00D18DE0 /* ControladosGeralTableViewCell.xib */,
+			);
+			path = MenuCategoriaCell.Xib;
+			sourceTree = "<group>";
+		};
+		F25AC4AB25A6346F005EB742 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2C925258BE94700FF0982 /* drug01.png */,
+				F2E2C924258BE94700FF0982 /* drug02.png */,
+				F2E2C92B258BF22200FF0982 /* drug03.png */,
+				F2E2C930258BFC4900FF0982 /* drug04.png */,
+				842DFDB125ABEDF3005692E4 /* drug06.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		F297576725A8A5F50042FA0E /* ResultadoCategorias */ = {
+			isa = PBXGroup;
+			children = (
+				F23C8EF3256AD28E0094FA87 /* ControladosView */,
+				F23C8ED1256ACF4F0094FA87 /* GenéricoView */,
+				F23C8ECF256ACF330094FA87 /* OrgânicoView */,
+				F23C328A2562F59F00F25304 /* LaboratórioView */,
+			);
+			path = ResultadoCategorias;
+			sourceTree = "<group>";
+		};
+		F29BE6FB25B0B6CF0088B274 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F29BE70525B0B71B0088B274 /* ImagePicker.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		F29BE6FC25B0B6DA0088B274 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F29BE71025B0D47C0088B274 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F2D2D559255E07E10025BEF3 /* Pesquisar */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F416258A545200E693EB /* Model */,
+				F2F5F415258A544900E693EB /* ViewModel */,
+				F2F5F414258A543D00E693EB /* View */,
+			);
+			path = Pesquisar;
+			sourceTree = "<group>";
+		};
+		F2D2D567255E0C020025BEF3 /* Menu Categoria */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F422258A54E500E693EB /* Model */,
+				F2F5F421258A54E000E693EB /* ViewModel */,
+				F2F5F420258A54D500E693EB /* View */,
+			);
+			path = "Menu Categoria";
+			sourceTree = "<group>";
+		};
+		F2D2D575255E0F330025BEF3 /* Favoritos */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F447258A572C00E693EB /* Model */,
+				F2F5F446258A572600E693EB /* ViewModel */,
+				F2F5F442258A571E00E693EB /* View */,
+			);
+			path = Favoritos;
+			sourceTree = "<group>";
+		};
+		F2DF0F62255C926600F43B54 /* Esqueceu a senha */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F400258A529600E693EB /* Model */,
+				F2F5F3FF258A528F00E693EB /* ViewModel */,
+				F2F5F3FE258A528900E693EB /* View */,
+			);
+			path = "Esqueceu a senha";
+			sourceTree = "<group>";
+		};
+		F2E282CE255C8CE800460304 /* Cadastrar */ = {
+			isa = PBXGroup;
+			children = (
+				F29BE6FC25B0B6DA0088B274 /* Model */,
+				F29BE6FB25B0B6CF0088B274 /* View Model */,
+				F2F5F45D258A582100E693EB /* View */,
+			);
+			path = Cadastrar;
+			sourceTree = "<group>";
+		};
+		F2E745C1256C44B20031D731 /* Editar Perfil  */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F413258A541F00E693EB /* Model */,
+				F2F5F412258A541700E693EB /* ViewModel */,
+				F2F5F411258A540E00E693EB /* View */,
+			);
+			path = "Editar Perfil ";
+			sourceTree = "<group>";
+		};
+		F2F5F3F5258A520A00E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F233D0A92559E99500D5CE2D /* Main.storyboard */,
+				F233D0A72559E99500D5CE2D /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F3F6258A521600E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F3F7258A521F00E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F233D0DA2559F3A400D5CE2D /* Logo */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F3FB258A523B00E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2E282BF255C89BB00460304 /* LoginViewController.storyboard */,
+				F2E282BA255C882800460304 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F3FC258A524500E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F3FD258A526E00E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F3FE258A528900E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2DF0F63255C92A500F43B54 /* EsqueceuASenhaViewController.swift */,
+				F2DF0F6B255C92B600F43B54 /* EsqueceuASenhaViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F3FF258A528F00E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F400258A529600E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F40A258A531100E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F23C8F0C256ADD180094FA87 /* PerfilViewController.swift */,
+				F23C8F14256ADD240094FA87 /* PerfilViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F40B258A531D00E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F40C258A532700E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F411258A540E00E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2E745C7256C44E60031D731 /* EditarPerfilViewController.storyboard */,
+				F2E745C2256C44D60031D731 /* EditarPerfilViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F412258A541700E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F413258A541F00E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F414258A543D00E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2D562255E08280025BEF3 /* PesquisarViewController.storyboard */,
+				F2D2D55A255E08110025BEF3 /* PesquisarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F415258A544900E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F416258A545200E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F417258A547100E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F232BC17256B37E700460ADF /* DetalhesMedicamento */,
+				F232BC13256B326500460ADF /* Cell */,
+				F23C32852562F4A500F25304 /* ResultadoPesquisaViewController.swift */,
+				F23C32802562F47700F25304 /* ResultadoPesquisaViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F418258A547500E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F23C5C3825A79C4F00D7C86A /* ResultadoPesquisaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F419258A547B00E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F23C5C3D25A79CA900D7C86A /* Remedio.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F420258A54D500E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F42B258A55F600E693EB /* CategoriaView */,
+				F297576725A8A5F50042FA0E /* ResultadoCategorias */,
+				F2F5F424258A556000E693EB /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F421258A54E000E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F207767325A8A08700326400 /* CategoriaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F422258A54E500E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F207766E25A8A00200326400 /* Categoria.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F424258A556000E693EB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F441258A56F100E693EB /* ControladosCell */,
+				F2F5F440258A56A900E693EB /* GenéricoCell */,
+				F2F5F43F258A569200E693EB /* OrgânicoCell */,
+				F2F5F438258A563B00E693EB /* LaboratórioCell */,
+				F247408D2567100500D18DE0 /* MenuCategoriaCell.Xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F2F5F42B258A55F600E693EB /* CategoriaView */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2D570255E0C420025BEF3 /* CategoriaViewController.storyboard */,
+				F2DBB96F2565B1BF00A5550E /* CategoriaViewController.swift */,
+			);
+			path = CategoriaView;
+			sourceTree = "<group>";
+		};
+		F2F5F438258A563B00E693EB /* LaboratórioCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3DBB90F256E04D500A1869B /* LaboratorioTableViewCell.swift */,
+			);
+			name = "LaboratórioCell";
+			path = "LaboratórioCell";
+			sourceTree = "<group>";
+		};
+		F2F5F43F258A569200E693EB /* OrgânicoCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3DBB91E256E11B400A1869B /* OrganicoTableViewCell.swift */,
+			);
+			name = "OrgânicoCell";
+			path = "OrgânicoCell";
+			sourceTree = "<group>";
+		};
+		F2F5F440258A56A900E693EB /* GenéricoCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3DBB914256E088900A1869B /* GenericoTableViewCell.swift */,
+			);
+			name = "GenéricoCell";
+			path = "GenéricoCell";
+			sourceTree = "<group>";
+		};
+		F2F5F441258A56F100E693EB /* ControladosCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3DBB919256E0E9D00A1869B /* ControladosTableViewCell.swift */,
+			);
+			path = ControladosCell;
+			sourceTree = "<group>";
+		};
+		F2F5F442258A571E00E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2D576255E0F510025BEF3 /* FavoritosViewController.swift */,
+				F2D2D57E255E0F800025BEF3 /* FavoritosViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F446258A572600E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F447258A572C00E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F448258A573700E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F232BBF3256B2B6B00460ADF /* LocalizacaoViewController.swift */,
+				F232BBFB256B2B7900460ADF /* LocalizacaoViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F44C258A574100E693EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2F5F44D258A574900E693EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2F5F45D258A582100E693EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2E282CF255C8DAB00460304 /* CadastroViewController.swift */,
+				F2E282D7255C8DBD00460304 /* CadastroViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2F5F475258A5AF700E693EB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E3DBB8F2256DD63200A1869B /* Class */,
+				F233D0D62559E9AA00D5CE2D /* Página Inicial  */,
+				F2FF1566255C754D007FAD80 /* Login */,
+				F2DF0F62255C926600F43B54 /* Esqueceu a senha */,
+				F2E282CE255C8CE800460304 /* Cadastrar */,
+				F23C8F0B256ADCF40094FA87 /* Perfil */,
+				F2E745C1256C44B20031D731 /* Editar Perfil  */,
+				F2D2D559255E07E10025BEF3 /* Pesquisar */,
+				F23C327F2562F45900F25304 /* ResultadoPesquisa */,
+				F2D2D567255E0C020025BEF3 /* Menu Categoria */,
+				F2D2D575255E0F330025BEF3 /* Favoritos */,
+				F232BBF2256B2B4900460ADF /* Localização */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F2FF1566255C754D007FAD80 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F2F5F3FD258A526E00E693EB /* Model */,
+				F2F5F3FC258A524500E693EB /* ViewModel */,
+				F2F5F3FB258A523B00E693EB /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F233D09F2559E99500D5CE2D /* DrugData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F233D0CA2559E99900D5CE2D /* Build configuration list for PBXNativeTarget "DrugData" */;
+			buildPhases = (
+				9EC70020DDEA3C703736DE04 /* [CP] Check Pods Manifest.lock */,
+				F233D09C2559E99500D5CE2D /* Sources */,
+				F233D09D2559E99500D5CE2D /* Frameworks */,
+				F233D09E2559E99500D5CE2D /* Resources */,
+				6C7871A7CE3A90110AF37FBE /* [CP] Embed Pods Frameworks */,
+				921B541402F32DA22C7A6C76 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrugData;
+			productName = DrugData;
+			productReference = F233D0A02559E99500D5CE2D /* DrugData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F233D0B52559E99900D5CE2D /* DrugDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F233D0CD2559E99900D5CE2D /* Build configuration list for PBXNativeTarget "DrugDataTests" */;
+			buildPhases = (
+				E44C2B68E0E9D07193B36365 /* [CP] Check Pods Manifest.lock */,
+				F233D0B22559E99900D5CE2D /* Sources */,
+				F233D0B32559E99900D5CE2D /* Frameworks */,
+				F233D0B42559E99900D5CE2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F233D0B82559E99900D5CE2D /* PBXTargetDependency */,
+			);
+			name = DrugDataTests;
+			productName = DrugDataTests;
+			productReference = F233D0B62559E99900D5CE2D /* DrugDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F233D0C02559E99900D5CE2D /* DrugDataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F233D0D02559E99900D5CE2D /* Build configuration list for PBXNativeTarget "DrugDataUITests" */;
+			buildPhases = (
+				3E5982866E7BBA426B35C9E5 /* [CP] Check Pods Manifest.lock */,
+				F233D0BD2559E99900D5CE2D /* Sources */,
+				F233D0BE2559E99900D5CE2D /* Frameworks */,
+				F233D0BF2559E99900D5CE2D /* Resources */,
+				5CA7B3D14FECCBA8FB8FF368 /* [CP] Embed Pods Frameworks */,
+				115E451547C195FCF3B3EF5D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F233D0C32559E99900D5CE2D /* PBXTargetDependency */,
+			);
+			name = DrugDataUITests;
+			productName = DrugDataUITests;
+			productReference = F233D0C12559E99900D5CE2D /* DrugDataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F233D0982559E99500D5CE2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					F233D09F2559E99500D5CE2D = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					F233D0B52559E99900D5CE2D = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = F233D09F2559E99500D5CE2D;
+					};
+					F233D0C02559E99900D5CE2D = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = F233D09F2559E99500D5CE2D;
+					};
+				};
+			};
+			buildConfigurationList = F233D09B2559E99500D5CE2D /* Build configuration list for PBXProject "DrugData" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F233D0972559E99500D5CE2D;
+			productRefGroup = F233D0A12559E99500D5CE2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F233D09F2559E99500D5CE2D /* DrugData */,
+				F233D0B52559E99900D5CE2D /* DrugDataTests */,
+				F233D0C02559E99900D5CE2D /* DrugDataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F233D09E2559E99500D5CE2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23C32812562F47700F25304 /* ResultadoPesquisaViewController.storyboard in Resources */,
+				F23C8EF5256AD2A70094FA87 /* ControladosViewController.storyboard in Resources */,
+				F206AECF25B1C05000FDE97A /* GoogleService-Info.plist in Resources */,
+				F2E2C927258BE94700FF0982 /* drug01.png in Resources */,
+				F2E282D8255C8DBD00460304 /* CadastroViewController.storyboard in Resources */,
+				F23C8EEE256AD14D0094FA87 /* GenericoViewController.storyboard in Resources */,
+				F2D2D57F255E0F800025BEF3 /* FavoritosViewController.storyboard in Resources */,
+				F2DF0F6C255C92B600F43B54 /* EsqueceuASenhaViewController.storyboard in Resources */,
+				F2E2C92C258BF22200FF0982 /* drug03.png in Resources */,
+				842DFDB225ABEDF4005692E4 /* drug06.png in Resources */,
+				F233D0B02559E99900D5CE2D /* LaunchScreen.storyboard in Resources */,
+				F247408425670F0B00D18DE0 /* ControladosGeralTableViewCell.xib in Resources */,
+				F2D2D571255E0C420025BEF3 /* CategoriaViewController.storyboard in Resources */,
+				F2E2C926258BE94700FF0982 /* drug02.png in Resources */,
+				F232BC21256B382100460ADF /* DetalhesMedicamentoViewController.storyboard in Resources */,
+				F2D2D563255E08280025BEF3 /* PesquisarViewController.storyboard in Resources */,
+				F2E745C8256C44E60031D731 /* EditarPerfilViewController.storyboard in Resources */,
+				F247408925670FF400D18DE0 /* PesquisaLaboratorioViewController.storyboard in Resources */,
+				F233D0AD2559E99900D5CE2D /* Assets.xcassets in Resources */,
+				F2E282C0255C89BB00460304 /* LoginViewController.storyboard in Resources */,
+				F232BBFC256B2B7900460ADF /* LocalizacaoViewController.storyboard in Resources */,
+				F23C8EDC256ACFD90094FA87 /* OrganicoViewController.storyboard in Resources */,
+				F23C8F15256ADD240094FA87 /* PerfilViewController.storyboard in Resources */,
+				F233D0AB2559E99500D5CE2D /* Main.storyboard in Resources */,
+				F2E2C931258BFC4900FF0982 /* drug04.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F233D0B42559E99900D5CE2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F233D0BF2559E99900D5CE2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		115E451547C195FCF3B3EF5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E5982866E7BBA426B35C9E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrugData-DrugDataUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CA7B3D14FECCBA8FB8FF368 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C7871A7CE3A90110AF37FBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrugData/Pods-DrugData-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrugData/Pods-DrugData-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrugData/Pods-DrugData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		921B541402F32DA22C7A6C76 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrugData/Pods-DrugData-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrugData/Pods-DrugData-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrugData/Pods-DrugData-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EC70020DDEA3C703736DE04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrugData-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E44C2B68E0E9D07193B36365 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrugDataTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F233D09C2559E99500D5CE2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23C32A02562FCCF00F25304 /* PesquisaLaboratorioViewController.swift in Sources */,
+				F23C32862562F4A500F25304 /* ResultadoPesquisaViewController.swift in Sources */,
+				F233D0A82559E99500D5CE2D /* ViewController.swift in Sources */,
+				F23C5C3E25A79CA900D7C86A /* Remedio.swift in Sources */,
+				F232BC2A256B391400460ADF /* DetalheMedicamentoTableViewCell.swift in Sources */,
+				E3DBB91A256E0E9D00A1869B /* ControladosTableViewCell.swift in Sources */,
+				F207766F25A8A00200326400 /* Categoria.swift in Sources */,
+				F2F314F725B7126200D6B5A1 /* Drugs.xcdatamodeld in Sources */,
+				F29BE70625B0B71B0088B274 /* ImagePicker.swift in Sources */,
+				E3DBB910256E04D500A1869B /* LaboratorioTableViewCell.swift in Sources */,
+				F2E282D0255C8DAB00460304 /* CadastroViewController.swift in Sources */,
+				F247408325670F0B00D18DE0 /* ControladosGeralTableViewCell.swift in Sources */,
+				F2DBB9702565B1BF00A5550E /* CategoriaViewController.swift in Sources */,
+				F23C5C3925A79C4F00D7C86A /* ResultadoPesquisaViewModel.swift in Sources */,
+				F2E745C3256C44D60031D731 /* EditarPerfilViewController.swift in Sources */,
+				F23C8EE1256ACFF60094FA87 /* OrganicoViewController.swift in Sources */,
+				E3DBB90B256DF81E00A1869B /* Remedios.swift in Sources */,
+				F2DF0F64255C92A500F43B54 /* EsqueceuASenhaViewController.swift in Sources */,
+				F23C8EE9256AD13F0094FA87 /* GenericoViewController.swift in Sources */,
+				F233D0DC2559F3BB00D5CE2D /* File.swift in Sources */,
+				F23C8F0D256ADD180094FA87 /* PerfilViewController.swift in Sources */,
+				F2D2D577255E0F510025BEF3 /* FavoritosViewController.swift in Sources */,
+				F2E745DA256C54E80031D731 /* DetalhesMedicamentoViewController.swift in Sources */,
+				F233D0A42559E99500D5CE2D /* AppDelegate.swift in Sources */,
+				E3DBB91F256E11B400A1869B /* OrganicoTableViewCell.swift in Sources */,
+				F2E282BB255C882800460304 /* LoginViewController.swift in Sources */,
+				E3DBB915256E088900A1869B /* GenericoTableViewCell.swift in Sources */,
+				F233D0A62559E99500D5CE2D /* SceneDelegate.swift in Sources */,
+				F207767425A8A08700326400 /* CategoriaViewModel.swift in Sources */,
+				F2D2D55B255E08110025BEF3 /* PesquisarViewController.swift in Sources */,
+				E3DBB907256DF81900A1869B /* Cabecalho.swift in Sources */,
+				F232BC0F256B323900460ADF /* NomeRemediosTableViewCell.swift in Sources */,
+				F23C8EFD256AD2EC0094FA87 /* ControladosViewController.swift in Sources */,
+				F232BBF4256B2B6B00460ADF /* LocalizacaoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F233D0B22559E99900D5CE2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F233D0BB2559E99900D5CE2D /* DrugDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F233D0BD2559E99900D5CE2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F233D0C62559E99900D5CE2D /* DrugDataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F233D0B82559E99900D5CE2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F233D09F2559E99500D5CE2D /* DrugData */;
+			targetProxy = F233D0B72559E99900D5CE2D /* PBXContainerItemProxy */;
+		};
+		F233D0C32559E99900D5CE2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F233D09F2559E99500D5CE2D /* DrugData */;
+			targetProxy = F233D0C22559E99900D5CE2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F233D0A92559E99500D5CE2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F233D0AA2559E99500D5CE2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F233D0AE2559E99900D5CE2D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F233D0AF2559E99900D5CE2D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F233D0C82559E99900D5CE2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F233D0C92559E99900D5CE2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F233D0CB2559E99900D5CE2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C157B864814879795A122AD /* Pods-DrugData.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DrugData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.github-bertiGrazi.DrugData";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F233D0CC2559E99900D5CE2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4626E0A19BD7FDA142D5ABB /* Pods-DrugData.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DrugData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.github-bertiGrazi.DrugData";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F233D0CE2559E99900D5CE2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D7E08AFB0D948E57B22B260 /* Pods-DrugDataTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DrugDataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.github-bertiGrazi.DrugDataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrugData.app/DrugData";
+			};
+			name = Debug;
+		};
+		F233D0CF2559E99900D5CE2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5403A5767A5804F982BC7F9 /* Pods-DrugDataTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DrugDataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.github-bertiGrazi.DrugDataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrugData.app/DrugData";
+			};
+			name = Release;
+		};
+		F233D0D12559E99900D5CE2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA74E4B80885D1597A8D66F5 /* Pods-DrugData-DrugDataUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DrugDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.github-bertiGrazi.DrugDataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DrugData;
+			};
+			name = Debug;
+		};
+		F233D0D22559E99900D5CE2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7005B2C3AE8F4F5FDC304FE /* Pods-DrugData-DrugDataUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DrugDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.github-bertiGrazi.DrugDataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DrugData;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F233D09B2559E99500D5CE2D /* Build configuration list for PBXProject "DrugData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F233D0C82559E99900D5CE2D /* Debug */,
+				F233D0C92559E99900D5CE2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F233D0CA2559E99900D5CE2D /* Build configuration list for PBXNativeTarget "DrugData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F233D0CB2559E99900D5CE2D /* Debug */,
+				F233D0CC2559E99900D5CE2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F233D0CD2559E99900D5CE2D /* Build configuration list for PBXNativeTarget "DrugDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F233D0CE2559E99900D5CE2D /* Debug */,
+				F233D0CF2559E99900D5CE2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F233D0D02559E99900D5CE2D /* Build configuration list for PBXNativeTarget "DrugDataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F233D0D12559E99900D5CE2D /* Debug */,
+				F233D0D22559E99900D5CE2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F2F314F425B7126200D6B5A1 /* Drugs.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F2F314F525B7126200D6B5A1 /* Drugs.xcdatamodel */,
+				F2F314F625B7126200D6B5A1 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = F2F314F525B7126200D6B5A1 /* Drugs.xcdatamodel */;
+			path = Drugs.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F233D0982559E99500D5CE2D /* Project object */;
+}
