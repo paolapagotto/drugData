@@ -87,6 +87,7 @@
                         <outlet property="imageViewAvatar" destination="1Df-PQ-zes" id="wE4-XU-sYM"/>
                         <outlet property="labelLocation" destination="h4g-Do-qjQ" id="BqJ-aH-GAR"/>
                         <outlet property="labelName" destination="jgU-z8-qz9" id="Of5-iq-LQw"/>
+                        <outlet property="mapkitMap" destination="gJF-wa-YUX" id="HTG-Er-piz"/>
                         <outlet property="viewBlue" destination="Ddu-SO-sP1" id="S7O-e2-jiM"/>
                     </connections>
                 </viewController>
