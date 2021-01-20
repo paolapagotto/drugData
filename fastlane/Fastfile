@@ -19,8 +19,8 @@ platform :ios do
   desc "Run Tests"
   lane :test do
     cocoapods
-    run_tests(workspace: "iLogin.xcworkspace",
+    run_tests(workspace: "DrugData.xcworkspace",
               devices: ["iPhone 11"],
-              scheme: "iLogin")
+              scheme: "DrugData")
   end
 end
