@@ -70,6 +70,7 @@
 		F2E745C3256C44D60031D731 /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E745C2256C44D60031D731 /* EditarPerfilViewController.swift */; };
 		F2E745C8256C44E60031D731 /* EditarPerfilViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E745C7256C44E60031D731 /* EditarPerfilViewController.storyboard */; };
 		F2E745DA256C54E80031D731 /* DetalhesMedicamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E745D9256C54E80031D731 /* DetalhesMedicamentoViewController.swift */; };
+		F2EB9CCA25B8C24700CF6C94 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EB9CC925B8C24700CF6C94 /* Location.swift */; };
 		F2F314F725B7126200D6B5A1 /* Drugs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2F314F425B7126200D6B5A1 /* Drugs.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +166,7 @@
 		F2E745C2256C44D60031D731 /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
 		F2E745C7256C44E60031D731 /* EditarPerfilViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditarPerfilViewController.storyboard; sourceTree = "<group>"; };
 		F2E745D9256C54E80031D731 /* DetalhesMedicamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesMedicamentoViewController.swift; sourceTree = "<group>"; };
+		F2EB9CC925B8C24700CF6C94 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F2F314F525B7126200D6B5A1 /* Drugs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drugs.xcdatamodel; sourceTree = "<group>"; };
 		F2F314F625B7126200D6B5A1 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		FFE2A49EE04C00DF77B0AE62 /* Pods_DrugDataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugDataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,9 +235,8 @@
 		F232BBF2256B2B4900460ADF /* Localização */ = {
 			isa = PBXGroup;
 			children = (
-				F2F5F44D258A574900E693EB /* Model */,
-				F2F5F44C258A574100E693EB /* ViewModel */,
 				F2F5F448258A573700E693EB /* View */,
+				F2EB9CC525B8C20800CF6C94 /* Model */,
 			);
 			name = "Localização";
 			path = "Localizaçã0";
@@ -272,7 +273,6 @@
 			children = (
 				F2F314F425B7126200D6B5A1 /* Drugs.xcdatamodeld */,
 				F233D0A22559E99500D5CE2D /* DrugData */,
-				F233D0B92559E99900D5CE2D /* DrugDataTests */,
 				F233D0C42559E99900D5CE2D /* DrugDataUITests */,
 				F233D0A12559E99500D5CE2D /* Products */,
 				AB74E95A9446CBEC8BDD4E2F /* Pods */,
@@ -293,6 +293,7 @@
 		F233D0A22559E99500D5CE2D /* DrugData */ = {
 			isa = PBXGroup;
 			children = (
+				F2F5F475258A5AF700E693EB /* Scenes */,
 				F25AC4AB25A6346F005EB742 /* Image */,
 				F233D0A52559E99500D5CE2D /* SceneDelegate.swift */,
 				F233D0AC2559E99900D5CE2D /* Assets.xcassets */,
@@ -300,7 +301,7 @@
 				F233D0A32559E99500D5CE2D /* AppDelegate.swift */,
 				F233D0B12559E99900D5CE2D /* Info.plist */,
 				F206AECE25B1C04F00FDE97A /* GoogleService-Info.plist */,
-				F2F5F475258A5AF700E693EB /* Scenes */,
+				F233D0B92559E99900D5CE2D /* DrugDataTests */,
 			);
 			path = DrugData;
 			sourceTree = "<group>";
@@ -394,9 +395,6 @@
 		F23C8F0B256ADCF40094FA87 /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
-				F29BE71025B0D47C0088B274 /* Cell */,
-				F2F5F40C258A532700E693EB /* Model */,
-				F2F5F40B258A531D00E693EB /* ViewModel */,
 				F2F5F40A258A531100E693EB /* View */,
 			);
 			path = Perfil;
@@ -447,13 +445,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F29BE71025B0D47C0088B274 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		F2D2D559255E07E10025BEF3 /* Pesquisar */ = {
@@ -514,6 +505,14 @@
 				F2F5F411258A540E00E693EB /* View */,
 			);
 			path = "Editar Perfil ";
+			sourceTree = "<group>";
+		};
+		F2EB9CC525B8C20800CF6C94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2EB9CC925B8C24700CF6C94 /* Location.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F2F5F3F5258A520A00E693EB /* View */ = {
@@ -593,20 +592,6 @@
 				F23C8F14256ADD240094FA87 /* PerfilViewController.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F2F5F40B258A531D00E693EB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F2F5F40C258A532700E693EB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		F2F5F411258A540E00E693EB /* View */ = {
@@ -794,20 +779,6 @@
 				F232BBFB256B2B7900460ADF /* LocalizacaoViewController.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F2F5F44C258A574100E693EB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F2F5F44D258A574900E693EB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		F2F5F45D258A582100E693EB /* View */ = {
@@ -1171,6 +1142,7 @@
 				E3DBB91F256E11B400A1869B /* OrganicoTableViewCell.swift in Sources */,
 				F2E282BB255C882800460304 /* LoginViewController.swift in Sources */,
 				E3DBB915256E088900A1869B /* GenericoTableViewCell.swift in Sources */,
+				F2EB9CCA25B8C24700CF6C94 /* Location.swift in Sources */,
 				F233D0A62559E99500D5CE2D /* SceneDelegate.swift in Sources */,
 				F207767425A8A08700326400 /* CategoriaViewModel.swift in Sources */,
 				F2D2D55B255E08110025BEF3 /* PesquisarViewController.swift in Sources */,
