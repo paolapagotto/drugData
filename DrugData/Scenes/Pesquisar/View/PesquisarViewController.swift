@@ -19,6 +19,8 @@ class PesquisarViewController: UIViewController {
     @IBOutlet weak var textFieldFilterSubstance: UITextField!
     @IBOutlet weak var textFieldFilterCategory: UITextField!
     
+    
+    
     var array = [Cabecalho] ()
     
     func setup(dados: Cabecalho) {

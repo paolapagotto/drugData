@@ -13,6 +13,12 @@ class NomeRemediosTableViewCell: UITableViewCell {
 
     // MARK: IBoutlet
     @IBOutlet weak var labelNameMedice: UILabel!
+    
+    @IBOutlet weak var labelNameLaboratory: UILabel!
+    
+    
+    @IBOutlet weak var labelProductType: UILabel!
+    
     @IBOutlet weak var saveFavoriteDrug: UIButton!
     // MARK: Atributos
     var context: NSManagedObjectContext {
@@ -44,8 +50,10 @@ class NomeRemediosTableViewCell: UITableViewCell {
     }
     
     // MARK: Métodos
-    func setup(nameMedice: String) {
+    func setup(nameMedice: String, nameLaboratory: String, productType: String) {
         labelNameMedice.text = nameMedice
+        labelNameLaboratory.text = nameLaboratory
+        labelProductType.text = productType
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -17,6 +17,8 @@ class ResultadoPesquisaViewController: UIViewController {
     @IBOutlet weak var imageViewAvatar: UIImageView!
     @IBOutlet weak var tableViewResult: UITableView!
     
+    
+    
     // MARK: Atributos
     var searchTerm: String = ""
     var array = [Cabecalho] ()
@@ -78,7 +80,7 @@ extension ResultadoPesquisaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NomeRemediosTableViewCell", for: indexPath) as! NomeRemediosTableViewCell
         
-        cell.setup(nameMedice: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].produto)
+        cell.setup(nameMedice: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].produto, nameLaboratory: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].nameLaboratory, productType: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].productType )
         return cell
         }
     

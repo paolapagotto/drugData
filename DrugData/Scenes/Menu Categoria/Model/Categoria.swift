@@ -12,17 +12,27 @@ class Categoria {
     
     var produto:String
     var laboratorio: String
-    var generico: String
-    var controlados: String
-    var organico: String
+    var tipoProduto: String
+    var tipoControlados: String
+    var classeTerapeutica: String
        
      init(json: JSON) {
         
         self.produto = json["PRODUTO"].stringValue
         self.laboratorio = json["LABORATORIO"].stringValue
-        self.generico = json["TIPO DE PRODUTO "].stringValue
-        self.controlados = json["TARJA"].stringValue
-        self.organico = json["CLASSE TERAPEUTICA"].stringValue
+        self.tipoProduto = json["TIPO DE PRODUTO"].stringValue
+        self.tipoControlados = json["TARJA"].stringValue
+        self.classeTerapeutica = json["CLASSE TERAPEUTICA"].stringValue
             
         }
+    
+    func filtroCategoria(remedio: Categoria){
+        if(remedio.tipoProduto == "GENERICO"){
+            self.tipoProduto = remedio.tipoProduto
+            
+        }else if(remedio.tipoProduto == "Biologico"){
+            self.tipoProduto = remedio.tipoProduto
+            
+        }
+    }
 }

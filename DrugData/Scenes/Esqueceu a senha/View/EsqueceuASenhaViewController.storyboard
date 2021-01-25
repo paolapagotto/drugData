@@ -21,10 +21,10 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPJ-0K-Ept">
-                                <rect key="frame" x="40" y="756" width="334" height="46"/>
+                                <rect key="frame" x="60" y="756" width="294" height="46"/>
                                 <color key="backgroundColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="rut-lW-gZW"/>
+                                    <constraint firstAttribute="height" constant="46" id="iHI-xr-idq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="ENVIAR ">
@@ -53,7 +53,7 @@
                                 <rect key="frame" x="36" y="434" width="342" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DIGITE AQUI SEU E-MAIL " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQZ-c5-oEd">
@@ -78,11 +78,11 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Szk-VJ-4h7"/>
-                        <color key="backgroundColor" white="0.1348756602" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Szk-VJ-4h7" firstAttribute="bottom" secondItem="aPJ-0K-Ept" secondAttribute="bottom" constant="60" id="1PR-WM-yir"/>
-                            <constraint firstItem="aPJ-0K-Ept" firstAttribute="leading" secondItem="Szk-VJ-4h7" secondAttribute="leading" constant="40" id="J60-Jz-VsW"/>
-                            <constraint firstItem="Szk-VJ-4h7" firstAttribute="trailing" secondItem="aPJ-0K-Ept" secondAttribute="trailing" constant="40" id="YgY-zl-DL6"/>
+                            <constraint firstItem="aPJ-0K-Ept" firstAttribute="leading" secondItem="Szk-VJ-4h7" secondAttribute="leading" constant="60" id="DSx-4k-XEj"/>
+                            <constraint firstItem="Szk-VJ-4h7" firstAttribute="trailing" secondItem="aPJ-0K-Ept" secondAttribute="trailing" constant="60" id="nl0-Vh-2yK"/>
+                            <constraint firstItem="Szk-VJ-4h7" firstAttribute="bottom" secondItem="aPJ-0K-Ept" secondAttribute="bottom" constant="60" id="vD6-cf-5mT"/>
                         </constraints>
                     </view>
                     <connections>
