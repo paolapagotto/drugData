@@ -13,8 +13,11 @@ class GenericoTableViewCell: UITableViewCell {
     @IBOutlet weak var labelGenericName: UILabel!
     
     func setup(name: Categoria){
-        self.labelNameDrug.text = name.produto
-        self.labelGenericName.text = name.generico
+        if name.tipoProduto == "GENÉRICO"{
+            self.labelNameDrug.text = name.produto
+            self.labelGenericName.text = name.tipoProduto
+        }
+        
     }
 
     override func awakeFromNib() {

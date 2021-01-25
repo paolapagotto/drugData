@@ -35,7 +35,7 @@ class GenericoViewController: UIViewController {
         tableViewGeneric.dataSource = self
 
         setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")))
-        
+    
         loadGenericData()
     }
     
@@ -57,6 +57,7 @@ extension GenericoViewController: UITableViewDelegate{
 extension GenericoViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let allGeneric = categoriaViewModel?.numberOfRows() {
+
                     return allGeneric
                 }
                 

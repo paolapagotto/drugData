@@ -17,9 +17,9 @@ class OrganicoTableViewCell: UITableViewCell {
         self.labelOrganicName.text = name.organico
     }*/
     func setup(name: Categoria) -> Void {
-            if (name.generico == "Biologicos" || name.generico == "Biologico" ){
+            if (name.tipoProduto == "Biologicos" || name.tipoProduto == "Biologico" ){
                 self.labelDrugName.text = name.produto
-                self.labelOrganicName.text = name.generico
+                self.labelOrganicName.text = name.tipoProduto
             }
 
         }

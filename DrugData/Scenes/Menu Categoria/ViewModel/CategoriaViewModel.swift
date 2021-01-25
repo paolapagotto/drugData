@@ -12,6 +12,7 @@ import SwiftyJSON
 class CategoriaViewModel {
     
     var arrayRemedios = [Categoria] ()
+    var hashRemedios: [String: [Categoria]] = [:]
     
     func loadCategoryAPI(completion: @escaping (_ result: Bool, _ error: Error?) -> Void) {
                    AF.request("https://raw.githubusercontent.com/paolapagotto/csvtojson/master/medicamentos.json").responseJSON { response in
@@ -19,6 +20,9 @@ class CategoriaViewModel {
                            
                            for item in arrayDictionary {
                                let brand = Categoria(json: JSON(item))
+                            
+                                let brandLab = brand.laboratorio
+                                self.hashRemedios[brandLab, default: [Categoria]()].append(brand)
                                self.arrayRemedios.append(brand)
                            }
                            completion(true, nil)
