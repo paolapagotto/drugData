@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drug03.png" translatesAutoresizingMaskIntoConstraints="NO" id="u77-Rc-ivM">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="INSIRA SEU E-MAIL AQUI" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48P-j1-kxr">
                                 <rect key="frame" x="35" y="403" width="344" height="34"/>
@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-w5-zWt">
-                                <rect key="frame" x="0.0" y="293" width="414" height="44"/>
+                                <rect key="frame" x="153.5" y="293" width="107" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,7 +61,13 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foM-Sw-1BP">
                                 <rect key="frame" x="60" y="742" width="294" height="46"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="lHV-wj-og8">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.82276713848114014" green="0.86374753713607788" blue="0.90679275989532471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z35-nY-nfB">
                                 <rect key="frame" x="141" y="516" width="133" height="30"/>
@@ -116,26 +122,27 @@
                             <constraint firstItem="lMn-Vs-FAu" firstAttribute="top" secondItem="n5Q-w5-zWt" secondAttribute="bottom" constant="40" id="4c1-BC-aH9"/>
                             <constraint firstItem="XUC-vn-18q" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" constant="87" id="5C7-HM-HtD"/>
                             <constraint firstItem="XUC-vn-18q" firstAttribute="top" secondItem="KIN-NX-TX6" secondAttribute="top" constant="69" id="6dl-Oi-DfD"/>
+                            <constraint firstItem="u77-Rc-ivM" firstAttribute="centerX" secondItem="INT-CS-EtP" secondAttribute="centerX" id="6na-WD-g9R"/>
                             <constraint firstItem="z35-nY-nfB" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" constant="141" id="92G-bu-EMD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="u77-Rc-ivM" secondAttribute="bottom" constant="-34" id="CD6-93-SBy"/>
                             <constraint firstItem="mXj-K9-CtB" firstAttribute="top" secondItem="7xf-VQ-mOx" secondAttribute="bottom" constant="4" id="Crs-Cl-H9R"/>
-                            <constraint firstItem="u77-Rc-ivM" firstAttribute="bottom" secondItem="KIN-NX-TX6" secondAttribute="bottom" id="DWh-Iy-w48"/>
                             <constraint firstItem="LMU-eW-THf" firstAttribute="leading" secondItem="foM-Sw-1BP" secondAttribute="leading" id="Egb-hD-uSn"/>
                             <constraint firstItem="48P-j1-kxr" firstAttribute="trailing" secondItem="7xf-VQ-mOx" secondAttribute="trailing" id="FaN-bo-dkY"/>
                             <constraint firstItem="n5Q-w5-zWt" firstAttribute="top" secondItem="XUC-vn-18q" secondAttribute="bottom" constant="8" id="Fu5-nn-S2C"/>
                             <constraint firstItem="LMU-eW-THf" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" constant="60" id="HCQ-hN-8YQ"/>
+                            <constraint firstItem="u77-Rc-ivM" firstAttribute="centerX" secondItem="z35-nY-nfB" secondAttribute="centerX" id="Jqw-T0-2Ew"/>
                             <constraint firstItem="48P-j1-kxr" firstAttribute="top" secondItem="lMn-Vs-FAu" secondAttribute="bottom" constant="6" id="Ksh-TK-Jhl"/>
                             <constraint firstItem="xQU-tc-9eD" firstAttribute="top" secondItem="INT-CS-EtP" secondAttribute="top" constant="796" id="Lea-lo-vRo"/>
                             <constraint firstItem="z35-nY-nfB" firstAttribute="centerX" secondItem="LMU-eW-THf" secondAttribute="centerX" id="PJU-Fp-K1T"/>
                             <constraint firstItem="LMU-eW-THf" firstAttribute="trailing" secondItem="foM-Sw-1BP" secondAttribute="trailing" id="Pqe-3J-9dL"/>
                             <constraint firstItem="LMU-eW-THf" firstAttribute="top" secondItem="z35-nY-nfB" secondAttribute="bottom" constant="43" id="Qce-bO-MMS"/>
                             <constraint firstItem="48P-j1-kxr" firstAttribute="leading" secondItem="7xf-VQ-mOx" secondAttribute="leading" id="SdQ-YN-Ao7"/>
-                            <constraint firstItem="u77-Rc-ivM" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" id="UYq-ec-svi"/>
                             <constraint firstItem="xQU-tc-9eD" firstAttribute="top" secondItem="foM-Sw-1BP" secondAttribute="bottom" constant="8" id="WGB-Mx-sjd"/>
+                            <constraint firstItem="u77-Rc-ivM" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" id="WgA-A2-Xrh"/>
                             <constraint firstItem="lMn-Vs-FAu" firstAttribute="trailing" secondItem="48P-j1-kxr" secondAttribute="trailing" id="YMc-fJ-F3q"/>
                             <constraint firstItem="z35-nY-nfB" firstAttribute="centerX" secondItem="mXj-K9-CtB" secondAttribute="centerX" id="ZDW-Mu-jYC"/>
                             <constraint firstItem="XUC-vn-18q" firstAttribute="centerX" secondItem="n5Q-w5-zWt" secondAttribute="centerX" id="Zua-o9-Zhj"/>
                             <constraint firstItem="7xf-VQ-mOx" firstAttribute="top" secondItem="48P-j1-kxr" secondAttribute="bottom" constant="12" id="c43-BA-tlI"/>
-                            <constraint firstItem="u77-Rc-ivM" firstAttribute="trailing" secondItem="n5Q-w5-zWt" secondAttribute="trailing" id="cib-oo-7pW"/>
                             <constraint firstItem="lMn-Vs-FAu" firstAttribute="leading" secondItem="48P-j1-kxr" secondAttribute="leading" id="dOo-8f-O6s"/>
                             <constraint firstItem="foM-Sw-1BP" firstAttribute="trailing" secondItem="xQU-tc-9eD" secondAttribute="trailing" id="dXr-eR-IdW"/>
                             <constraint firstItem="n5Q-w5-zWt" firstAttribute="centerX" secondItem="lMn-Vs-FAu" secondAttribute="centerX" id="ewn-dj-RrD"/>
@@ -143,11 +150,9 @@
                             <constraint firstItem="KIN-NX-TX6" firstAttribute="bottom" secondItem="xQU-tc-9eD" secondAttribute="bottom" constant="20" id="iPt-zW-S9v"/>
                             <constraint firstItem="7xf-VQ-mOx" firstAttribute="leading" secondItem="mXj-K9-CtB" secondAttribute="leading" id="kZb-xB-Qbb"/>
                             <constraint firstItem="foM-Sw-1BP" firstAttribute="top" secondItem="INT-CS-EtP" secondAttribute="top" constant="742" id="khe-oh-Ibh"/>
-                            <constraint firstItem="u77-Rc-ivM" firstAttribute="leading" secondItem="n5Q-w5-zWt" secondAttribute="leading" id="l8w-TA-ya7"/>
                             <constraint firstItem="lMn-Vs-FAu" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" constant="35" id="oan-6B-zRH"/>
                             <constraint firstItem="foM-Sw-1BP" firstAttribute="leading" secondItem="xQU-tc-9eD" secondAttribute="leading" id="pqY-aZ-VRQ"/>
-                            <constraint firstItem="u77-Rc-ivM" firstAttribute="top" secondItem="KIN-NX-TX6" secondAttribute="top" id="s7O-Jd-odO"/>
-                            <constraint firstItem="u77-Rc-ivM" firstAttribute="centerX" secondItem="INT-CS-EtP" secondAttribute="centerX" id="wvT-a3-P1o"/>
+                            <constraint firstItem="u77-Rc-ivM" firstAttribute="top" secondItem="KIN-NX-TX6" secondAttribute="top" id="t8B-Sv-XBi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="JcS-Zd-cnV"/>
@@ -183,6 +188,7 @@
     </scenes>
     <resources>
         <image name="drug03.png" width="124" height="581"/>
+        <image name="facebook.png" width="503" height="100"/>
         <image name="pills03.png" width="900" height="692"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

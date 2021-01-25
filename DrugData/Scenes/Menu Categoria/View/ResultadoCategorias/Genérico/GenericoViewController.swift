@@ -67,7 +67,7 @@ extension GenericoViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GenericoTableViewCell", for: indexPath) as! GenericoTableViewCell
        
-        cell.setup(name: categoriaViewModel!.arrayRemedios[indexPath.row])
+        cell.setup(name: categoriaViewModel!.arrayGenericos[indexPath.row])
         return cell
     }
     

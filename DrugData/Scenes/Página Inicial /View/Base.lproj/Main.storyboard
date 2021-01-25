@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY9-Bi-mms">
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY9-Bi-mms">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                 <color key="backgroundColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -25,6 +25,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pills09.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CG8-0o-gR1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="634"/>
+                                <color key="backgroundColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVR-kl-pP2">
                                 <rect key="frame" x="60" y="742" width="294" height="46"/>
                                 <color key="backgroundColor" red="0.75686274509999996" green="0.77647058820000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,20 +85,17 @@
                                     <action selector="buttonRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Est-1K-zrz"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drug06.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CG8-0o-gR1">
-                                <rect key="frame" x="70" y="0.0" width="274" height="736.5"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <rect key="contentStretch" x="0.90000000000000002" y="0.0" width="1" height="1"/>
                         <constraints>
-                            <constraint firstItem="WVR-kl-pP2" firstAttribute="top" secondItem="CG8-0o-gR1" secondAttribute="bottom" constant="5.5" id="00k-vC-OMH"/>
+                            <constraint firstItem="WVR-kl-pP2" firstAttribute="top" secondItem="CG8-0o-gR1" secondAttribute="bottom" constant="20" id="00k-vC-OMH"/>
                             <constraint firstItem="WY9-Bi-mms" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6SQ-1X-tI0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WVR-kl-pP2" secondAttribute="trailing" constant="60" id="7AC-R0-L9W"/>
-                            <constraint firstItem="CG8-0o-gR1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DMe-eK-X5r"/>
-                            <constraint firstItem="CG8-0o-gR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="H6h-zw-zKF"/>
+                            <constraint firstItem="CG8-0o-gR1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="88" id="DMe-eK-X5r"/>
+                            <constraint firstItem="CG8-0o-gR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H6h-zw-zKF"/>
                             <constraint firstItem="db9-JB-sch" firstAttribute="top" secondItem="WVR-kl-pP2" secondAttribute="bottom" constant="8" id="O9B-Vh-wDo"/>
                             <constraint firstItem="db9-JB-sch" firstAttribute="top" secondItem="WVR-kl-pP2" secondAttribute="bottom" constant="8" id="TKZ-1w-V7E"/>
                             <constraint firstItem="WVR-kl-pP2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="cKv-al-2Gh"/>
@@ -102,7 +103,7 @@
                             <constraint firstItem="db9-JB-sch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="maW-Et-nv6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="db9-JB-sch" secondAttribute="trailing" constant="60" id="oFA-N7-kRv"/>
                             <constraint firstItem="WY9-Bi-mms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tdF-A7-OPA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CG8-0o-gR1" secondAttribute="trailing" constant="70" id="x6a-aW-pYa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CG8-0o-gR1" secondAttribute="trailing" id="x6a-aW-pYa"/>
                             <constraint firstItem="WY9-Bi-mms" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z0L-X6-vTj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="db9-JB-sch" secondAttribute="bottom" constant="20" id="zmi-if-Jip"/>
                         </constraints>
@@ -114,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2748.75" y="77.5"/>
+            <point key="canvasLocation" x="2747.826086956522" y="77.008928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hbp-Ez-5tR">
@@ -137,7 +138,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="drug06.png" width="355" height="354.5"/>
+        <image name="pills09.png" width="763" height="721"/>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

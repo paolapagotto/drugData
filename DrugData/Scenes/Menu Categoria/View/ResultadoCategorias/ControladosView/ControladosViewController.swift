@@ -66,7 +66,7 @@ extension ControladosViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ControladosTableViewCell", for: indexPath) as! ControladosTableViewCell
-        cell.setup(name: categoriaViewModel!.arrayRemedios[indexPath.row])
+        cell.setup(name: categoriaViewModel!.arrayControlados[indexPath.row])
         return cell
     }
     
