@@ -17,11 +17,10 @@ class OrganicoTableViewCell: UITableViewCell {
         self.labelOrganicName.text = name.organico
     }*/
     func setup(name: Categoria) -> Void {
-            if (name.tipoProduto == "Biologicos" || name.tipoProduto == "Biologico" ){
-                self.labelDrugName.text = name.produto
-                self.labelOrganicName.text = name.tipoProduto
-            }
-
+            
+        self.labelDrugName.text = name.produto
+        self.labelOrganicName.text = name.tipoProduto
+            
         }
     override func awakeFromNib() {
         super.awakeFromNib()

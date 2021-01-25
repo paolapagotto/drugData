@@ -12,6 +12,12 @@ import SwiftyJSON
 class CategoriaViewModel {
     
     var arrayRemedios = [Categoria] ()
+    var arrayGenericos = [Categoria] ()
+    var arrayOrganicos = [Categoria] ()
+    var arrayTarjaPreta = [Categoria] ()
+    var arrayTarjaVermelha = [Categoria] ()
+    var arrayControlados = [Categoria] ()
+    var hashControlados: [String: [Categoria]] = [:]
     var hashRemedios: [String: [Categoria]] = [:]
     
     func loadCategoryAPI(completion: @escaping (_ result: Bool, _ error: Error?) -> Void) {
@@ -20,10 +26,30 @@ class CategoriaViewModel {
                            
                            for item in arrayDictionary {
                                let brand = Categoria(json: JSON(item))
+                                self.arrayRemedios.append(brand)
                             
                                 let brandLab = brand.laboratorio
                                 self.hashRemedios[brandLab, default: [Categoria]()].append(brand)
-                               self.arrayRemedios.append(brand)
+                            
+                                let typeProduto = brand.tipoProduto
+                                if typeProduto == "GENÉRICO"{
+                                    self.arrayGenericos.append(brand)
+                                } else if typeProduto == "BIOLÓGICO" || typeProduto == "FITOTERÁPICO"{
+                                    self.arrayOrganicos.append(brand)
+                                }
+                                
+                                let typeControlados = brand.tipoControlados
+                                self.hashControlados[typeControlados, default: [Categoria]()].append(brand)
+                            
+                                if typeControlados == "Tarja PRETA"{
+                                    self.arrayControlados.append(brand)
+                                    self.arrayTarjaPreta.append(brand)
+                                }else if typeControlados == "Tarja VERMELHA"{
+                                    self.arrayControlados.append(brand)
+                                    self.arrayTarjaVermelha.append(brand)
+                                }
+                            
+                                
                            }
                            completion(true, nil)
                        } else {

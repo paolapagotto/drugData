@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4c7-EC-pI4">
-                                <rect key="frame" x="0.0" y="333" width="414" height="505"/>
+                                <rect key="frame" x="0.0" y="333" width="414" height="563"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ControladosTableViewCell" rowHeight="83" id="La7-bI-Eo8" customClass="ControladosTableViewCell" customModule="DrugData" customModuleProvider="target">
@@ -94,11 +94,11 @@
                         <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FnA-7G-66b" firstAttribute="trailing" secondItem="VsR-Wq-Hkg" secondAttribute="trailing" constant="35" id="2I5-4v-Gbt"/>
+                            <constraint firstItem="4c7-EC-pI4" firstAttribute="trailing" secondItem="SEu-dw-YQ0" secondAttribute="trailing" id="4YS-eE-uqt"/>
                             <constraint firstItem="4LT-et-uio" firstAttribute="leading" secondItem="zRJ-zm-203" secondAttribute="leading" id="5cv-R3-uar"/>
                             <constraint firstAttribute="trailing" secondItem="4LT-et-uio" secondAttribute="trailing" id="6fZ-ys-T3m"/>
                             <constraint firstItem="M0o-Ic-ndO" firstAttribute="top" secondItem="FnA-7G-66b" secondAttribute="top" constant="20" id="78L-h5-VVP"/>
-                            <constraint firstItem="SEu-dw-YQ0" firstAttribute="leading" secondItem="4c7-EC-pI4" secondAttribute="leading" id="Jow-zf-Pw9"/>
-                            <constraint firstItem="SEu-dw-YQ0" firstAttribute="trailing" secondItem="4c7-EC-pI4" secondAttribute="trailing" id="OEl-R3-8rf"/>
+                            <constraint firstItem="4c7-EC-pI4" firstAttribute="leading" secondItem="SEu-dw-YQ0" secondAttribute="leading" id="Hcd-Ky-Ila"/>
                             <constraint firstItem="4LT-et-uio" firstAttribute="top" secondItem="Xtd-PI-pcg" secondAttribute="bottom" constant="81.5" id="Qji-Lm-vJu"/>
                             <constraint firstItem="4LT-et-uio" firstAttribute="top" secondItem="VsR-Wq-Hkg" secondAttribute="bottom" constant="80" id="Tmx-m4-FKV"/>
                             <constraint firstItem="M0o-Ic-ndO" firstAttribute="leading" secondItem="Xtd-PI-pcg" secondAttribute="leading" id="jOZ-jH-EuA"/>
@@ -106,10 +106,10 @@
                             <constraint firstItem="4LT-et-uio" firstAttribute="trailing" secondItem="SEu-dw-YQ0" secondAttribute="trailing" id="mfC-X5-SbZ"/>
                             <constraint firstItem="SEu-dw-YQ0" firstAttribute="top" secondItem="4LT-et-uio" secondAttribute="bottom" constant="40" id="nhg-1w-ofx"/>
                             <constraint firstItem="M0o-Ic-ndO" firstAttribute="leading" secondItem="FnA-7G-66b" secondAttribute="leading" constant="35" id="pf7-Zh-qa5"/>
-                            <constraint firstItem="4c7-EC-pI4" firstAttribute="top" secondItem="SEu-dw-YQ0" secondAttribute="bottom" id="pgo-68-TzD"/>
                             <constraint firstItem="Xtd-PI-pcg" firstAttribute="top" secondItem="M0o-Ic-ndO" secondAttribute="bottom" constant="4" id="rsL-Px-qad"/>
+                            <constraint firstItem="4c7-EC-pI4" firstAttribute="top" secondItem="SEu-dw-YQ0" secondAttribute="bottom" id="vYp-Mf-nEh"/>
                             <constraint firstItem="M0o-Ic-ndO" firstAttribute="top" secondItem="VsR-Wq-Hkg" secondAttribute="top" id="xt8-kK-1gU"/>
-                            <constraint firstItem="FnA-7G-66b" firstAttribute="bottom" secondItem="4c7-EC-pI4" secondAttribute="bottom" constant="24" id="y59-eU-19k"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="4c7-EC-pI4" secondAttribute="bottom" constant="-34" id="yWi-Lr-lpR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F74-6b-jil"/>

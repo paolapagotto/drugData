@@ -37,7 +37,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jh8-Kb-6mv">
-                                <rect key="frame" x="0.0" y="331" width="414" height="507"/>
+                                <rect key="frame" x="0.0" y="331" width="414" height="565"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenericoTableViewCell" rowHeight="100" id="X3g-GC-LeV" customClass="GenericoTableViewCell" customModule="DrugData" customModuleProvider="target">
@@ -95,22 +95,22 @@
                         <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lbW-2e-piI" firstAttribute="leading" secondItem="Vs4-uP-eA4" secondAttribute="leading" id="0N2-Qk-WLp"/>
-                            <constraint firstItem="nca-su-nyo" firstAttribute="leading" secondItem="Jh8-Kb-6mv" secondAttribute="leading" id="1lO-yK-d8k"/>
                             <constraint firstItem="Igc-cB-7J7" firstAttribute="leading" secondItem="vgD-VS-K19" secondAttribute="leading" constant="35" id="64s-sm-arv"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Jh8-Kb-6mv" secondAttribute="bottom" constant="-34" id="8Y1-xD-qvG"/>
                             <constraint firstItem="vgD-VS-K19" firstAttribute="trailing" secondItem="Kom-7w-fXj" secondAttribute="trailing" constant="35" id="8dh-Xn-t0q"/>
                             <constraint firstItem="lbW-2e-piI" firstAttribute="top" secondItem="wGh-Yc-9WX" secondAttribute="bottom" constant="81.5" id="9Lm-xx-IB1"/>
                             <constraint firstItem="lbW-2e-piI" firstAttribute="trailing" secondItem="nca-su-nyo" secondAttribute="trailing" id="DLP-ih-bNq"/>
-                            <constraint firstItem="nca-su-nyo" firstAttribute="trailing" secondItem="Jh8-Kb-6mv" secondAttribute="trailing" id="FGi-iW-XX3"/>
                             <constraint firstItem="wGh-Yc-9WX" firstAttribute="top" secondItem="Igc-cB-7J7" secondAttribute="bottom" constant="4" id="LUE-u2-a94"/>
                             <constraint firstAttribute="trailing" secondItem="lbW-2e-piI" secondAttribute="trailing" id="Ouy-Cn-pJQ"/>
-                            <constraint firstItem="Jh8-Kb-6mv" firstAttribute="top" secondItem="nca-su-nyo" secondAttribute="bottom" constant="10" id="YTt-iE-kGb"/>
+                            <constraint firstItem="Jh8-Kb-6mv" firstAttribute="leading" secondItem="nca-su-nyo" secondAttribute="leading" id="WiO-PY-WUf"/>
                             <constraint firstItem="Igc-cB-7J7" firstAttribute="leading" secondItem="wGh-Yc-9WX" secondAttribute="leading" id="ZYM-CA-2hZ"/>
                             <constraint firstItem="lbW-2e-piI" firstAttribute="top" secondItem="Kom-7w-fXj" secondAttribute="bottom" constant="80" id="b3a-px-wz9"/>
-                            <constraint firstItem="vgD-VS-K19" firstAttribute="bottom" secondItem="Jh8-Kb-6mv" secondAttribute="bottom" constant="24" id="hh1-i5-Y5X"/>
                             <constraint firstItem="Igc-cB-7J7" firstAttribute="top" secondItem="Kom-7w-fXj" secondAttribute="top" id="huQ-1f-AYb"/>
                             <constraint firstItem="Igc-cB-7J7" firstAttribute="top" secondItem="vgD-VS-K19" secondAttribute="top" constant="20" id="huW-i9-Y7r"/>
                             <constraint firstItem="lbW-2e-piI" firstAttribute="leading" secondItem="nca-su-nyo" secondAttribute="leading" id="llh-jI-ZWi"/>
                             <constraint firstItem="nca-su-nyo" firstAttribute="top" secondItem="lbW-2e-piI" secondAttribute="bottom" constant="40" id="mfJ-2W-Fbe"/>
+                            <constraint firstItem="Jh8-Kb-6mv" firstAttribute="trailing" secondItem="nca-su-nyo" secondAttribute="trailing" id="ryr-It-cbe"/>
+                            <constraint firstItem="Jh8-Kb-6mv" firstAttribute="top" secondItem="nca-su-nyo" secondAttribute="bottom" constant="10" id="tCt-lI-QlQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X0j-32-FTH"/>

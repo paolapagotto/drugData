@@ -36,18 +36,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ct2-PQ-pId">
-                                <rect key="frame" x="0.0" y="331" width="414" height="507"/>
+                                <rect key="frame" x="0.0" y="331" width="414" height="565"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LaboratorioTableViewCell" id="r5s-Yb-oJb" customClass="LaboratorioTableViewCell" customModule="DrugData" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="53"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="53.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r5s-Yb-oJb" id="Ism-qV-tTY">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pq8-KC-AxC">
-                                                    <rect key="frame" x="36" y="16" width="342" height="21"/>
+                                                    <rect key="frame" x="36" y="16" width="342" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -86,20 +86,20 @@
                             <constraint firstAttribute="trailing" secondItem="WhQ-dd-6yN" secondAttribute="trailing" id="34d-FQ-lqW"/>
                             <constraint firstItem="eDh-Xz-2ps" firstAttribute="top" secondItem="See-mS-vG9" secondAttribute="bottom" constant="4" id="4rB-Kw-4SK"/>
                             <constraint firstItem="WhQ-dd-6yN" firstAttribute="trailing" secondItem="KGd-sU-Ci8" secondAttribute="trailing" id="76s-iT-rye"/>
-                            <constraint firstItem="ct2-PQ-pId" firstAttribute="top" secondItem="KGd-sU-Ci8" secondAttribute="bottom" constant="10" id="7FG-vX-Rug"/>
                             <constraint firstItem="WhQ-dd-6yN" firstAttribute="top" secondItem="eDh-Xz-2ps" secondAttribute="bottom" constant="81.5" id="BzE-1T-CkE"/>
                             <constraint firstItem="See-mS-vG9" firstAttribute="top" secondItem="UZC-jr-F5Z" secondAttribute="top" id="BzF-rD-HCc"/>
                             <constraint firstItem="WhQ-dd-6yN" firstAttribute="leading" secondItem="KGd-sU-Ci8" secondAttribute="leading" id="Dgt-Ji-Hej"/>
+                            <constraint firstItem="ct2-PQ-pId" firstAttribute="leading" secondItem="KGd-sU-Ci8" secondAttribute="leading" id="EXh-Za-7LK"/>
+                            <constraint firstItem="ct2-PQ-pId" firstAttribute="trailing" secondItem="KGd-sU-Ci8" secondAttribute="trailing" id="HeU-NW-ZSz"/>
                             <constraint firstItem="See-mS-vG9" firstAttribute="leading" secondItem="eDh-Xz-2ps" secondAttribute="leading" id="Lxk-75-K0g"/>
                             <constraint firstItem="KGd-sU-Ci8" firstAttribute="top" secondItem="WhQ-dd-6yN" secondAttribute="bottom" constant="40" id="M8r-5Y-Neb"/>
-                            <constraint firstItem="abT-kH-Shy" firstAttribute="bottom" secondItem="ct2-PQ-pId" secondAttribute="bottom" constant="24" id="SJF-Xc-9F2"/>
                             <constraint firstItem="See-mS-vG9" firstAttribute="top" secondItem="abT-kH-Shy" secondAttribute="top" constant="20" id="kUy-f3-nh9"/>
-                            <constraint firstItem="KGd-sU-Ci8" firstAttribute="leading" secondItem="ct2-PQ-pId" secondAttribute="leading" id="mIS-de-EH6"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ct2-PQ-pId" secondAttribute="bottom" constant="-34" id="npf-Ha-uTf"/>
                             <constraint firstItem="WhQ-dd-6yN" firstAttribute="leading" secondItem="iaf-5m-oLu" secondAttribute="leading" id="ofS-fC-Tfb"/>
                             <constraint firstItem="WhQ-dd-6yN" firstAttribute="top" secondItem="UZC-jr-F5Z" secondAttribute="bottom" constant="80" id="qIL-Ky-NAd"/>
+                            <constraint firstItem="ct2-PQ-pId" firstAttribute="top" secondItem="KGd-sU-Ci8" secondAttribute="bottom" constant="10" id="sjM-M4-ARs"/>
                             <constraint firstItem="abT-kH-Shy" firstAttribute="trailing" secondItem="UZC-jr-F5Z" secondAttribute="trailing" constant="35" id="w23-NE-L8E"/>
                             <constraint firstItem="See-mS-vG9" firstAttribute="leading" secondItem="abT-kH-Shy" secondAttribute="leading" constant="35" id="yNY-RL-ZOB"/>
-                            <constraint firstItem="KGd-sU-Ci8" firstAttribute="trailing" secondItem="ct2-PQ-pId" secondAttribute="trailing" id="zbt-Iz-788"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m2I-KA-FhB"/>

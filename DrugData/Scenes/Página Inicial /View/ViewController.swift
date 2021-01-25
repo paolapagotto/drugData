@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageViewLogo.image = UIImage(named: "drug06.png")
+        imageViewLogo.image = UIImage(named: "pills09.png")
     }
 
 

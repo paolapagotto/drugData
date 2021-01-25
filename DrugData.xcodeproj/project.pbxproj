@@ -12,6 +12,8 @@
 		84672DC325BC9D9A00B1C21C /* pills03.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DC225BC9D9A00B1C21C /* pills03.png */; };
 		84672DC825BCA48E00B1C21C /* pills02.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DC725BCA48E00B1C21C /* pills02.png */; };
 		84672DCD25BCA60D00B1C21C /* pills05.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DCC25BCA60D00B1C21C /* pills05.png */; };
+		84672DFD25BF33B100B1C21C /* pills09.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DFC25BF33B000B1C21C /* pills09.png */; };
+		84672E0225BF408400B1C21C /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E0125BF408400B1C21C /* facebook.png */; };
 		E00D826CB978BA7A11BA3076 /* Pods_DrugData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */; };
 		E3DBB907256DF81900A1869B /* Cabecalho.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBB9742565B5D100A5550E /* Cabecalho.swift */; };
 		E3DBB90B256DF81E00A1869B /* Remedios.swift in Sources */ = {isa = PBXBuildFile; fileRef = F232BC03256B30BD00460ADF /* Remedios.swift */; };
@@ -101,6 +103,8 @@
 		84672DC225BC9D9A00B1C21C /* pills03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills03.png; sourceTree = "<group>"; };
 		84672DC725BCA48E00B1C21C /* pills02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills02.png; sourceTree = "<group>"; };
 		84672DCC25BCA60D00B1C21C /* pills05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills05.png; sourceTree = "<group>"; };
+		84672DFC25BF33B000B1C21C /* pills09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills09.png; sourceTree = "<group>"; };
+		84672E0125BF408400B1C21C /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4626E0A19BD7FDA142D5ABB /* Pods-DrugData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData.release.xcconfig"; path = "Target Support Files/Pods-DrugData/Pods-DrugData.release.xcconfig"; sourceTree = "<group>"; };
 		B7005B2C3AE8F4F5FDC304FE /* Pods-DrugData-DrugDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData-DrugDataUITests.release.xcconfig"; path = "Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -426,6 +430,8 @@
 				84672DC725BCA48E00B1C21C /* pills02.png */,
 				84672DC225BC9D9A00B1C21C /* pills03.png */,
 				84672DCC25BCA60D00B1C21C /* pills05.png */,
+				84672DFC25BF33B000B1C21C /* pills09.png */,
+				84672E0125BF408400B1C21C /* facebook.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -945,6 +951,7 @@
 				F2E282D8255C8DBD00460304 /* CadastroViewController.storyboard in Resources */,
 				84672DC325BC9D9A00B1C21C /* pills03.png in Resources */,
 				F23C8EEE256AD14D0094FA87 /* GenericoViewController.storyboard in Resources */,
+				84672E0225BF408400B1C21C /* facebook.png in Resources */,
 				F2D2D57F255E0F800025BEF3 /* FavoritosViewController.storyboard in Resources */,
 				F2DF0F6C255C92B600F43B54 /* EsqueceuASenhaViewController.storyboard in Resources */,
 				F2E2C92C258BF22200FF0982 /* drug03.png in Resources */,
@@ -962,6 +969,7 @@
 				F2E282C0255C89BB00460304 /* LoginViewController.storyboard in Resources */,
 				F232BBFC256B2B7900460ADF /* LocalizacaoViewController.storyboard in Resources */,
 				F23C8EDC256ACFD90094FA87 /* OrganicoViewController.storyboard in Resources */,
+				84672DFD25BF33B100B1C21C /* pills09.png in Resources */,
 				F23C8F15256ADD240094FA87 /* PerfilViewController.storyboard in Resources */,
 				F233D0AB2559E99500D5CE2D /* Main.storyboard in Resources */,
 				F2E2C931258BFC4900FF0982 /* drug04.png in Resources */,

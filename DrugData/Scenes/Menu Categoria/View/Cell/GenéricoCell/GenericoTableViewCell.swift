@@ -13,10 +13,10 @@ class GenericoTableViewCell: UITableViewCell {
     @IBOutlet weak var labelGenericName: UILabel!
     
     func setup(name: Categoria){
-        if name.tipoProduto == "GENÉRICO"{
-            self.labelNameDrug.text = name.produto
-            self.labelGenericName.text = name.tipoProduto
-        }
+        
+        self.labelNameDrug.text = name.produto
+        self.labelGenericName.text = name.tipoProduto
+        
         
     }
 
