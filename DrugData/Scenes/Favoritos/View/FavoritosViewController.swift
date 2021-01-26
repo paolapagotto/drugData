@@ -17,6 +17,7 @@ class FavoritosViewController: UIViewController, NSFetchedResultsControllerDeleg
     @IBOutlet weak var imageViewAvatar: UIImageView!
     @IBOutlet weak var tableViewFavoritos: UITableView!
     
+    
     // MARK: Variáveis
     var array = [Cabecalho] ()
     var arrayMed = [Remedios] ()

@@ -56,7 +56,7 @@ extension GenericoViewController: UITableViewDelegate{
 }
 extension GenericoViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let allGeneric = categoriaViewModel?.numberOfRows() {
+        if let allGeneric = categoriaViewModel?.numberOfRowsGenericos() {
 
                     return allGeneric
                 }

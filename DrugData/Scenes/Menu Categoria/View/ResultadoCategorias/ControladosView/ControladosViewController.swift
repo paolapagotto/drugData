@@ -57,7 +57,7 @@ extension ControladosViewController: UITableViewDelegate{
 extension ControladosViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        if let allControll = categoriaViewModel?.numberOfRows() {
+        if let allControll = categoriaViewModel?.numberOfRowsControlados() {
                     return allControll
                 }
                 
