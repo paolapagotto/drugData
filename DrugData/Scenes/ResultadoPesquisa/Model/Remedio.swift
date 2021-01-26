@@ -22,4 +22,8 @@ class Remedio {
             self.productType = json[ "TIPO DE PRODUTO"].stringValue
             //self.apresentacao = json["APRESENTACAO"].stringValue
         }
+    
+    func resultOfSearch(){
+        
+    }
 }

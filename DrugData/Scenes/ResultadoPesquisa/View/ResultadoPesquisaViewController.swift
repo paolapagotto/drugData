@@ -70,7 +70,7 @@ extension ResultadoPesquisaViewController: UITableViewDelegate {
 }
 extension ResultadoPesquisaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let allDrugs = resultadoPesquisaViewModel?.numberOfRows() {
+        if let allDrugs = resultadoPesquisaViewModel?.numberOfRowsSearchByName() {
                     return allDrugs
                 }
                 
@@ -80,7 +80,7 @@ extension ResultadoPesquisaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NomeRemediosTableViewCell", for: indexPath) as! NomeRemediosTableViewCell
         
-        cell.setup(nameMedice: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].produto, nameLaboratory: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].nameLaboratory, productType: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].productType )
+        cell.setup(nameMedice: resultadoPesquisaViewModel!.arraySearchByName[indexPath.row].produto, nameLaboratory: resultadoPesquisaViewModel!.arraySearchByName[indexPath.row].nameLaboratory, productType: resultadoPesquisaViewModel!.arraySearchByName[indexPath.row].productType )
         return cell
         }
     
