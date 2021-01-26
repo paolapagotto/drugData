@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PesquisarViewController: UIViewController {
+class PesquisarViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var labelName: UILabel!
@@ -19,6 +19,8 @@ class PesquisarViewController: UIViewController {
     @IBOutlet weak var textFieldFilterSubstance: UITextField!
     @IBOutlet weak var textFieldFilterCategory: UITextField!
     
+    
+    
     var array = [Cabecalho] ()
     
     func setup(dados: Cabecalho) {
@@ -27,14 +29,23 @@ class PesquisarViewController: UIViewController {
         imageViewAvatar.image = UIImage(named: "1.png")
     }
     
+    func reloadTextFieldSearch() {
+        return textFieldNameMedice.text = ""
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")))
+        
+        textFieldNameMedice.delegate = self
+        
     }
     @IBAction func buttonSearchMedice(_ sender: Any) {
         if let search = UIStoryboard(name: "ResultadoPesquisaViewController", bundle: nil).instantiateInitialViewController() as? ResultadoPesquisaViewController{
             navigationController?.pushViewController(search, animated: true)
         }
+        reloadTextFieldSearch()
     }
 }

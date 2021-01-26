@@ -34,19 +34,22 @@ class CategoriaViewController: UIViewController {
     }
     
     @IBAction func buttonGeneric(_ sender: Any) {
-        if let filterLaboratory = UIStoryboard(name: "GenericoViewController", bundle: nil).instantiateInitialViewController() as? GenericoViewController {
+        if let filterLaboratory = UIStoryboard(name: "GenericoViewController", bundle:
+            nil).instantiateInitialViewController() as? GenericoViewController {
             navigationController?.pushViewController(filterLaboratory, animated: true)
         }
     }
     
     @IBAction func buttonControlMedice(_ sender: Any) {
-        if let filterLaboratory = UIStoryboard(name: "ControladosViewController", bundle: nil).instantiateInitialViewController() as? ControladosViewController {
+        if let filterLaboratory = UIStoryboard(name: "ControladosViewController", bundle:
+            nil).instantiateInitialViewController() as? ControladosViewController {
             navigationController?.pushViewController(filterLaboratory, animated: true)
         }
     }
     
     @IBAction func buttonOrganic(_ sender: Any) {
-        if let filterLaboratory = UIStoryboard(name: "OrganicoViewController", bundle: nil).instantiateInitialViewController() as? OrganicoViewController {
+        if let filterLaboratory = UIStoryboard(name: "OrganicoViewController", bundle:
+            nil).instantiateInitialViewController() as? OrganicoViewController {
             navigationController?.pushViewController(filterLaboratory, animated: true)
         }
     }

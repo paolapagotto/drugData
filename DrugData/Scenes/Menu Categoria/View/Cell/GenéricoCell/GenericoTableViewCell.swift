@@ -11,10 +11,14 @@ class GenericoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelNameDrug: UILabel!
     @IBOutlet weak var labelGenericName: UILabel!
+    @IBOutlet weak var labelLaboratoryName: UILabel!
     
     func setup(name: Categoria){
+        
         self.labelNameDrug.text = name.produto
-        self.labelGenericName.text = name.generico
+        self.labelGenericName.text = name.tipoProduto
+        self.labelLaboratoryName.text = name.laboratorio
+        
     }
 
     override func awakeFromNib() {

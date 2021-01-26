@@ -14,8 +14,12 @@ class ControladosTableViewCell: UITableViewCell {
     
     func setup(name: Categoria){
         labelDrugName.text = name.produto
-        labelControlledName.text = name.controlados
+        labelControlledName.text = name.tipoControlados
+        
+        
     }
+    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

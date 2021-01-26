@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		58990A8382660EB73440A4EF /* Pods_DrugData_DrugDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B93F1C2797407C475AAF07 /* Pods_DrugData_DrugDataUITests.framework */; };
 		842DFDB225ABEDF4005692E4 /* drug06.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DFDB125ABEDF3005692E4 /* drug06.png */; };
+		84672DC325BC9D9A00B1C21C /* pills03.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DC225BC9D9A00B1C21C /* pills03.png */; };
+		84672DC825BCA48E00B1C21C /* pills02.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DC725BCA48E00B1C21C /* pills02.png */; };
+		84672DCD25BCA60D00B1C21C /* pills05.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DCC25BCA60D00B1C21C /* pills05.png */; };
+		84672DFD25BF33B100B1C21C /* pills09.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DFC25BF33B000B1C21C /* pills09.png */; };
+		84672E0225BF408400B1C21C /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E0125BF408400B1C21C /* facebook.png */; };
+		84672E0725C06EC000B1C21C /* imgtarjavermelha.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E0625C06EBF00B1C21C /* imgtarjavermelha.png */; };
+		84672E0C25C06ED000B1C21C /* imgtarjapreta.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E0B25C06ECF00B1C21C /* imgtarjapreta.png */; };
+		84672E1125C06EED00B1C21C /* imggenericotarjapreta.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1025C06EEC00B1C21C /* imggenericotarjapreta.png */; };
+		84672E1325C06F0200B1C21C /* imggenerico.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1225C06F0200B1C21C /* imggenerico.png */; };
+		84672E1825C06F2500B1C21C /* imggenericotarjavermelha.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1725C06F2400B1C21C /* imggenericotarjavermelha.png */; };
 		E00D826CB978BA7A11BA3076 /* Pods_DrugData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */; };
 		E3DBB907256DF81900A1869B /* Cabecalho.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBB9742565B5D100A5550E /* Cabecalho.swift */; };
 		E3DBB90B256DF81E00A1869B /* Remedios.swift in Sources */ = {isa = PBXBuildFile; fileRef = F232BC03256B30BD00460ADF /* Remedios.swift */; };
@@ -95,6 +105,16 @@
 		3C157B864814879795A122AD /* Pods-DrugData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData.debug.xcconfig"; path = "Target Support Files/Pods-DrugData/Pods-DrugData.debug.xcconfig"; sourceTree = "<group>"; };
 		5D7E08AFB0D948E57B22B260 /* Pods-DrugDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugDataTests.debug.xcconfig"; path = "Target Support Files/Pods-DrugDataTests/Pods-DrugDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		842DFDB125ABEDF3005692E4 /* drug06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drug06.png; sourceTree = "<group>"; };
+		84672DC225BC9D9A00B1C21C /* pills03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills03.png; sourceTree = "<group>"; };
+		84672DC725BCA48E00B1C21C /* pills02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills02.png; sourceTree = "<group>"; };
+		84672DCC25BCA60D00B1C21C /* pills05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills05.png; sourceTree = "<group>"; };
+		84672DFC25BF33B000B1C21C /* pills09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills09.png; sourceTree = "<group>"; };
+		84672E0125BF408400B1C21C /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		84672E0625C06EBF00B1C21C /* imgtarjavermelha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgtarjavermelha.png; sourceTree = "<group>"; };
+		84672E0B25C06ECF00B1C21C /* imgtarjapreta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgtarjapreta.png; sourceTree = "<group>"; };
+		84672E1025C06EEC00B1C21C /* imggenericotarjapreta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenericotarjapreta.png; sourceTree = "<group>"; };
+		84672E1225C06F0200B1C21C /* imggenerico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenerico.png; sourceTree = "<group>"; };
+		84672E1725C06F2400B1C21C /* imggenericotarjavermelha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenericotarjavermelha.png; sourceTree = "<group>"; };
 		98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4626E0A19BD7FDA142D5ABB /* Pods-DrugData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData.release.xcconfig"; path = "Target Support Files/Pods-DrugData/Pods-DrugData.release.xcconfig"; sourceTree = "<group>"; };
 		B7005B2C3AE8F4F5FDC304FE /* Pods-DrugData-DrugDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData-DrugDataUITests.release.xcconfig"; path = "Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -417,6 +437,16 @@
 				F2E2C92B258BF22200FF0982 /* drug03.png */,
 				F2E2C930258BFC4900FF0982 /* drug04.png */,
 				842DFDB125ABEDF3005692E4 /* drug06.png */,
+				84672DC725BCA48E00B1C21C /* pills02.png */,
+				84672DC225BC9D9A00B1C21C /* pills03.png */,
+				84672DCC25BCA60D00B1C21C /* pills05.png */,
+				84672DFC25BF33B000B1C21C /* pills09.png */,
+				84672E1225C06F0200B1C21C /* imggenerico.png */,
+				84672E1025C06EEC00B1C21C /* imggenericotarjapreta.png */,
+				84672E1725C06F2400B1C21C /* imggenericotarjavermelha.png */,
+				84672E0B25C06ECF00B1C21C /* imgtarjapreta.png */,
+				84672E0625C06EBF00B1C21C /* imgtarjavermelha.png */,
+				84672E0125BF408400B1C21C /* facebook.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -934,15 +964,20 @@
 				F206AECF25B1C05000FDE97A /* GoogleService-Info.plist in Resources */,
 				F2E2C927258BE94700FF0982 /* drug01.png in Resources */,
 				F2E282D8255C8DBD00460304 /* CadastroViewController.storyboard in Resources */,
+				84672E0725C06EC000B1C21C /* imgtarjavermelha.png in Resources */,
+				84672DC325BC9D9A00B1C21C /* pills03.png in Resources */,
 				F23C8EEE256AD14D0094FA87 /* GenericoViewController.storyboard in Resources */,
+				84672E0225BF408400B1C21C /* facebook.png in Resources */,
 				F2D2D57F255E0F800025BEF3 /* FavoritosViewController.storyboard in Resources */,
 				F2DF0F6C255C92B600F43B54 /* EsqueceuASenhaViewController.storyboard in Resources */,
 				F2E2C92C258BF22200FF0982 /* drug03.png in Resources */,
 				842DFDB225ABEDF4005692E4 /* drug06.png in Resources */,
 				F233D0B02559E99900D5CE2D /* LaunchScreen.storyboard in Resources */,
 				F247408425670F0B00D18DE0 /* ControladosGeralTableViewCell.xib in Resources */,
+				84672E0C25C06ED000B1C21C /* imgtarjapreta.png in Resources */,
 				F2D2D571255E0C420025BEF3 /* CategoriaViewController.storyboard in Resources */,
 				F2E2C926258BE94700FF0982 /* drug02.png in Resources */,
+				84672DC825BCA48E00B1C21C /* pills02.png in Resources */,
 				F232BC21256B382100460ADF /* DetalhesMedicamentoViewController.storyboard in Resources */,
 				F2D2D563255E08280025BEF3 /* PesquisarViewController.storyboard in Resources */,
 				F2E745C8256C44E60031D731 /* EditarPerfilViewController.storyboard in Resources */,
@@ -951,9 +986,14 @@
 				F2E282C0255C89BB00460304 /* LoginViewController.storyboard in Resources */,
 				F232BBFC256B2B7900460ADF /* LocalizacaoViewController.storyboard in Resources */,
 				F23C8EDC256ACFD90094FA87 /* OrganicoViewController.storyboard in Resources */,
+				84672E1325C06F0200B1C21C /* imggenerico.png in Resources */,
+				84672E1125C06EED00B1C21C /* imggenericotarjapreta.png in Resources */,
+				84672DFD25BF33B100B1C21C /* pills09.png in Resources */,
 				F23C8F15256ADD240094FA87 /* PerfilViewController.storyboard in Resources */,
+				84672E1825C06F2500B1C21C /* imggenericotarjavermelha.png in Resources */,
 				F233D0AB2559E99500D5CE2D /* Main.storyboard in Resources */,
 				F2E2C931258BFC4900FF0982 /* drug04.png in Resources */,
+				84672DCD25BCA60D00B1C21C /* pills05.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
