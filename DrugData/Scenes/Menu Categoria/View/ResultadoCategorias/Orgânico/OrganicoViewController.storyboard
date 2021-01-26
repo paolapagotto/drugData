@@ -35,11 +35,11 @@
                                     <constraint firstAttribute="height" constant="562" id="7lD-dp-Xua"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrganicoTableViewCell" rowHeight="98" id="0Vp-If-fn1" customClass="OrganicoTableViewCell" customModule="DrugData" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="98"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrganicoTableViewCell" rowHeight="126" id="0Vp-If-fn1" customClass="OrganicoTableViewCell" customModule="DrugData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Vp-If-fn1" id="7uh-LN-zpV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n95-GK-Zny">
@@ -54,20 +54,29 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-v4-Iyp">
+                                                    <rect key="frame" x="36" y="78" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96549629579999996" green="0.99759989609999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="n95-GK-Zny" secondAttribute="trailing" constant="16" id="Gnj-tf-kdJ"/>
-                                                <constraint firstItem="iba-3s-AKV" firstAttribute="top" secondItem="n95-GK-Zny" secondAttribute="bottom" constant="1" id="K8t-zC-efA"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="iba-3s-AKV" secondAttribute="trailing" constant="16" id="L71-pa-H6G"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="iba-3s-AKV" secondAttribute="bottom" constant="17" id="MJs-V9-t6m"/>
-                                                <constraint firstItem="iba-3s-AKV" firstAttribute="leading" secondItem="7uh-LN-zpV" secondAttribute="leadingMargin" constant="16" id="cbI-7Y-YAr"/>
-                                                <constraint firstItem="n95-GK-Zny" firstAttribute="leading" secondItem="7uh-LN-zpV" secondAttribute="leadingMargin" constant="16" id="fd4-aO-Dm5"/>
-                                                <constraint firstItem="n95-GK-Zny" firstAttribute="top" secondItem="7uh-LN-zpV" secondAttribute="topMargin" constant="16" id="l0Z-6Q-jGW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cAa-v4-Iyp" secondAttribute="bottom" constant="16" id="0oe-32-btZ"/>
+                                                <constraint firstItem="n95-GK-Zny" firstAttribute="centerX" secondItem="7uh-LN-zpV" secondAttribute="centerX" id="AEn-wS-3WQ"/>
+                                                <constraint firstItem="iba-3s-AKV" firstAttribute="leading" secondItem="cAa-v4-Iyp" secondAttribute="leading" id="Fqy-W7-F3c"/>
+                                                <constraint firstItem="n95-GK-Zny" firstAttribute="trailing" secondItem="iba-3s-AKV" secondAttribute="trailing" id="JA1-IS-ZR5"/>
+                                                <constraint firstItem="n95-GK-Zny" firstAttribute="top" secondItem="7uh-LN-zpV" secondAttribute="topMargin" constant="16" id="Kpc-Zc-KrW"/>
+                                                <constraint firstItem="iba-3s-AKV" firstAttribute="top" secondItem="n95-GK-Zny" secondAttribute="bottom" constant="1" id="L27-Ql-Dz8"/>
+                                                <constraint firstItem="cAa-v4-Iyp" firstAttribute="top" secondItem="iba-3s-AKV" secondAttribute="bottom" constant="8" id="MWl-BR-YlD"/>
+                                                <constraint firstItem="n95-GK-Zny" firstAttribute="leading" secondItem="7uh-LN-zpV" secondAttribute="leadingMargin" constant="16" id="hiS-PH-RUj"/>
+                                                <constraint firstItem="n95-GK-Zny" firstAttribute="leading" secondItem="iba-3s-AKV" secondAttribute="leading" id="mfi-mm-tJd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelDrugName" destination="n95-GK-Zny" id="8uh-M0-iez"/>
+                                            <outlet property="labelLaboratoryName" destination="cAa-v4-Iyp" id="jGW-G9-4Ff"/>
                                             <outlet property="labelOrganicName" destination="iba-3s-AKV" id="lEI-9n-uWc"/>
                                         </connections>
                                     </tableViewCell>
