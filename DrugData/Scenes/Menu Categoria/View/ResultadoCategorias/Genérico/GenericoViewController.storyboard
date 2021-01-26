@@ -40,21 +40,27 @@
                                 <rect key="frame" x="0.0" y="331" width="414" height="565"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenericoTableViewCell" rowHeight="100" id="X3g-GC-LeV" customClass="GenericoTableViewCell" customModule="DrugData" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenericoTableViewCell" rowHeight="130" id="X3g-GC-LeV" customClass="GenericoTableViewCell" customModule="DrugData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X3g-GC-LeV" id="dbA-ph-rq8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTR-ez-gJi">
-                                                    <rect key="frame" x="36" y="27" width="342" height="21"/>
+                                                    <rect key="frame" x="36" y="27" width="46" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                     <color key="textColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-O6-rKH">
-                                                    <rect key="frame" x="36" y="54" width="342" height="21"/>
+                                                    <rect key="frame" x="36" y="54.5" width="41.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNM-hN-0hw">
+                                                    <rect key="frame" x="36" y="82.5" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -62,17 +68,18 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.98492100750045009" green="1" blue="0.83410524206722347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="qNK-O6-rKH" secondAttribute="trailing" constant="16" id="QGS-Lg-wH6"/>
-                                                <constraint firstItem="GTR-ez-gJi" firstAttribute="top" secondItem="dbA-ph-rq8" secondAttribute="topMargin" constant="16" id="VbO-jN-BFm"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GTR-ez-gJi" secondAttribute="trailing" constant="16" id="XMe-tq-8zf"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="qNK-O6-rKH" secondAttribute="bottom" constant="14" id="Y6J-bX-S9r"/>
-                                                <constraint firstItem="GTR-ez-gJi" firstAttribute="leading" secondItem="dbA-ph-rq8" secondAttribute="leadingMargin" constant="16" id="Zwh-hj-Xlz"/>
-                                                <constraint firstItem="qNK-O6-rKH" firstAttribute="leading" secondItem="dbA-ph-rq8" secondAttribute="leadingMargin" constant="16" id="x2Z-mT-7hp"/>
-                                                <constraint firstItem="qNK-O6-rKH" firstAttribute="top" secondItem="GTR-ez-gJi" secondAttribute="bottom" constant="6" id="z4c-jC-Rbh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kNM-hN-0hw" secondAttribute="bottom" constant="16" id="02J-3b-hVr"/>
+                                                <constraint firstItem="GTR-ez-gJi" firstAttribute="top" secondItem="dbA-ph-rq8" secondAttribute="topMargin" constant="16" id="FYc-JX-MWC"/>
+                                                <constraint firstItem="qNK-O6-rKH" firstAttribute="top" secondItem="GTR-ez-gJi" secondAttribute="bottom" constant="7" id="Fxp-CM-cZF"/>
+                                                <constraint firstItem="kNM-hN-0hw" firstAttribute="leading" secondItem="dbA-ph-rq8" secondAttribute="leadingMargin" constant="16" id="GnU-b4-ApE"/>
+                                                <constraint firstItem="kNM-hN-0hw" firstAttribute="top" secondItem="qNK-O6-rKH" secondAttribute="bottom" constant="7" id="JL6-ms-UsT"/>
+                                                <constraint firstItem="qNK-O6-rKH" firstAttribute="leading" secondItem="dbA-ph-rq8" secondAttribute="leadingMargin" constant="16" id="jLI-Lv-NfV"/>
+                                                <constraint firstItem="GTR-ez-gJi" firstAttribute="leading" secondItem="dbA-ph-rq8" secondAttribute="leadingMargin" constant="16" id="ptx-e3-J90"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelGenericName" destination="qNK-O6-rKH" id="abA-QG-VcT"/>
+                                            <outlet property="labelLaboratoryName" destination="kNM-hN-0hw" id="FEa-hR-XfU"/>
                                             <outlet property="labelNameDrug" destination="GTR-ez-gJi" id="A36-Lk-Ax5"/>
                                         </connections>
                                     </tableViewCell>
