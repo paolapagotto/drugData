@@ -62,4 +62,17 @@ class CategoriaViewModel {
     func numberOfRows() -> Int {
             return arrayRemedios.count
         }
+    func numberOfRowsControlados() -> Int {
+            return arrayControlados.count
+        }
+    func numberOfRowsGenericos() -> Int {
+            return arrayGenericos.count
+        }
+    func numberOfRowsOrganicos() -> Int {
+            return arrayOrganicos.count
+        }
+    func numberOfRowsLaboratorios() -> Int {
+        print("\(hashRemedios.keys.count)")
+        return hashRemedios.keys.count
+        }
 }

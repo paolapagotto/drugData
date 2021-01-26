@@ -55,7 +55,7 @@ extension OrganicoViewController: UITableViewDelegate{
 }
 extension OrganicoViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let allOrganic = categoriaViewModel?.numberOfRows() {
+        if let allOrganic = categoriaViewModel?.numberOfRowsOrganicos() {
                     return allOrganic
                 }
                 

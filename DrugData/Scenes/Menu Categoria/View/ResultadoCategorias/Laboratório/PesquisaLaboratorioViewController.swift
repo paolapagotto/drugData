@@ -58,7 +58,7 @@ extension PesquisaLaboratorioViewController: UITableViewDelegate{
 }
 extension PesquisaLaboratorioViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let allLabs = categoriaViewModel?.numberOfRows() {
+        if let allLabs = categoriaViewModel?.numberOfRowsLaboratorios() {
 //            if searching {
 //                return searchLaboratories.count
 //            }
