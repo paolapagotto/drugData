@@ -12,8 +12,9 @@ import SwiftyJSON
 
 class ResultadoPesquisaViewModel {
     
-   
+    var textSearch : String = ""
     var arrayRemedios = [Remedio] ();
+    var arraySearchByName = [Remedio] ()
     var hashRemedios: [String: [Remedio]] = [:]
     
     // MARK: Métodos
@@ -28,6 +29,8 @@ class ResultadoPesquisaViewModel {
                                 let brandLab = brand.nameLaboratory
                                 self.hashRemedios[brandLab, default: [Remedio]()].append(brand)
                                 self.arrayRemedios.append(brand)
+                            
+                                self.searchByName(name: self.textSearch)
                            }
                         
                         
@@ -40,8 +43,20 @@ class ResultadoPesquisaViewModel {
                    }
                    
                }
+    func searchByName(name: String){
+        let brand = Remedio(json: JSON())
+        if name.contains(brand.produto){
+            self.arraySearchByName.append(brand)
+        } else if brand.produto.contains(name){
+            self.arraySearchByName.append(brand)
+        }
+    }
+    
     func numberOfRows() -> Int {
             return arrayRemedios.count
         }
     
+    func numberOfRowsSearchByName() -> Int {
+            return arraySearchByName.count
+        }
 }
