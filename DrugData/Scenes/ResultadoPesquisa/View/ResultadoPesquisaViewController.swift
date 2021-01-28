@@ -33,7 +33,7 @@ class ResultadoPesquisaViewController: UIViewController {
         tableViewResult.delegate = self
         tableViewResult.dataSource = self
         
-        setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")) )
+        
         
         loadBrandData()
     }
@@ -80,7 +80,7 @@ extension ResultadoPesquisaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NomeRemediosTableViewCell", for: indexPath) as! NomeRemediosTableViewCell
         
-        cell.setup(nameMedice: resultadoPesquisaViewModel!.arraySearchByName[indexPath.row].produto, nameLaboratory: resultadoPesquisaViewModel!.arraySearchByName[indexPath.row].nameLaboratory, productType: resultadoPesquisaViewModel!.arraySearchByName[indexPath.row].productType )
+        cell.setup(nameMedice: resultadoPesquisaViewModel!.arraySearchByName[indexPath.row].produto, nameLaboratory: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].nameLaboratory, productType: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].productType )
         return cell
         }
     

@@ -34,7 +34,7 @@ class OrganicoViewController: UIViewController {
         tableViewOrganic.delegate = self
         tableViewOrganic.dataSource = self
 
-        setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")))
+        
         
         loadOrganicData()
     }

@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+enum ProviderType: String {
+    case basic
+}
+
 class PesquisarViewController: UIViewController, UITextFieldDelegate {
 
     
@@ -20,24 +25,32 @@ class PesquisarViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldFilterCategory: UITextField!
     
     
+    private let email: String = ""
+    //private let provider: ProviderType
     
-    var array = [Cabecalho] ()
     
-    func setup(dados: Cabecalho) {
-        labelName.text = dados.name
-        labelLocation.text = dados.location
-        imageViewAvatar.image = UIImage(named: "1.png")
-    }
+//    var array = [Cabecalho] ()
+//
+//    func setup(dados: Cabecalho) {
+//        labelName.text = dados.name
+//        labelLocation.text = dados.location
+//        imageViewAvatar.image = UIImage(named: "1.png")
+//    }
     
     func reloadTextFieldSearch() {
         return textFieldNameMedice.text = ""
     }
     
     
+    
+    
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")))
+        
+        
         
         textFieldNameMedice.delegate = self
         
