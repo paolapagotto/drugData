@@ -9,9 +9,10 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import CoreData
+import FBSDKCoreKit
 
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -21,12 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("\(error)")
             return
           }
-
           guard let authentication = user.authentication else { return }
           let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                             accessToken: authentication.accessToken)
-        
-        
         Auth.auth().signIn(with: credential) { (authResult, error) in
           if let error = error {
             let authError = error as NSError
@@ -38,13 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController {
                 UIViewController.replaceRootViewController(viewController: tabBarController)
         }
-           
-            
         }
-        
-        
-        
-       
     }
 
     var window: UIWindow?
@@ -56,12 +48,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = "916024135351-hgfqncgu2jsehgd394qll8shlq0pul8p.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         
+        ApplicationDelegate.shared.application(
+                    application,
+                    didFinishLaunchingWithOptions: launchOptions
+                )
+        
         return true
     }
     
     @available(iOS 9.0, *)
-    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:])
       -> Bool {
+        
+        ApplicationDelegate.shared.application(
+                    app,
+                    open: "https://dhdrugdata.firebaseapp.com/__/auth/handler",
+                    sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                    annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+                )
       return GIDSignIn.sharedInstance().handle(url)
     }
     // IOS 8 or previous
@@ -129,3 +133,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
 }
 
+
+  

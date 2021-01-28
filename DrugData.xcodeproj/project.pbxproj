@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		58990A8382660EB73440A4EF /* Pods_DrugData_DrugDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B93F1C2797407C475AAF07 /* Pods_DrugData_DrugDataUITests.framework */; };
+		840E527E25C359ED003F3474 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 840E527D25C359EC003F3474 /* FacebookLogin */; };
 		842DFDB225ABEDF4005692E4 /* drug06.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DFDB125ABEDF3005692E4 /* drug06.png */; };
 		84672DC325BC9D9A00B1C21C /* pills03.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DC225BC9D9A00B1C21C /* pills03.png */; };
 		84672DC825BCA48E00B1C21C /* pills02.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DC725BCA48E00B1C21C /* pills02.png */; };
@@ -197,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840E527E25C359ED003F3474 /* FacebookLogin in Frameworks */,
 				E00D826CB978BA7A11BA3076 /* Pods_DrugData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -868,6 +870,9 @@
 			dependencies = (
 			);
 			name = DrugData;
+			packageProductDependencies = (
+				840E527D25C359EC003F3474 /* FacebookLogin */,
+			);
 			productName = DrugData;
 			productReference = F233D0A02559E99500D5CE2D /* DrugData.app */;
 			productType = "com.apple.product-type.application";
@@ -943,6 +948,9 @@
 				Base,
 			);
 			mainGroup = F233D0972559E99500D5CE2D;
+			packageReferences = (
+				840E527C25C359EC003F3474 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = F233D0A12559E99500D5CE2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1524,6 +1532,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		840E527C25C359EC003F3474 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		840E527D25C359EC003F3474 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840E527C25C359EC003F3474 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F2F314F425B7126200D6B5A1 /* Drugs.xcdatamodeld */ = {
