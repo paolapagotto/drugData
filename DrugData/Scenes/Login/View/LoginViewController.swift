@@ -10,7 +10,7 @@ import Firebase
 import GoogleSignIn
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: @IBOutlet
     @IBOutlet weak var textFieldEmail: UITextField!
@@ -23,57 +23,100 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func buttonLoggin(_ sender: Any) {
-        if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController{
-            UIViewController.replaceRootViewController(viewController: tabBarController)
+        
+        if let email = textFieldEmail.text, let password = textFieldPassword.text {
+            
+            if validateInfo(){
+                
+                Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                    if let result = result, error == nil {
+                        if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController{
+                                        UIViewController.replaceRootViewController(viewController: tabBarController)
+                                    }
+                    } else {
+                        let alertController = UIAlertController(title: "Error", message: "Email ou Senha inválidos", preferredStyle: .alert)
+                        
+                        alertController.addAction(UIAlertAction(title: "Aceitar", style: .default))
+                        
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                    
+                }
+                cleanTextFields()
+                
+            }
+            let alertController = UIAlertController(title: "Error", message: "Email ou Senha inválidos", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Aceitar", style: .default))
+            
+            self.present(alertController, animated: true, completion: nil)
+            cleanTextFields()
         }
     }
+    private func cleanTextFields() {
+        textFieldEmail.text = ""
+        textFieldPassword.text = ""
+        textFieldEmail.delegate = self
+        textFieldPassword.delegate = self
+       }
     
-    @IBAction func buttonEmail(_ sender: Any) {
-    }
-    @IBAction func buttonPassword(_ sender: Any) {
+    func isLogged() -> Bool {
+            return Auth.auth().currentUser != nil
     }
     
-//    @IBAction func buttonLoginGoogle(_ sender: Any) {
-//        
-//    }
+    func isValidEmail(_ email: String) -> Bool {
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z.]{2,64}"
+            
+            let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            return emailPred.evaluate(with: email)
+        }
+        
+    func isValidPassword(_ password: String) -> Bool {
+            let passwordRegEx = "[A-Za-z0-9]{6,12}"
+
+            let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+            return passwordPred.evaluate(with: password)
+        }
+    
+    func validateInfo() -> Bool {
+            let user = User(email: textFieldEmail.text!,
+                            password: textFieldPassword.text!)
+            if !isValidEmail(textFieldEmail.text!)
+                {
+                    print("Valid e-mail is required!")
+                    return false
+                }
+            if !isValidPassword(textFieldPassword.text!)
+                {
+                    print("Password is required!")
+                    return false
+                }
+            user.email = textFieldEmail.text ?? "email inválido"
+            print(user.email)
+            
+        
+            return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == textFieldEmail {
+            textFieldPassword.becomeFirstResponder()
+        } else {
+            if validateInfo() {
+                textField.resignFirstResponder()
+            }
+        }
+        return true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
         
     }
-    
-    
-    // MARK: Métodos
-//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//        
-//        print("User email: \(user.profile.email ?? "No Email")")
-//        if let error = error {
-//            print("\(error)")
-//            return
-//          }
-//
-//          guard let authentication = user.authentication else { return }
-//          let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-//                                                            accessToken: authentication.accessToken)
-//        
-//        
-//        Auth.auth().signIn(with: credential) { (authResult, error) in
-//          if let error = error {
-//            let authError = error as NSError
-//
-//            // ...
-//            return
-//          }
-//          // User is signed in
-//      
-//           
-//            
-//        }
-//        
-//       
-//    }
-    
    
 }
 
@@ -93,3 +136,5 @@ extension UIViewController {
         }, completion: nil)
     }
 }
+
+

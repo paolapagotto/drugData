@@ -22,7 +22,8 @@ class DetalheMedicamentoTableViewCell: UITableViewCell {
         labelNameLaboratory.text = details.nameLaboratory
         labelNameCategory.text = details.nameCategory
         labelPreco.text = details.preco
-        imageViewMedicine.image = UIImage(named: "remedio.png")
+        //imageViewMedicine.image = UIImage(named: "remedio.png")
+        
     }
     override func awakeFromNib() {
         super.awakeFromNib()

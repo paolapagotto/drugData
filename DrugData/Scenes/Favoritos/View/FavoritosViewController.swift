@@ -33,8 +33,7 @@ class FavoritosViewController: UIViewController, NSFetchedResultsControllerDeleg
         super.viewDidLoad()
         recoverDrugs()
         
-        setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")) )
-        
+                
         tableViewFavoritos.delegate = self
         tableViewFavoritos.dataSource = self
         

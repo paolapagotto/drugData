@@ -34,7 +34,7 @@ class GenericoViewController: UIViewController {
         tableViewGeneric.delegate = self
         tableViewGeneric.dataSource = self
 
-        setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")))
+        
     
         loadGenericData()
     }

@@ -32,7 +32,7 @@ class LocalizacaoViewController: UIViewController {
         super.viewDidLoad()
         inicialLocation()
 
-        setup(dados: (Cabecalho(name: "Maria", location: "São Paulo - SP", profileImage: "1.png")))
+        
         
     }
     

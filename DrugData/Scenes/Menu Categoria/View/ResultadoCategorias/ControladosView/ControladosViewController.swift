@@ -34,7 +34,6 @@ class ControladosViewController: UIViewController {
         tableViewControll.delegate = self
         tableViewControll.dataSource = self
 
-        setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")))
         
         loadControllData()
     }

@@ -24,7 +24,7 @@ class CategoriaViewController: UIViewController {
         super.viewDidLoad()
         
         
-        setup(dados: (Cabecalho(name: "Maria", location: "São Paulo", profileImage: "1.png")) )
+      
     }
 
     @IBAction func buttonLaboratory(_ sender: Any) {

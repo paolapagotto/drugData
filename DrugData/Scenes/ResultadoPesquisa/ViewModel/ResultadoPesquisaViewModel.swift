@@ -30,7 +30,7 @@ class ResultadoPesquisaViewModel {
                                 self.hashRemedios[brandLab, default: [Remedio]()].append(brand)
                                 self.arrayRemedios.append(brand)
                             
-                                self.searchByName(name: self.textSearch)
+                                //self.searchByName(name: self.textSearch)
                            }
                         
                         
