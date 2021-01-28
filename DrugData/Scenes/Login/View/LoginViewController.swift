@@ -26,33 +26,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if let email = textFieldEmail.text, let password = textFieldPassword.text {
             
-            if validateInfo(){
-                
-                Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            Auth.auth().signIn(withEmail: email, password: password) { [self] (result, error) in
                     if let result = result, error == nil {
                         if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController{
                                         UIViewController.replaceRootViewController(viewController: tabBarController)
-                                    }
-                    } else {
+                            
+                        }
+                    }else{
                         let alertController = UIAlertController(title: "Error", message: "Email ou Senha inválidos", preferredStyle: .alert)
                         
                         alertController.addAction(UIAlertAction(title: "Aceitar", style: .default))
                         
                         self.present(alertController, animated: true, completion: nil)
-                    }
                     
+                    
+                    }
+                    cleanTextFields()
                 }
-                cleanTextFields()
-                
             }
-            let alertController = UIAlertController(title: "Error", message: "Email ou Senha inválidos", preferredStyle: .alert)
-            
-            alertController.addAction(UIAlertAction(title: "Aceitar", style: .default))
-            
-            self.present(alertController, animated: true, completion: nil)
-            cleanTextFields()
-        }
     }
+    
     private func cleanTextFields() {
         textFieldEmail.text = ""
         textFieldPassword.text = ""
