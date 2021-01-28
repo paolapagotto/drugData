@@ -25,6 +25,21 @@
 			<array>
 				<string>com.googleusercontent.apps.916024135351-hgfqncgu2jsehgd394qll8shlq0pul8p</string>
 			</array>
+            <key>CFBundleURLTypes</key>
+            <array>
+              <dict>
+              <key>CFBundleURLSchemes</key>
+              <array>
+                <string>fb878989299341322</string>
+              </array>
+              </dict>
+            </array>
+            <key>FacebookAppID</key>
+            <string>878989299341322</string>
+            <key>FacebookDisplayName</key>
+            <string>DrugData</string>
+            
+            
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
