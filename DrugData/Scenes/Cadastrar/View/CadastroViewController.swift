@@ -93,13 +93,14 @@ class CadastroViewController: UIViewController, ImagePickerFotoSelecionada, UITe
                     
                     return cleanTextFields()
                 }
+            } else {
+                let alertController = UIAlertController(title: "Error", message: "Email ou Senha inválidos", preferredStyle: .alert)
+                
+                alertController.addAction(UIAlertAction(title: "Aceitar", style: .default))
+                
+                self.present(alertController, animated: true, completion: nil)
+                return cleanTextFields()
             }
-            let alertController = UIAlertController(title: "Error", message: "Email ou Senha inválidos", preferredStyle: .alert)
-            
-            alertController.addAction(UIAlertAction(title: "Aceitar", style: .default))
-            
-            self.present(alertController, animated: true, completion: nil)
-            cleanTextFields()
         }
     }
     
@@ -141,31 +142,7 @@ class CadastroViewController: UIViewController, ImagePickerFotoSelecionada, UITe
     }
     
     // MARK: Firebase
-    
-//    func createUser(_ email: String,_ password: String) {
-//        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-//          if let error = error as? NSError {
-//            switch AuthErrorCode(rawValue: error.code) {
-//            case .operationNotAllowed: break
-//              // Error: The given sign-in provider is disabled for this Firebase project. Enable it in the Firebase console, under the sign-in method tab of the Auth section.
-//            case .emailAlreadyInUse: break
-//              // Error: The email address is already in use by another account.
-//            case .invalidEmail: break
-//              // Error: The email address is badly formatted.
-//            case .weakPassword: break
-//              // Error: The password must be 6 characters long or more.
-//            default:
-//                print("Error: \(error.localizedDescription)")
-//            }
-//          } else {
-//            print("User signs up successfully")
-//            let newUserInfo = Auth.auth().currentUser
-//            let email = newUserInfo?.email
-//
-//          }
-//        }
-//    }
-    
+
     func isValidEmail(_ email: String) -> Bool {
             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z.]{2,64}"
             
@@ -193,7 +170,7 @@ class CadastroViewController: UIViewController, ImagePickerFotoSelecionada, UITe
                     print("Password is required!")
                     return false
                 }
-            if textFieldPassword.text != textFiedConfirmPassword.text{
+            if  textFiedConfirmPassword.text != textFieldPassword.text {
                 print("Password doesn't match")
                 return false
             }
