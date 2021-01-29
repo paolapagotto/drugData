@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 import GoogleSignIn
-import FBSDKLoginKit
 
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -17,6 +16,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var signInButton: GIDSignInButton!
+
     @IBOutlet weak var signInbuttonFB: FBSDKLoginButton!
     
     @IBAction func signInButtonFB(_ sender: Any) {
@@ -32,7 +32,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         signInButtonFB.permissions = ["public_profile", "email"]
     }
     
-    let signInButtonFB = FBLoginButton()
+    let signInButtonFB = FBLoginButton
+
     
     @IBAction func buttonForgotPassword(_ sender: Any) {
         if let forgotPassword = UIStoryboard(name: "EsqueceuASenhaViewController", bundle: nil).instantiateInitialViewController() as? EsqueceuASenhaViewController {
@@ -55,6 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         alertController.addAction(UIAlertAction(title: "Aceitar", style: .default))
                         
                         self.present(alertController, animated: true, completion: nil)
+                    
                     
                     }
                     cleanTextFields()
@@ -119,19 +121,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
-        
-        
+
         signInButtonFB.center = view.center
         
-   
     }
+   
 }
+
 extension UIViewController {
     class func replaceRootViewController(viewController: UIViewController) {
         guard let window = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first

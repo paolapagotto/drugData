@@ -59,12 +59,24 @@
                                     <action selector="buttonLoginGoogle:" destination="dVw-Cj-wMd" eventType="valueChanged" id="3d3-DG-24k"/>
                                 </connections>
                             </view>
+<<<<<<< HEAD
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foM-Sw-1BP" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="60" y="742" width="294" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="signInButtonFB:" destination="dVw-Cj-wMd" eventType="valueChanged" id="H7V-Qr-510"/>
                                 </connections>
+=======
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foM-Sw-1BP">
+                                <rect key="frame" x="60" y="742" width="294" height="46"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="lHV-wj-og8">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.82276713848114014" green="0.86374753713607788" blue="0.90679275989532471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+>>>>>>> refs/remotes/origin/main
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z35-nY-nfB">
                                 <rect key="frame" x="141" y="516" width="133" height="30"/>
@@ -155,7 +167,10 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="JcS-Zd-cnV"/>
                     <connections>
                         <outlet property="signInButton" destination="xQU-tc-9eD" id="FVk-8O-Bmn"/>
+<<<<<<< HEAD
                         <outlet property="signInbuttonFB" destination="foM-Sw-1BP" id="kew-jT-7Xg"/>
+=======
+>>>>>>> refs/remotes/origin/main
                         <outlet property="textFieldEmail" destination="48P-j1-kxr" id="r7F-z6-eRi"/>
                         <outlet property="textFieldPassword" destination="mXj-K9-CtB" id="34L-cc-gN9"/>
                     </connections>
@@ -186,6 +201,7 @@
     </scenes>
     <resources>
         <image name="drug03.png" width="124" height="581"/>
+        <image name="facebook.png" width="503" height="100"/>
         <image name="pills03.png" width="900" height="692"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
