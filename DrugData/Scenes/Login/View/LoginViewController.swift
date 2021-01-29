@@ -17,7 +17,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var signInButton: GIDSignInButton!
-    @IBOutlet weak var signInButtonFB: FBLoginButton!
+    @IBOutlet weak var signInbuttonFB: FBSDKLoginButton!
+    
+    @IBAction func signInButtonFB(_ sender: Any) {
+        
+        view.addSubview(signInButtonFB)
+        if let token = AccessToken.current,
+                !token.isExpired {
+                // User is logged in, do work such as go to next view controller.
+                if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController{
+                            UIViewController.replaceRootViewController(viewController: tabBarController)
+                }
+            }
+        signInButtonFB.permissions = ["public_profile", "email"]
+    }
     
     let signInButtonFB = FBLoginButton()
     
@@ -115,12 +128,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         
         signInButtonFB.center = view.center
-        view.addSubview(signInButtonFB)
-        if let token = AccessToken.current,
-                !token.isExpired {
-                // User is logged in, do work such as go to next view controller.
-            }
-        signInButtonFB.permissions = ["public_profile", "email"]
+        
    
     }
 }

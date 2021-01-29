@@ -59,9 +59,12 @@
                                     <action selector="buttonLoginGoogle:" destination="dVw-Cj-wMd" eventType="valueChanged" id="3d3-DG-24k"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foM-Sw-1BP" customClass="FBLoginButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foM-Sw-1BP" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="60" y="742" width="294" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="signInButtonFB:" destination="dVw-Cj-wMd" eventType="valueChanged" id="H7V-Qr-510"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z35-nY-nfB">
                                 <rect key="frame" x="141" y="516" width="133" height="30"/>
@@ -152,7 +155,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="JcS-Zd-cnV"/>
                     <connections>
                         <outlet property="signInButton" destination="xQU-tc-9eD" id="FVk-8O-Bmn"/>
-                        <outlet property="signInButtonFB" destination="foM-Sw-1BP" id="pH0-O0-1VX"/>
+                        <outlet property="signInbuttonFB" destination="foM-Sw-1BP" id="kew-jT-7Xg"/>
                         <outlet property="textFieldEmail" destination="48P-j1-kxr" id="r7F-z6-eRi"/>
                         <outlet property="textFieldPassword" destination="mXj-K9-CtB" id="34L-cc-gN9"/>
                     </connections>
