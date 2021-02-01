@@ -8,6 +8,8 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -16,21 +18,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var signInButton: GIDSignInButton!
-<<<<<<< HEAD
-=======
 
-    @IBOutlet weak var signInbuttonFB: FBSDKLoginButton!
->>>>>>> main
+
+  
+
     
     @IBOutlet weak var FBLoginView: UIView!
     
     @IBOutlet weak var loginButton: FBLoginButton!
     
-<<<<<<< HEAD
-=======
-    let signInButtonFB = FBLoginButton
 
->>>>>>> main
+   
+
+
     
     @IBAction func buttonForgotPassword(_ sender: Any) {
         if let forgotPassword = UIStoryboard(name: "EsqueceuASenhaViewController", bundle: nil).instantiateInitialViewController() as? EsqueceuASenhaViewController {
@@ -134,7 +134,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
-<<<<<<< HEAD
+
         
         let loginButton = FBLoginButton()
         loginButton.permissions = ["public_profile", "email"]
@@ -143,11 +143,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.FBLoginView.addSubview(loginButton)
         
         //facebookIsLogged()
-=======
-
-        signInButtonFB.center = view.center
         
->>>>>>> main
+
     }
    
 }
