@@ -78,8 +78,8 @@ class CategoriaViewModel {
             return arrayGenericos.count
         }
     func numberOfRowsOrganicos() -> Int {
-            //eturn arrayOrganicos.count
-        return filteredOrganic.count
+        return arrayOrganicos.count
+        
         }
     func numberOfRowsLaboratorios() -> Int {
         print("\(hashRemedios.keys.count)")

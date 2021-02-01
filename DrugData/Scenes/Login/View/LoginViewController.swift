@@ -72,7 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return Auth.auth().currentUser != nil
     }
     
-    func facebookIsLogged() {
+    func facebookIsLogged(button: FBLoginButton!) {
         if let token = AccessToken.current,
                 !token.isExpired {
                 // User is logged in, do work such as go to next view controller.
