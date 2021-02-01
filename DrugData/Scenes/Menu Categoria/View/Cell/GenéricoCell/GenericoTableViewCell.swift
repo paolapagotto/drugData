@@ -13,7 +13,7 @@ class GenericoTableViewCell: UITableViewCell {
     @IBOutlet weak var labelGenericName: UILabel!
     @IBOutlet weak var labelLaboratoryName: UILabel!
     
-    func setup(name: Categoria){
+    func setup(name: Categoria) -> Void {
         
         self.labelNameDrug.text = name.produto
         self.labelGenericName.text = name.tipoProduto

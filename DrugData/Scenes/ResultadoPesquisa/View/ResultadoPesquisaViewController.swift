@@ -70,7 +70,7 @@ extension ResultadoPesquisaViewController: UITableViewDelegate {
 }
 extension ResultadoPesquisaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let allDrugs = resultadoPesquisaViewModel?.numberOfRowsSearchByName() {
+        if let allDrugs = resultadoPesquisaViewModel?.numberOfRows() {
                     return allDrugs
                 }
                 

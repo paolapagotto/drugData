@@ -99,7 +99,7 @@ extension OrganicoViewController: UITableViewDataSource{
     }
 }
 
-extension UISearchBarDelegate{
+extension OrganicoViewController{
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         return true
