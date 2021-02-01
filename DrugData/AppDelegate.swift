@@ -8,11 +8,22 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+<<<<<<< HEAD
+import FBSDKCoreKit
+=======
+>>>>>>> main
 import CoreData
 
 
 @main
+<<<<<<< HEAD
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+    
+    
+    // MARK: Google login
+=======
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+>>>>>>> main
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
@@ -41,15 +52,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
            
             
         }
+<<<<<<< HEAD
+    
+=======
         
         
         
        
+>>>>>>> main
     }
 
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Facebook
+        ApplicationDelegate.shared.application(
+                    application,
+                    didFinishLaunchingWithOptions: launchOptions
+                )
+        
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
 
@@ -62,13 +83,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
       -> Bool {
+<<<<<<< HEAD
+        ApplicationDelegate.shared.application(
+                    application,
+                    open: url,
+                    sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                    annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+                )
+=======
+>>>>>>> main
       return GIDSignIn.sharedInstance().handle(url)
     }
     // IOS 8 or previous
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
     }
-
+    
+    // MARK: Facebook login
 
     
     // MARK: UISceneSession Lifecycle

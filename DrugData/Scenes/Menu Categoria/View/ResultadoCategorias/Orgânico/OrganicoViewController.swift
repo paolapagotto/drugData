@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrganicoViewController: UIViewController {
+class OrganicoViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var labelLocation: UILabel!
     @IBOutlet weak var labelName: UILabel!
@@ -31,22 +31,50 @@ class OrganicoViewController: UIViewController {
         
         categoriaViewModel = CategoriaViewModel()
         
+        searchBarOrganic.delegate = self
+        categoriaViewModel?.filteredOrganic = categoriaViewModel!.arrayOrganicos
+        
         tableViewOrganic.delegate = self
         tableViewOrganic.dataSource = self
 
-        
-        
+       
         loadOrganicData()
+        
     }
+
     
     func loadOrganicData() {
         categoriaViewModel?.loadCategoryAPI(completion: {  (sucess, error) in
                    if sucess {
                        DispatchQueue.main.async {
+                        self.categoriaViewModel?.filteredOrganic = self.categoriaViewModel!.arrayOrganicos
                            self.tableViewOrganic.reloadData()
+                        //self.categoriaViewModel?.filteredOrganic = []
+                        
                        }
                    }
         })
+    }
+    
+    //MARK: SearchBar Delegate
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        categoriaViewModel?.filteredOrganic = []
+        
+        if searchText == "" {
+            categoriaViewModel?.filteredOrganic = categoriaViewModel!.arrayOrganicos
+        } else {
+            for organic in categoriaViewModel!.arrayOrganicos {
+                if organic.produto.lowercased().contains(searchText.lowercased()) {
+                    categoriaViewModel?.filteredOrganic = []
+                   loadOrganicData()
+                    categoriaViewModel?.filteredOrganic.append(organic)
+                }
+            }
+        }
+
+        tableViewOrganic.reloadData()
+       
     }
 
 }
@@ -64,9 +92,8 @@ extension OrganicoViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrganicoTableViewCell", for: indexPath) as! OrganicoTableViewCell
-        cell.setup(name: categoriaViewModel!.arrayOrganicos[indexPath.row])
+        //cell.setup(name: categoriaViewModel!.arrayOrganicos[indexPath.row])
+        cell.setup(name: (categoriaViewModel?.filteredOrganic[indexPath.row])!)
         return cell
     }
-    
-    
 }

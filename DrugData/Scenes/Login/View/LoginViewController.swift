@@ -16,24 +16,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var signInButton: GIDSignInButton!
+<<<<<<< HEAD
+=======
 
     @IBOutlet weak var signInbuttonFB: FBSDKLoginButton!
+>>>>>>> main
     
-    @IBAction func signInButtonFB(_ sender: Any) {
-        
-        view.addSubview(signInButtonFB)
-        if let token = AccessToken.current,
-                !token.isExpired {
-                // User is logged in, do work such as go to next view controller.
-                if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController{
-                            UIViewController.replaceRootViewController(viewController: tabBarController)
-                }
-            }
-        signInButtonFB.permissions = ["public_profile", "email"]
-    }
+    @IBOutlet weak var FBLoginView: UIView!
     
+    @IBOutlet weak var loginButton: FBLoginButton!
+    
+<<<<<<< HEAD
+=======
     let signInButtonFB = FBLoginButton
 
+>>>>>>> main
     
     @IBAction func buttonForgotPassword(_ sender: Any) {
         if let forgotPassword = UIStoryboard(name: "EsqueceuASenhaViewController", bundle: nil).instantiateInitialViewController() as? EsqueceuASenhaViewController {
@@ -73,6 +70,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func isLogged() -> Bool {
             return Auth.auth().currentUser != nil
+    }
+    
+    func facebookIsLogged() {
+        if let token = AccessToken.current,
+                !token.isExpired {
+                // User is logged in, do work such as go to next view controller.
+            if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController{
+                            UIViewController.replaceRootViewController(viewController: tabBarController)
+            }
+        }
+        
     }
     
     func isValidEmail(_ email: String) -> Bool {
@@ -126,9 +134,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
+<<<<<<< HEAD
+        
+        let loginButton = FBLoginButton()
+        loginButton.permissions = ["public_profile", "email"]
+        let newCenter = CGPoint(x: self.FBLoginView.frame.width / 2, y: self.FBLoginView.frame.height / 2)
+        loginButton.center = newCenter
+        self.FBLoginView.addSubview(loginButton)
+        
+        //facebookIsLogged()
+=======
 
         signInButtonFB.center = view.center
         
+>>>>>>> main
     }
    
 }

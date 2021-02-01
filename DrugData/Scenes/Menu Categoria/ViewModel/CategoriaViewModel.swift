@@ -20,6 +20,12 @@ class CategoriaViewModel {
     var hashControlados: [String: [Categoria]] = [:]
     var hashRemedios: [String: [Categoria]] = [:]
     
+    // MARK: Atributos para SearchBar
+    var filteredOrganic = [Categoria] ()
+    
+    var filteredLab: [String: [Categoria]] = [:]
+    
+    
     func loadCategoryAPI(completion: @escaping (_ result: Bool, _ error: Error?) -> Void) {
                    AF.request("https://raw.githubusercontent.com/paolapagotto/csvtojson/master/medicamentos.json").responseJSON { response in
                        if let arrayDictionary = response.value as? [[String: String]] {
@@ -29,13 +35,16 @@ class CategoriaViewModel {
                                 self.arrayRemedios.append(brand)
                             
                                 let brandLab = brand.laboratorio
-                                self.hashRemedios[brandLab, default: [Categoria]()].append(brand)
+                               self.hashRemedios[brandLab, default: [Categoria]()].append(brand)
+                                //self.filteredLab[brandLab, default: [Categoria]()].append(brand)
+                                
                             
                                 let typeProduto = brand.tipoProduto
                                 if typeProduto == "GENÉRICO"{
                                     self.arrayGenericos.append(brand)
                                 } else if typeProduto == "BIOLÓGICO" || typeProduto == "FITOTERÁPICO"{
                                     self.arrayOrganicos.append(brand)
+                                    //self.filteredOrganic.append(brand)
                                 }
                                 
                                 let typeControlados = brand.tipoControlados
@@ -69,10 +78,12 @@ class CategoriaViewModel {
             return arrayGenericos.count
         }
     func numberOfRowsOrganicos() -> Int {
-            return arrayOrganicos.count
+            //eturn arrayOrganicos.count
+        return filteredOrganic.count
         }
     func numberOfRowsLaboratorios() -> Int {
         print("\(hashRemedios.keys.count)")
         return hashRemedios.keys.count
+        //return filteredLab.keys.count
         }
 }

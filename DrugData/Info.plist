@@ -25,8 +25,23 @@
 			<array>
 				<string>com.googleusercontent.apps.916024135351-hgfqncgu2jsehgd394qll8shlq0pul8p</string>
 			</array>
+<<<<<<< HEAD
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb176422010909812</string>
+			</array>
+=======
+>>>>>>> main
 		</dict>
 	</array>
+    <key>FacebookAppID</key>
+    <string>176422010909812</string>
+    <key>FacebookDisplayName</key>
+    <string>DrugData</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
