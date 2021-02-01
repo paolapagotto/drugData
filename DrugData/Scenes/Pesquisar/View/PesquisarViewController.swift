@@ -41,17 +41,8 @@ class PesquisarViewController: UIViewController, UITextFieldDelegate {
         return textFieldNameMedice.text = ""
     }
     
-    
-    
-    
-    
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         textFieldNameMedice.delegate = self
         
     }

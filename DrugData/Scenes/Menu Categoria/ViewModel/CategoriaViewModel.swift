@@ -22,7 +22,8 @@ class CategoriaViewModel {
     
     // MARK: Atributos para SearchBar
     var filteredOrganic = [Categoria] ()
-    
+    var filteredGeneric = [Categoria] ()
+    var filteredControlled = [Categoria] ()
     var filteredLab: [String: [Categoria]] = [:]
     
     
@@ -36,15 +37,12 @@ class CategoriaViewModel {
                             
                                 let brandLab = brand.laboratorio
                                self.hashRemedios[brandLab, default: [Categoria]()].append(brand)
-                                //self.filteredLab[brandLab, default: [Categoria]()].append(brand)
                                 
-                            
                                 let typeProduto = brand.tipoProduto
                                 if typeProduto == "GENÉRICO"{
                                     self.arrayGenericos.append(brand)
                                 } else if typeProduto == "BIOLÓGICO" || typeProduto == "FITOTERÁPICO"{
                                     self.arrayOrganicos.append(brand)
-                                    //self.filteredOrganic.append(brand)
                                 }
                                 
                                 let typeControlados = brand.tipoControlados
@@ -57,8 +55,6 @@ class CategoriaViewModel {
                                     self.arrayControlados.append(brand)
                                     self.arrayTarjaVermelha.append(brand)
                                 }
-                            
-                                
                            }
                            completion(true, nil)
                        } else {
@@ -84,6 +80,5 @@ class CategoriaViewModel {
     func numberOfRowsLaboratorios() -> Int {
         print("\(hashRemedios.keys.count)")
         return hashRemedios.keys.count
-        //return filteredLab.keys.count
         }
 }
