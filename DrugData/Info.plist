@@ -25,6 +25,7 @@
 			<array>
 				<string>com.googleusercontent.apps.916024135351-hgfqncgu2jsehgd394qll8shlq0pul8p</string>
 			</array>
+<<<<<<< HEAD
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
@@ -33,6 +34,8 @@
 			<array>
 				<string>fb176422010909812</string>
 			</array>
+=======
+>>>>>>> main
 		</dict>
 	</array>
     <key>FacebookAppID</key>
