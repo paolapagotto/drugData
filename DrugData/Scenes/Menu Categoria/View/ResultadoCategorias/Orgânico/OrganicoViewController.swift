@@ -66,8 +66,6 @@ class OrganicoViewController: UIViewController, UISearchBarDelegate {
         } else {
             for organic in categoriaViewModel!.arrayOrganicos {
                 if organic.produto.lowercased().contains(searchText.lowercased()) {
-                    categoriaViewModel?.filteredOrganic = []
-                   loadOrganicData()
                     categoriaViewModel?.filteredOrganic.append(organic)
                 }
             }
@@ -76,6 +74,7 @@ class OrganicoViewController: UIViewController, UISearchBarDelegate {
         tableViewOrganic.reloadData()
        
     }
+    
 
 }
 extension OrganicoViewController: UITableViewDelegate{
@@ -83,9 +82,11 @@ extension OrganicoViewController: UITableViewDelegate{
 }
 extension OrganicoViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let allOrganic = categoriaViewModel?.numberOfRowsOrganicos() {
-                    return allOrganic
-                }
+        if !searchBarShouldBeginEditing(searchBarOrganic){
+            return (categoriaViewModel?.numberOfRowsOrganicos())!
+        } else if searchBarShouldBeginEditing(searchBarOrganic) {
+            return (categoriaViewModel?.filteredOrganic.count)!
+        }
                 
                 return 0
     }
@@ -96,4 +97,12 @@ extension OrganicoViewController: UITableViewDataSource{
         cell.setup(name: (categoriaViewModel?.filteredOrganic[indexPath.row])!)
         return cell
     }
+}
+
+extension UISearchBarDelegate{
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        return true
+    }
+    
 }
