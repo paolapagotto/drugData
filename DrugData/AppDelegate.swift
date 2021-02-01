@@ -8,12 +8,15 @@
 import UIKit
 import Firebase
 import GoogleSignIn
-import CoreData
 import FBSDKCoreKit
+import CoreData
 
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+    
+    
+    // MARK: Google login
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
@@ -22,9 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("\(error)")
             return
           }
+
           guard let authentication = user.authentication else { return }
           let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                             accessToken: authentication.accessToken)
+        
+        
         Auth.auth().signIn(with: credential) { (authResult, error) in
           if let error = error {
             let authError = error as NSError
@@ -37,32 +43,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 UIViewController.replaceRootViewController(viewController: tabBarController)
         }
         }
+    
     }
 
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Facebook
+        ApplicationDelegate.shared.application(
+                    application,
+                    didFinishLaunchingWithOptions: launchOptions
+                )
+        
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
 
         GIDSignIn.sharedInstance().clientID = "916024135351-hgfqncgu2jsehgd394qll8shlq0pul8p.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
         
-        ApplicationDelegate.shared.application(
-                    application,
-                    didFinishLaunchingWithOptions: launchOptions
-                )
-        
         return true
     }
     
     @available(iOS 9.0, *)
-    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:])
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
       -> Bool {
-        
         ApplicationDelegate.shared.application(
-                    app,
-                    open: "https://dhdrugdata.firebaseapp.com/__/auth/handler",
+                    application,
+                    open: url,
                     sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
                     annotation: options[UIApplication.OpenURLOptionsKey.annotation]
                 )
@@ -72,7 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
     }
-
+    
+    // MARK: Facebook login
 
     
     // MARK: UISceneSession Lifecycle
@@ -133,5 +141,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
 }
 
-
-  

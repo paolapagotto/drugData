@@ -8,6 +8,10 @@
 import Foundation
 import SwiftyJSON
 
+protocol SearchBarProtocol {
+    func getTeam() -> String
+}
+
 class Categoria {
     
     var produto:String
@@ -34,5 +38,14 @@ class Categoria {
             self.tipoProduto = remedio.tipoProduto
             
         }
+    }
+}
+
+extension Categoria: SearchBarProtocol {
+    func getTeam() -> String {
+        return "\(produto)".lowercased()
+    }
+    func getTeamLab() -> String {
+        return "\(laboratorio)".lowercased()
     }
 }
