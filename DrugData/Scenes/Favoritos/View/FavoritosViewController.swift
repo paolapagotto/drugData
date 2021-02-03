@@ -19,8 +19,8 @@ class FavoritosViewController: UIViewController, NSFetchedResultsControllerDeleg
     
     
     // MARK: Variáveis
-    var array = [Cabecalho] ()
-    var arrayMed = [Remedios] ()
+    
+    var arrayMed = [Remedio] ()
     var favoriteManager: NSFetchedResultsController<Favorite>?
     var context: NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -36,18 +36,13 @@ class FavoritosViewController: UIViewController, NSFetchedResultsControllerDeleg
                 
         tableViewFavoritos.delegate = self
         tableViewFavoritos.dataSource = self
-        
-        arrayMed.append(Remedios(name: "Coristina D", nameLaboratory: "Laboratório: COSMED S.A", nameCategory: "Categoria: ANTIGRIPAL ", productType: "Novo", preco: "Preço: R$ 17, 24"))
+
         
         tableViewFavoritos.reloadData()
     }
     
     // MARK: Métodos
-    func setup(dados: Cabecalho) {
-        labelName.text = dados.name
-        labelLocation.text = dados.location
-        imageViewAvatar.image = UIImage(named: "1.png")
-    }
+   
     
     func recoverDrugs() {
         let sourchFavorite: NSFetchRequest<Favorite> = Favorite.fetchRequest()
@@ -88,7 +83,10 @@ extension FavoritosViewController: UITableViewDataSource {
         //cell.setup(details: arrayMed[indexPath.row])
         guard let drugs = favoriteManager?.fetchedObjects?[indexPath.row] else { return cell }
         
-        cell.labelNameMedice.text = drugs.drugsFavorite
+        cell.labelProductName.text = drugs.drugsFavorite
+        //cell.labelLaboratoryName.text = drugs.drugLab
+        
+        
         return cell
     }
     

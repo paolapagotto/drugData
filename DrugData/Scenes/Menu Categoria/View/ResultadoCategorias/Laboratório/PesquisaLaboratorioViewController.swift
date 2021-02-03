@@ -15,18 +15,13 @@ class PesquisaLaboratorioViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBarLaboratory: UISearchBar!
     @IBOutlet weak var tableViewLaboratory: UITableView!
     
-    var array = [Cabecalho] ()
+    
     var arrayLaboratories = [String]()
     var searchLaboratories = [String]()
-    var arrayMedice = [Remedios]()
     var searching = false
     var categoriaViewModel: CategoriaViewModel?
     
-    func setup(dados: Cabecalho) {
-        labelName.text = dados.name
-        labelLocation.text = dados.location
-        imageViewAvatar.image = UIImage(named: "1.png")
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

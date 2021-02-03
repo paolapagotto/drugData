@@ -21,11 +21,9 @@ class ResultadoPesquisaViewController: UIViewController {
     
     // MARK: Atributos
     var searchTerm: String = ""
-    var array = [Cabecalho] ()
-    //var arrayMedice = [Remedios] ()
     var resultadoPesquisaViewModel: ResultadoPesquisaViewModel?
-    var filteredRemedios = [Remedios] ()
-    var arrayRemedios = [Remedios] ()
+    var filteredRemedios = [Remedio] ()
+    var arrayRemedios = [Remedio] ()
     
     var pesquisarViewController: PesquisarViewController?
     
@@ -44,13 +42,7 @@ class ResultadoPesquisaViewController: UIViewController {
     }
     
     // MARK: Métodos
-    func setup(dados: Cabecalho) {
-        labelName.text = dados.name
-        labelLocation.text = dados.location
-        imageViewAvatar.image = UIImage(named: "1.png")
-        
-    }
-    
+
     func loadBrandData() {
         resultadoPesquisaViewModel?.loadBrandAPI(completion: {  (sucess, error) in
                    if sucess {
@@ -86,7 +78,7 @@ extension ResultadoPesquisaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NomeRemediosTableViewCell", for: indexPath) as! NomeRemediosTableViewCell
         
-        cell.setup(nameMedice: resultadoPesquisaViewModel!.filteredRemedios[indexPath.row].produto)
+        cell.setup(remedio: resultadoPesquisaViewModel!.filteredRemedios[indexPath.row])
         return cell
         }
     

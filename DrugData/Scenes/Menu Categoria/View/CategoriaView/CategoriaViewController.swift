@@ -13,12 +13,7 @@ class CategoriaViewController: UIViewController {
     @IBOutlet weak var labelLocation: UILabel!
     @IBOutlet weak var imageViewAvatar: UIImageView!
     
-    var array = [Cabecalho] ()
-    func setup(dados: Cabecalho) {
-        labelName.text = dados.name
-        labelLocation.text = dados.location
-        imageViewAvatar.image = UIImage(named: "1.png")
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

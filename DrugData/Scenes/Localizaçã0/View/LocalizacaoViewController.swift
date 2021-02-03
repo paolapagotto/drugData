@@ -19,21 +19,11 @@ class LocalizacaoViewController: UIViewController {
     
     @IBOutlet weak var mapkitMap: MKMapView!
     
-    var array = [Cabecalho] ()
-    
-    func setup(dados: Cabecalho) {
-        labelName.text = dados.name
-        labelLocation.text = dados.location
-        imageViewAvatar.image = UIImage(named: "1.png")
-        //imageViewMap.image = UIImage(named: "mapa.png")
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         inicialLocation()
-
-        
-        
     }
     
     // MARK: Métodos
