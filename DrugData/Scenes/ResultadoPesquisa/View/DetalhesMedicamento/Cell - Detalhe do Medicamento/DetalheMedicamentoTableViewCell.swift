@@ -9,22 +9,45 @@ import UIKit
 
 class DetalheMedicamentoTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var labelNameMedice: UILabel!
-    @IBOutlet weak var labelNameLaboratory: UILabel!
-    @IBOutlet weak var labelNameCategory: UILabel!
-    @IBOutlet weak var labelPreco: UILabel!
-    @IBOutlet weak var imageViewMedicine: UIImageView!
+    @IBOutlet weak var labelProductName: UILabel!
+    @IBOutlet weak var labelLaboratoryName: UILabel!
+    @IBOutlet weak var labelProductType: UILabel!
+    @IBOutlet weak var labelProductPrice: UILabel!
+    @IBOutlet weak var imageViewProduct: UIImageView!
     
   
     
-    func setup(details: Remedios) {
-        labelNameMedice.text = details.name
-        labelNameLaboratory.text = details.nameLaboratory
-        labelNameCategory.text = details.nameCategory
-        labelPreco.text = details.preco
-        //imageViewMedicine.image = UIImage(named: "remedio.png")
+    func setup(details: Remedio) {
+        labelProductName.text = details.product
+        labelLaboratoryName.text = details.nameLaboratory
+        labelProductType.text = details.productType
+        labelProductPrice.text = details.price
+        
+        setupImage(remedio: details)
+        
         
     }
+    
+    func setupImage(remedio: Remedio){
+        
+        if remedio.productType == "BIOLÓGICO" || remedio.productType == "FITOTERÁPICO"{
+            return imageViewProduct.image = UIImage(named: "imgorganico.png")
+        } else if remedio.productType == "GENÉRICO" && remedio.productType == "Tarja VERMELHA"{
+            return imageViewProduct.image = UIImage(named: "imggenericotarjavermelha.png")
+        } else if remedio.productType == "GENÉRICO" && remedio.productType == "Tarja PRETA"{
+            return imageViewProduct.image = UIImage(named: "imggenericotarjapreta.png")
+        } else if remedio.productType == "Tarja PRETA"{
+            return imageViewProduct.image = UIImage(named: "imgtarjapreta.png")
+        } else if remedio.productType == "Tarja VERMELHA"{
+            return imageViewProduct.image = UIImage(named: "imgtarjavermelha.png")
+        } else if remedio.productType == "GENÉRICO"{
+            return imageViewProduct.image = UIImage(named: "imggenerico.png")
+        }
+        return self.imageViewProduct.image = UIImage(named: "imgremedio.png")
+    }
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
       

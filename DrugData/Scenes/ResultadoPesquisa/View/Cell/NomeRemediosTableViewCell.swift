@@ -12,7 +12,7 @@ import CoreData
 class NomeRemediosTableViewCell: UITableViewCell {
 
     // MARK: IBoutlet
-    @IBOutlet weak var labelNameMedice: UILabel!
+    @IBOutlet weak var labelNameProduct: UILabel!
     
     @IBOutlet weak var labelNameLaboratory: UILabel!
     
@@ -33,7 +33,7 @@ class NomeRemediosTableViewCell: UITableViewCell {
     
     @IBAction func saveFavoriteDrug(_ sender: Any) {
         let drug = Favorite(context: context)
-        drug.drugsFavorite = labelNameMedice.text
+        drug.drugsFavorite = labelNameProduct.text
         
         do {
             //saveFavoriteDrug.setImage(UIImage(named: "star.fill"), for: .normal)
@@ -50,10 +50,10 @@ class NomeRemediosTableViewCell: UITableViewCell {
     }
     
     // MARK: Métodos
-    func setup(nameMedice: String) {
-        labelNameMedice.text = nameMedice
-//        labelNameLaboratory.text = nameLaboratory
-        //        labelProductType.text = productType
+    func setup(remedio: Remedio) {
+        labelNameProduct.text = remedio.product
+        labelNameLaboratory.text = remedio.nameLaboratory
+        labelProductType.text = remedio.productType
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

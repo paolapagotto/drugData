@@ -15,16 +15,18 @@ protocol SearchBarRemedioProtocol {
 
 class Remedio {
     
-    var produto: String
+    var product: String
     var nameLaboratory: String
     var productType: String
-    //var apresentacao: String
+    var description: String
+    var price: String
         
         init(json: JSON) {
-            self.produto = json["PRODUTO"].stringValue
+            self.product = json["PRODUTO"].stringValue
             self.nameLaboratory = json[ "LABORATORIO"].stringValue
             self.productType = json[ "TIPO DE PRODUTO"].stringValue
-            //self.apresentacao = json["APRESENTACAO"].stringValue
+            self.description = json["APRESENTACAO"].stringValue
+            self.price = json["PRECO FINAL"].stringValue
         }
     
     func resultOfSearch(){
@@ -33,7 +35,7 @@ class Remedio {
 }
 extension Remedio: SearchBarRemedioProtocol {
     func getTeam() -> String {
-        return "\(produto)".lowercased()
+        return "\(product)".lowercased()
     }
     func getTeamLab() -> String {
         return "\(nameLaboratory)".lowercased()

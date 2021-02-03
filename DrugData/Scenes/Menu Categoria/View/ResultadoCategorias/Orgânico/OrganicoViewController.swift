@@ -15,15 +15,7 @@ class OrganicoViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var imageViewAvatar: UIImageView!
     @IBOutlet weak var tableViewOrganic: UITableView!
     
-    var array = [Cabecalho] ()
-    var arrayMedice = [Remedios]()
-    
-    func setup(dados: Cabecalho) {
-        labelName.text = dados.name
-        labelLocation.text = dados.location
-        imageViewAvatar.image = UIImage(named: "1.png")
-    }
-    
+  
     var categoriaViewModel: CategoriaViewModel?
     
     override func viewDidLoad() {

@@ -9,44 +9,46 @@ import UIKit
 
 class DetalhesMedicamentoViewController: UIViewController {
    
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameDrug: UILabel!
-    @IBOutlet weak var laboratoryName: UILabel!
-    @IBOutlet weak var categoryDrug: UILabel!
-    @IBOutlet weak var priceDrug: UILabel!
+    @IBOutlet weak var imageViewProduct: UIImageView!
+    @IBOutlet weak var labelProductName: UILabel!
+    @IBOutlet weak var labelLaboratoryName: UILabel!
+    @IBOutlet weak var labelProductType: UILabel!
+    @IBOutlet weak var labelProductPrice: UILabel!
     
-    var drugDetail: Remedios?
+    var drugDetail: Remedio?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupImage(remedio: drugDetail!)
-        //self.imageView.image = UIImage(named: "remedio.png")
-        self.nameDrug.text = "Preço: R$\(drugDetail!.name)"
-        self.laboratoryName.text = "Laboratório: \(drugDetail!.nameLaboratory)"
-        self.categoryDrug.text = "Categoria: \(drugDetail!.nameCategory)"
-        self.priceDrug.text! = "Preço: R$\(drugDetail!.preco)"
-    }
-    
-    func setupImage(remedio: Remedios){
         
-        if remedio.nameCategory == "BIOLÓGICO" || remedio.nameCategory == "FITOTERÁPICO"{
-            return self.imageView.image = UIImage(named: "imgorganico.png")
-        } else if remedio.nameCategory == "GENÉRICO" && remedio.productType == "Tarja VERMELHA"{
-            return self.imageView.image = UIImage(named: "imggenericotarjavermelha.png")
-        } else if remedio.nameCategory == "GENÉRICO" && remedio.productType == "Tarja PRETA"{
-            return self.imageView.image = UIImage(named: "imggenericotarjapreta.png")
-        } else if remedio.productType == "Tarja PRETA"{
-            return self.imageView.image = UIImage(named: "imgtarjapreta.png")
-        } else if remedio.productType == "Tarja VERMELHA"{
-            return self.imageView.image = UIImage(named: "imgtarjavermelha.png")
-        } else if remedio.nameCategory == "GENÉRICO"{
-            return self.imageView.image = UIImage(named: "imggenerico.png")
-        }
-        return self.imageView.image = UIImage(named: "imgremedio.png")
+        
+        self.labelProductName.text = "Nome: \(drugDetail!.product)"
+        self.labelLaboratoryName.text = "Laboratório: \(drugDetail!.nameLaboratory)"
+        self.labelProductType.text = "Categoria: \(drugDetail!.productType)"
+        self.labelProductPrice.text! = "Preço: \(drugDetail!.price)"
     }
     
-    func setup(remedio: Remedios){
+    func setupImage(remedio: Remedio){
+        
+        if remedio.productType == "BIOLÓGICO" || remedio.productType == "FITOTERÁPICO"{
+            return imageViewProduct.image = UIImage(named: "imgorganico.png")
+        } else if remedio.productType == "GENÉRICO" && remedio.productType == "Tarja VERMELHA"{
+            return imageViewProduct.image = UIImage(named: "imggenericotarjavermelha.png")
+        } else if remedio.productType == "GENÉRICO" && remedio.productType == "Tarja PRETA"{
+            return imageViewProduct.image = UIImage(named: "imggenericotarjapreta.png")
+        } else if remedio.productType == "Tarja PRETA"{
+            return imageViewProduct.image = UIImage(named: "imgtarjapreta.png")
+        } else if remedio.productType == "Tarja VERMELHA"{
+            return imageViewProduct.image = UIImage(named: "imgtarjavermelha.png")
+        } else if remedio.productType == "GENÉRICO"{
+            return imageViewProduct.image = UIImage(named: "imggenerico.png")
+        }
+        return self.imageViewProduct.image = UIImage(named: "imgremedio.png")
+    }
+    
+    
+    func setup(remedio: Remedio){
         self.drugDetail = remedio
+
     }
     
 }

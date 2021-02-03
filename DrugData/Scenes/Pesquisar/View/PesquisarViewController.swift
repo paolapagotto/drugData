@@ -65,7 +65,7 @@ class PesquisarViewController: UIViewController, UISearchBarDelegate {
             resultadoPesquisaViewModel?.filteredRemedios = resultadoPesquisaViewModel!.arrayRemedios
         } else {
             for remedio in resultadoPesquisaViewModel!.arrayRemedios {
-                if remedio.produto.lowercased().contains(searchText.lowercased()) {
+                if remedio.product.lowercased().contains(searchText.lowercased()) {
                     resultadoPesquisaViewModel?.filteredRemedios.append(remedio)
                 }
             }

@@ -45,7 +45,7 @@ class ResultadoPesquisaViewModel {
                }
     func searchByName(name: String){
         let brand = Remedio(json: JSON())
-        if name.contains(brand.produto){
+        if name.contains(brand.product){
             self.filteredRemedios.append(brand)
         }
     }
