@@ -24,11 +24,16 @@ class ResultadoPesquisaViewController: UIViewController {
     var array = [Cabecalho] ()
     //var arrayMedice = [Remedios] ()
     var resultadoPesquisaViewModel: ResultadoPesquisaViewModel?
+    var filteredRemedios = [Remedios] ()
+    var arrayRemedios = [Remedios] ()
+    
+    var pesquisarViewController: PesquisarViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         resultadoPesquisaViewModel = ResultadoPesquisaViewModel()
+        pesquisarViewController = PesquisarViewController()
         
         tableViewResult.delegate = self
         tableViewResult.dataSource = self
@@ -50,6 +55,7 @@ class ResultadoPesquisaViewController: UIViewController {
         resultadoPesquisaViewModel?.loadBrandAPI(completion: {  (sucess, error) in
                    if sucess {
                        DispatchQueue.main.async {
+                        self.pesquisarViewController?.filteredRemedios = self.pesquisarViewController!.arrayRemedios
                            self.tableViewResult.reloadData()
                        }
                    }
@@ -70,7 +76,7 @@ extension ResultadoPesquisaViewController: UITableViewDelegate {
 }
 extension ResultadoPesquisaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let allDrugs = resultadoPesquisaViewModel?.numberOfRows() {
+        if let allDrugs = pesquisarViewController?.filteredRemedios.count {
                     return allDrugs
                 }
                 
@@ -80,9 +86,11 @@ extension ResultadoPesquisaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NomeRemediosTableViewCell", for: indexPath) as! NomeRemediosTableViewCell
         
-        cell.setup(nameMedice: resultadoPesquisaViewModel!.arraySearchByName[indexPath.row].produto, nameLaboratory: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].nameLaboratory, productType: resultadoPesquisaViewModel!.arrayRemedios[indexPath.row].productType )
+        cell.setup(nameMedice: resultadoPesquisaViewModel!.filteredRemedios[indexPath.row].produto)
         return cell
         }
     
 }
+
+
 

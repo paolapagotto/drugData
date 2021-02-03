@@ -160,6 +160,8 @@
                         <outlet property="textFiedConfirmPassword" destination="O12-qE-YhZ" id="RTO-NK-EWK"/>
                         <outlet property="textFieldEmail" destination="47J-jg-gpI" id="c0M-ot-goM"/>
                         <outlet property="textFieldPassword" destination="MzC-pl-d0L" id="qzU-IM-bue"/>
+                        <outlet property="textFieldUserName" destination="QiM-bX-vnq" id="YWZ-Ft-ozf"/>
+                        <outlet property="textFieldUserPhone" destination="eOm-fm-8cq" id="dnO-U0-TmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SvV-Ui-hn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

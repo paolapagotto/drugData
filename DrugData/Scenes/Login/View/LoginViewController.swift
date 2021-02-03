@@ -18,25 +18,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var signInButton: GIDSignInButton!
-
-
-  
-
-    
     @IBOutlet weak var FBLoginView: UIView!
-    
     @IBOutlet weak var loginButton: FBLoginButton!
-    
-
-   
-
-
     
     @IBAction func buttonForgotPassword(_ sender: Any) {
         if let forgotPassword = UIStoryboard(name: "EsqueceuASenhaViewController", bundle: nil).instantiateInitialViewController() as? EsqueceuASenhaViewController {
             navigationController?.pushViewController(forgotPassword, animated: true)
         }
     }
+    
     @IBAction func buttonLoggin(_ sender: Any) {
         
         if let email = textFieldEmail.text, let password = textFieldPassword.text {
@@ -98,8 +88,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     
     func validateInfo() -> Bool {
-            let user = User(email: textFieldEmail.text!,
-                            password: textFieldPassword.text!)
+          
             if !isValidEmail(textFieldEmail.text!)
                 {
                     print("Valid e-mail is required!")
@@ -110,10 +99,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     print("Password is required!")
                     return false
                 }
-            user.email = textFieldEmail.text ?? "email inválido"
-            print(user.email)
             
-        
             return true
     }
     

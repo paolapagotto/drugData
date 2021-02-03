@@ -29,16 +29,6 @@ class Categoria {
         self.classeTerapeutica = json["CLASSE TERAPEUTICA"].stringValue
             
         }
-    
-    func filtroCategoria(remedio: Categoria){
-        if(remedio.tipoProduto == "GENERICO"){
-            self.tipoProduto = remedio.tipoProduto
-            
-        }else if(remedio.tipoProduto == "Biologico"){
-            self.tipoProduto = remedio.tipoProduto
-            
-        }
-    }
 }
 
 extension Categoria: SearchBarProtocol {
