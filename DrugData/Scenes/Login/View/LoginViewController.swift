@@ -21,6 +21,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var FBLoginView: UIView!
     @IBOutlet weak var loginButton: FBLoginButton!
     
+    @IBOutlet var buttonOutletFacebook: UIButton!
+    
+    @IBAction func buttonActionFacebook(_ sender: Any) {
+        buttonOutletFacebook = FBLoginButton()
+        let newCenter = CGPoint(x: self.FBLoginView.frame.width / 2, y: self.FBLoginView.frame.height / 2)
+            buttonOutletFacebook.center = newCenter
+            self.FBLoginView.addSubview(buttonOutletFacebook)
+            facebookLogged()
+    }
+    
+    
     @IBAction func buttonForgotPassword(_ sender: Any) {
         if let forgotPassword = UIStoryboard(name: "EsqueceuASenhaViewController", bundle: nil).instantiateInitialViewController() as? EsqueceuASenhaViewController {
             navigationController?.pushViewController(forgotPassword, animated: true)
@@ -62,7 +73,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return Auth.auth().currentUser != nil
     }
     
-    func facebookIsLogged(button: FBLoginButton!) {
+    
+    func facebookLogged(){
         if let token = AccessToken.current,
                 !token.isExpired {
                 // User is logged in, do work such as go to next view controller.
@@ -70,8 +82,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             UIViewController.replaceRootViewController(viewController: tabBarController)
             }
         }
-        
     }
+    
     
     func isValidEmail(_ email: String) -> Bool {
             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z.]{2,64}"
@@ -120,13 +132,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
-
         
-        let loginButton = FBLoginButton()
-        loginButton.permissions = ["public_profile", "email"]
-        let newCenter = CGPoint(x: self.FBLoginView.frame.width / 2, y: self.FBLoginView.frame.height / 2)
-        loginButton.center = newCenter
-        self.FBLoginView.addSubview(loginButton)
+        
+        
+//        let loginButton = FBLoginButton()
+//        loginButton.permissions = ["public_profile", "email"]
+//        let newCenter = CGPoint(x: self.FBLoginView.frame.width / 2, y: self.FBLoginView.frame.height / 2)
+//        loginButton.center = newCenter
+//        self.FBLoginView.addSubview(loginButton)
         
         //facebookIsLogged()
         

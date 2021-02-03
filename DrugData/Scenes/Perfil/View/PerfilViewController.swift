@@ -28,24 +28,39 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     @IBAction func buttonActionEditUserProfile(_ sender: Any) {
         let user = User(name: textFieldUserName.text!, phone: textFieldUserPhone.text!, email: textFieldUserEmail.text!, password: textFieldUserPassword.text!)
                 user.name = textFieldUserName.text!
-                user.email = textFieldUserEmail.text!
                 user.phone = textFieldUserPhone.text!
-                user.password = textFieldUserPassword.text!
-                user.setUser(user: user)
+                updateUserLoginFirebase()
     }
     
     @IBAction func buttonLogOut(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-            if let loginView = UIStoryboard(name: "LoginViewController", bundle: nil).instantiateInitialViewController() as? LoginViewController {
-                navigationController?.pushViewController(loginView, animated: true)
+        
+            do {
+                try Auth.auth().signOut()
+                if let loginView = UIStoryboard(name: "LoginViewController", bundle: nil).instantiateInitialViewController() as? LoginViewController {
+                    navigationController?.pushViewController(loginView, animated: true)
+                }
+            } catch let signOutError as NSError {
+              print ("Error signing out: %@", signOutError)
             }
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
+           
     }
     
+    func isLogged() -> Bool {
+            return Auth.auth().currentUser != nil
+    }
+    
+    func updateUserLoginFirebase(){
+        if textFieldShouldEndEditing(textFieldUserEmail){
+            Auth.auth().currentUser?.updateEmail(to: textFieldUserEmail.text!) { (error) in
+              // ...
+            }
+        }
+        if textFieldShouldEndEditing(textFieldUserPassword){
+            Auth.auth().currentUser?.updatePassword(to: textFieldUserPassword.text!) { (error) in
+              // ...
+            }
+        }
+    }
     //@IBOutlet weak var tableViewUser: UITableView!
     func userFirebase(){
         let user = Auth.auth().currentUser
@@ -79,16 +94,21 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
         textFieldUserEmail.placeholder = user?.email
         textFieldUserPassword.placeholder = user?.password
         buttonUIEditUserProfile.isEnabled = false
+        buttonUIEditUserProfile.backgroundColor = UIColor.lightGray
         
     }
 }
 
 extension PerfilViewController {
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool{
-        
-        buttonUIEditUserProfile.isEnabled = true
         return true
     }
+    func textFieldDidBeginEditing(_ textField: UITextField){
+        buttonUIEditUserProfile.isEnabled = true
+        buttonUIEditUserProfile.backgroundColor = UIColor.systemTeal
+    }
     
-    
+    func textFieldDidEndEditing(_ textField: UITextField){
+        
+    }
 }
