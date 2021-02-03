@@ -50,10 +50,10 @@ class NomeRemediosTableViewCell: UITableViewCell {
     }
     
     // MARK: Métodos
-    func setup(nameMedice: String, nameLaboratory: String, productType: String) {
+    func setup(nameMedice: String) {
         labelNameMedice.text = nameMedice
-        labelNameLaboratory.text = nameLaboratory
-        labelProductType.text = productType
+//        labelNameLaboratory.text = nameLaboratory
+        //        labelProductType.text = productType
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

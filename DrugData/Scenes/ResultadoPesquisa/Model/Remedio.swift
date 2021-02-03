@@ -9,6 +9,10 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+protocol SearchBarRemedioProtocol {
+    func getTeam() -> String
+}
+
 class Remedio {
     
     var produto: String
@@ -25,5 +29,13 @@ class Remedio {
     
     func resultOfSearch(){
         
+    }
+}
+extension Remedio: SearchBarRemedioProtocol {
+    func getTeam() -> String {
+        return "\(produto)".lowercased()
+    }
+    func getTeamLab() -> String {
+        return "\(nameLaboratory)".lowercased()
     }
 }

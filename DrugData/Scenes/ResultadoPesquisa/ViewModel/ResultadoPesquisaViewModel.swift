@@ -14,7 +14,7 @@ class ResultadoPesquisaViewModel {
     
     var textSearch : String = ""
     var arrayRemedios = [Remedio] ();
-    var arraySearchByName = [Remedio] ()
+    var filteredRemedios = [Remedio] ()
     var hashRemedios: [String: [Remedio]] = [:]
     
     // MARK: Métodos
@@ -46,7 +46,7 @@ class ResultadoPesquisaViewModel {
     func searchByName(name: String){
         let brand = Remedio(json: JSON())
         if name.contains(brand.produto){
-            self.arraySearchByName.append(brand)
+            self.filteredRemedios.append(brand)
         }
     }
     
@@ -55,6 +55,6 @@ class ResultadoPesquisaViewModel {
         }
     
     func numberOfRowsSearchByName() -> Int {
-            return arraySearchByName.count
+            return filteredRemedios.count
         }
 }

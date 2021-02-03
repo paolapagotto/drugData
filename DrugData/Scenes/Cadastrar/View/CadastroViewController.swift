@@ -10,51 +10,15 @@ import UIKit
 import FirebaseAuth
 
 
-protocol AddUser {
-    func getUserEmail()
-}
 
-class User: AddUser {
-    var email:String
-    var password:String
-    init(email:String, password:String) {
-        self.email = email
-        self.password = password
-    }
-    
-    func newUser(emailUser: String){
-        setUserEmail(email: emailUser)
-    }
-    
-    func setUserEmail(email: String){
-        self.email = email
-    }
-    
-    func getUserEmail(){
-        print("User \(self.email)")
-    }
-}
-
-class userData {
-    private var userList = [AddUser]()
-    
-    func addUserToList(user: AddUser) {
-        userList.append(user)
-    }
-    func printUserList() {
-        for user in userList{
-            print(user)
-        }
-    }
-    private func userCard(user: AddUser){
-        user.getUserEmail()
-    }
-}
 
 class CadastroViewController: UIViewController, ImagePickerFotoSelecionada, UITextFieldDelegate{
 
     // MARK: IBOutlet 
     @IBOutlet weak var imageViewUser: UIImageView!
+    
+    @IBOutlet weak var textFieldUserName: UITextField!
+    @IBOutlet weak var textFieldUserPhone: UITextField!
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var textFiedConfirmPassword: UITextField!
@@ -62,21 +26,26 @@ class CadastroViewController: UIViewController, ImagePickerFotoSelecionada, UITe
     
     // MARK: Atributos
     let imagePicker = ImagePicker()
+    var user: User?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         cornerRadiusView()
         self.setup()
-
+        user = User(name: textFieldUserName.text!, phone: textFieldUserPhone.text!, email: textFieldEmail.text!, password: textFieldPassword.text!)
         textFieldEmail.delegate = self
         textFieldPassword.delegate = self
         
     }
     
     private func cleanTextFields() {
-            textFieldEmail.text = ""
-            textFieldPassword.text = ""
-            textFiedConfirmPassword.text = ""
+        textFieldUserName.text = ""
+        textFieldUserPhone.text = ""
+        textFieldEmail.text = ""
+        textFieldPassword.text = ""
+        textFiedConfirmPassword.text = ""
         }
     
    // MARK: IBAction
@@ -158,8 +127,7 @@ class CadastroViewController: UIViewController, ImagePickerFotoSelecionada, UITe
         }
     
     func validateInfo() -> Bool {
-            let user = User(email: textFieldEmail.text!,
-                            password: textFieldPassword.text!)
+        let user = User(name: textFieldUserName.text!, phone: textFieldUserPhone.text!, email: textFieldEmail.text!, password: textFieldPassword.text!)
             if !isValidEmail(textFieldEmail.text!)
                 {
                     print("Valid e-mail is required!")
@@ -177,7 +145,7 @@ class CadastroViewController: UIViewController, ImagePickerFotoSelecionada, UITe
             print("Usuário cadastrado!")
             buttonNextRegister.isEnabled = true
             user.email = textFieldEmail.text ?? "email inválido"
-            print(user.email)
+            user.setUser(user: user)
             
         
             return true

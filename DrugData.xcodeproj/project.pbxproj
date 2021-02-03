@@ -19,6 +19,7 @@
 		84672E1125C06EED00B1C21C /* imggenericotarjapreta.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1025C06EEC00B1C21C /* imggenericotarjapreta.png */; };
 		84672E1325C06F0200B1C21C /* imggenerico.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1225C06F0200B1C21C /* imggenerico.png */; };
 		84672E1825C06F2500B1C21C /* imggenericotarjavermelha.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1725C06F2400B1C21C /* imggenericotarjavermelha.png */; };
+		84B70B2525CAE0B900CDE929 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B70B2425CAE0B900CDE929 /* User.swift */; };
 		E00D826CB978BA7A11BA3076 /* Pods_DrugData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */; };
 		E3DBB907256DF81900A1869B /* Cabecalho.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBB9742565B5D100A5550E /* Cabecalho.swift */; };
 		E3DBB90B256DF81E00A1869B /* Remedios.swift in Sources */ = {isa = PBXBuildFile; fileRef = F232BC03256B30BD00460ADF /* Remedios.swift */; };
@@ -115,6 +116,7 @@
 		84672E1025C06EEC00B1C21C /* imggenericotarjapreta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenericotarjapreta.png; sourceTree = "<group>"; };
 		84672E1225C06F0200B1C21C /* imggenerico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenerico.png; sourceTree = "<group>"; };
 		84672E1725C06F2400B1C21C /* imggenericotarjavermelha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenericotarjavermelha.png; sourceTree = "<group>"; };
+		84B70B2425CAE0B900CDE929 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4626E0A19BD7FDA142D5ABB /* Pods-DrugData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData.release.xcconfig"; path = "Target Support Files/Pods-DrugData/Pods-DrugData.release.xcconfig"; sourceTree = "<group>"; };
 		B7005B2C3AE8F4F5FDC304FE /* Pods-DrugData-DrugDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData-DrugDataUITests.release.xcconfig"; path = "Target Support Files/Pods-DrugData-DrugDataUITests/Pods-DrugData-DrugDataUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +230,14 @@
 				FFE2A49EE04C00DF77B0AE62 /* Pods_DrugDataTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84B70B2325CAE09300CDE929 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84B70B2425CAE0B900CDE929 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AB74E95A9446CBEC8BDD4E2F /* Pods */ = {
@@ -415,6 +425,7 @@
 		F23C8F0B256ADCF40094FA87 /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
+				84B70B2325CAE09300CDE929 /* Model */,
 				F2F5F40A258A531100E693EB /* View */,
 			);
 			path = Perfil;
@@ -1187,6 +1198,7 @@
 				F207767425A8A08700326400 /* CategoriaViewModel.swift in Sources */,
 				F2D2D55B255E08110025BEF3 /* PesquisarViewController.swift in Sources */,
 				E3DBB907256DF81900A1869B /* Cabecalho.swift in Sources */,
+				84B70B2525CAE0B900CDE929 /* User.swift in Sources */,
 				F232BC0F256B323900460ADF /* NomeRemediosTableViewCell.swift in Sources */,
 				F23C8EFD256AD2EC0094FA87 /* ControladosViewController.swift in Sources */,
 				F232BBF4256B2B6B00460ADF /* LocalizacaoViewController.swift in Sources */,
