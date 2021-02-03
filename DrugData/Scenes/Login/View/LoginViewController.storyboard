@@ -111,21 +111,16 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvY-Q4-gkK">
                                 <rect key="frame" x="60" y="742" width="294" height="46"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="foM-Sw-1BP" customClass="FBLoginButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="46"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="r39-M1-R2u"/>
-                                            <constraint firstAttribute="width" constant="294" id="u6A-xE-wuq"/>
-                                        </constraints>
-                                    </view>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx5-JT-Xr2">
+                                        <rect key="frame" x="-6" y="-6" width="307" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="facebook.png"/>
+                                        <connections>
+                                            <action selector="buttonActionFacebook:" destination="dVw-Cj-wMd" eventType="touchUpInside" id="b2c-7I-zUf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="foM-Sw-1BP" firstAttribute="top" secondItem="zvY-Q4-gkK" secondAttribute="top" id="LQk-dN-pLQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="foM-Sw-1BP" secondAttribute="bottom" id="RFI-if-xTk"/>
-                                    <constraint firstItem="foM-Sw-1BP" firstAttribute="leading" secondItem="zvY-Q4-gkK" secondAttribute="leading" id="XtS-M6-kAw"/>
-                                    <constraint firstAttribute="trailing" secondItem="foM-Sw-1BP" secondAttribute="trailing" id="s6b-te-Kz6"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KIN-NX-TX6"/>
@@ -169,7 +164,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="JcS-Zd-cnV"/>
                     <connections>
                         <outlet property="FBLoginView" destination="zvY-Q4-gkK" id="MCZ-cd-QN5"/>
-                        <outlet property="loginButton" destination="foM-Sw-1BP" id="Ixz-FG-lN0"/>
+                        <outlet property="buttonOutletFacebook" destination="Yx5-JT-Xr2" id="HnG-jM-t9U"/>
                         <outlet property="signInButton" destination="xQU-tc-9eD" id="FVk-8O-Bmn"/>
                         <outlet property="textFieldEmail" destination="48P-j1-kxr" id="r7F-z6-eRi"/>
                         <outlet property="textFieldPassword" destination="mXj-K9-CtB" id="34L-cc-gN9"/>
@@ -201,6 +196,7 @@
     </scenes>
     <resources>
         <image name="drug03.png" width="124" height="581"/>
+        <image name="facebook.png" width="503" height="100"/>
         <image name="pills03.png" width="900" height="692"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
