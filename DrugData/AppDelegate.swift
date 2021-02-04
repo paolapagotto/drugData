@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
+import FacebookCore
+import FacebookLogin
 import CoreData
 
 @main
@@ -47,18 +49,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Facebook
         
-        ApplicationDelegate.shared.application(
-                    application,
-                    didFinishLaunchingWithOptions: launchOptions
-                )
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
 
         GIDSignIn.sharedInstance().clientID = "916024135351-hgfqncgu2jsehgd394qll8shlq0pul8p.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        
+        // Facebook
+        
+        ApplicationDelegate.shared.application(
+                    application,
+                    didFinishLaunchingWithOptions: launchOptions
+                )
         
         return true
     }
