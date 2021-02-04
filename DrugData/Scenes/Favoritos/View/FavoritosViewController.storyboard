@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-Tg-Qwd">
-                                <rect key="frame" x="34" y="111" width="146" height="20.5"/>
+                                <rect key="frame" x="34" y="97" width="146" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="yZ2-ke-Ct4"/>
                                 </constraints>
@@ -34,19 +34,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYV-o4-4yy">
-                                <rect key="frame" x="35" y="64" width="91.5" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <rect key="frame" x="35" y="64" width="61.5" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.95466549300000003" green="0.9441021127" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVk-sy-kH9">
-                                <rect key="frame" x="310" y="64" width="69" height="69"/>
+                                <rect key="frame" x="310" y="64" width="69" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="JHI-Ut-8od"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-3E-SKY">
-                                <rect key="frame" x="0.0" y="219" width="414" height="594"/>
+                                <rect key="frame" x="0.0" y="205" width="414" height="608"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetalheMedicamentoTableViewCell" rowHeight="125" id="Ksy-mx-lxS" customClass="DetalheMedicamentoTableViewCell" customModule="DrugData" customModuleProvider="target">
@@ -126,7 +126,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msY-RW-pmO">
-                                <rect key="frame" x="0.0" y="155" width="414" height="33"/>
+                                <rect key="frame" x="0.0" y="141" width="414" height="33"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Seus favoritos ⭐️">
                                         <attributes>
