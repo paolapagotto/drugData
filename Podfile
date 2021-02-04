@@ -13,7 +13,9 @@ target 'DrugData' do
   # https://firebase.google.com/docs/ios/setup#available-pods
 
   pod 'FirebaseUI'
-  pod 'FBSDKLoginKit'		
+  pod 'FBSDKLoginKit'	
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'	
 
 
 
