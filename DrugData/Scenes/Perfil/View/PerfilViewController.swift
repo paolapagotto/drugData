@@ -23,6 +23,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var buttonUIEditUserProfile: UIButton!
     @IBOutlet weak var buttonLogOut: UIButton!
     
+    @IBOutlet weak var labelTeste: UILabel!
     var user: User?
     
     @IBAction func buttonActionEditUserProfile(_ sender: Any) {
@@ -75,14 +76,28 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
           let name = user.displayName
           let phone = user.phoneNumber
           let email = user.email
-          let photoURL = user.photoURL
-        
+            let photoURL = user.photoURL
+            textFieldUserName.placeholder = name
+            textFieldUserPhone.placeholder = phone ?? "(xx)xxxxx-xxxx"
+            textFieldUserEmail.placeholder = email
+            let data = try? Data(contentsOf: photoURL!)
+            if let imagedata = data {
+                imageViewUserProfilePhoto.image = UIImage(data: imagedata) ?? UIImage(named: "userplaceholder.png")
+                cornerRadiusView()
+            }
+//            imageViewUserProfilePhoto.image = UIImage(named: "\(photoURL)") ?? UIImage(named: "userplaceholder.png")
         }
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-//        changeRequest?.displayName = displayName
+
         changeRequest?.commitChanges { (error) in
           // ...
         }
+    }
+    
+    func cornerRadiusView() {
+        imageViewUserProfilePhoto.layer.cornerRadius = imageViewUserProfilePhoto.frame.width / 2
+        imageViewUserProfilePhoto.layer.borderWidth = 0.5
+        //imageViewUserProfilePhoto.layer.borderWidth = UIColor.lightGray.cgColor
     }
     
     override func viewDidLoad() {
@@ -92,13 +107,11 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
         textFieldUserPhone.delegate = self
         textFieldUserEmail.delegate = self
         textFieldUserPassword.delegate = self
-        textFieldUserName.placeholder = user?.name
-        textFieldUserPhone.placeholder = user?.phone
-        textFieldUserEmail.placeholder = user?.email
-        textFieldUserPassword.placeholder = user?.password
         buttonUIEditUserProfile.isEnabled = false
         buttonUIEditUserProfile.backgroundColor = UIColor.lightGray
         //buttonLogOut.delegate = self
+        userFirebase()
+        cornerRadiusView()
         
     }
 }
