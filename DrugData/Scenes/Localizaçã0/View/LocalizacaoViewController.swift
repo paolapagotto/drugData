@@ -7,6 +7,11 @@
 
 import UIKit
 import MapKit
+import Firebase
+import GoogleSignIn
+import FBSDKLoginKit
+import FBSDKCoreKit
+import FacebookLogin
 
 class LocalizacaoViewController: UIViewController {
 
@@ -23,13 +28,16 @@ class LocalizacaoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        inicialLocation()
+        
+        //inicialLocation()
+        userFirebase()
+        cornerRadiusView()
     }
     
     // MARK: Métodos
     func inicialLocation() {
-        Location().convertLocation(endereco: "Av. Paulista, 1578 - Bela Vista, São Paulo - SP") { (findLocation) in
-            let pino = self.confPino(name: "Maria", location: findLocation)
+        Location().convertLocation(endereco: "São Paulo - SP") { (findLocation) in
+            let pino = self.confPino(name: "Paola", location: findLocation)
             
             let place = MKCoordinateRegion(center: pino.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
             self.mapkitMap.setRegion(place, animated: true)
@@ -45,7 +53,29 @@ class LocalizacaoViewController: UIViewController {
         
         return pino
     }
-    
+    func cornerRadiusView() {
+        imageViewAvatar.layer.cornerRadius = imageViewAvatar.frame.width / 2
+        imageViewAvatar.layer.borderWidth = 0.5
+        //imageViewUserProfilePhoto.layer.borderWidth = UIColor.lightGray.cgColor
+    }
+    func userFirebase(){
+        let user = Auth.auth().currentUser
+        if let user = user {
+          // The user's ID, unique to the Firebase project.
+          // Do NOT use this value to authenticate with your backend server,
+          // if you have one. Use getTokenWithCompletion:completion: instead.
+          let uid = user.uid
+          let name = user.displayName
+            let photoURL = user.photoURL
+            labelName.text = "Olá, \(name)!" ?? "Olá, Doutorx"
+            labelLocation.text = "São Paulo - SP"
+            let data = try? Data(contentsOf: photoURL!)
+            if let imagedata = data {
+                imageViewAvatar.image = UIImage(data: imagedata) ?? UIImage(named: "userplaceholder.png")
+                cornerRadiusView()
+            }
+        }
+    }
 }
     
 
