@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		58990A8382660EB73440A4EF /* Pods_DrugData_DrugDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B93F1C2797407C475AAF07 /* Pods_DrugData_DrugDataUITests.framework */; };
 		842DFDB225ABEDF4005692E4 /* drug06.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DFDB125ABEDF3005692E4 /* drug06.png */; };
+		84393FDD25CC862E00A39896 /* userplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 84393FDC25CC862E00A39896 /* userplaceholder.png */; };
 		84672DC325BC9D9A00B1C21C /* pills03.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DC225BC9D9A00B1C21C /* pills03.png */; };
 		84672DC825BCA48E00B1C21C /* pills02.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DC725BCA48E00B1C21C /* pills02.png */; };
 		84672DCD25BCA60D00B1C21C /* pills05.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672DCC25BCA60D00B1C21C /* pills05.png */; };
@@ -105,6 +106,7 @@
 		3C157B864814879795A122AD /* Pods-DrugData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugData.debug.xcconfig"; path = "Target Support Files/Pods-DrugData/Pods-DrugData.debug.xcconfig"; sourceTree = "<group>"; };
 		5D7E08AFB0D948E57B22B260 /* Pods-DrugDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugDataTests.debug.xcconfig"; path = "Target Support Files/Pods-DrugDataTests/Pods-DrugDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		842DFDB125ABEDF3005692E4 /* drug06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drug06.png; sourceTree = "<group>"; };
+		84393FDC25CC862E00A39896 /* userplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userplaceholder.png; sourceTree = "<group>"; };
 		84672DC225BC9D9A00B1C21C /* pills03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills03.png; sourceTree = "<group>"; };
 		84672DC725BCA48E00B1C21C /* pills02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills02.png; sourceTree = "<group>"; };
 		84672DCC25BCA60D00B1C21C /* pills05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pills05.png; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				F2F5F475258A5AF700E693EB /* Scenes */,
 				F25AC4AB25A6346F005EB742 /* Image */,
+				84393FDC25CC862E00A39896 /* userplaceholder.png */,
 				F233D0A52559E99500D5CE2D /* SceneDelegate.swift */,
 				F233D0AC2559E99900D5CE2D /* Assets.xcassets */,
 				F233D0AE2559E99900D5CE2D /* LaunchScreen.storyboard */,
@@ -1006,6 +1009,7 @@
 				F23C8F15256ADD240094FA87 /* PerfilViewController.storyboard in Resources */,
 				84672E1825C06F2500B1C21C /* imggenericotarjavermelha.png in Resources */,
 				F233D0AB2559E99500D5CE2D /* Main.storyboard in Resources */,
+				84393FDD25CC862E00A39896 /* userplaceholder.png in Resources */,
 				F2E2C931258BFC4900FF0982 /* drug04.png in Resources */,
 				84672DCD25BCA60D00B1C21C /* pills05.png in Resources */,
 			);

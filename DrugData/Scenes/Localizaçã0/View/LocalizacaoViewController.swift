@@ -28,7 +28,7 @@ class LocalizacaoViewController: UIViewController {
     
     // MARK: Métodos
     func inicialLocation() {
-        Location().convertLocation(endereco: "São Paulo - São Paulo") { (findLocation) in
+        Location().convertLocation(endereco: "Av. Paulista, 1578 - Bela Vista, São Paulo - SP") { (findLocation) in
             let pino = self.confPino(name: "Maria", location: findLocation)
             
             let place = MKCoordinateRegion(center: pino.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)

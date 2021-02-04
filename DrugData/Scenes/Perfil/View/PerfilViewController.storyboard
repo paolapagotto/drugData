@@ -98,22 +98,22 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceL-aC-daz">
                                 <rect key="frame" x="35" y="315" width="344" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XRK-A1-IVf">
                                 <rect key="frame" x="35" y="394" width="344" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umm-Zz-kkU">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umm-Zz-kkU">
                                 <rect key="frame" x="35" y="472" width="344" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ChD-W1-pO8">
                                 <rect key="frame" x="35" y="554" width="344" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                         </subviews>
@@ -166,6 +166,7 @@
                         <outlet property="buttonLogOut" destination="8N3-Qs-aAH" id="y9Y-bA-xOO"/>
                         <outlet property="buttonUIEditUserProfile" destination="8N3-Qs-aAH" id="KPY-Wj-KQ7"/>
                         <outlet property="imageViewUserProfilePhoto" destination="eE8-He-xuI" id="Plv-SC-Vr5"/>
+                        <outlet property="labelTeste" destination="hCk-lG-K0h" id="fWG-6F-2L3"/>
                         <outlet property="textFieldUserEmail" destination="Umm-Zz-kkU" id="xNf-VJ-Hn5"/>
                         <outlet property="textFieldUserName" destination="ceL-aC-daz" id="8pD-db-Xn4"/>
                         <outlet property="textFieldUserPassword" destination="ChD-W1-pO8" id="ljx-ve-Ant"/>
