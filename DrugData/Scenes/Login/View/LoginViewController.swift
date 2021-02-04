@@ -10,27 +10,19 @@ import Firebase
 import GoogleSignIn
 import FBSDKLoginKit
 import FBSDKCoreKit
+import FacebookLogin
 
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
-    
+class LoginViewController: UIViewController, UITextFieldDelegate, LoginButtonDelegate {
+
     // MARK: @IBOutlet
     @IBOutlet weak var textFieldEmail: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var signInButton: GIDSignInButton!
     @IBOutlet weak var FBLoginView: UIView!
-    @IBOutlet weak var loginButton: FBLoginButton!
-    
-    @IBOutlet var buttonOutletFacebook: UIButton!
-    
+    @IBOutlet var buttonOutletFacebook: FBLoginButton!
     @IBAction func buttonActionFacebook(_ sender: Any) {
-        buttonOutletFacebook = FBLoginButton()
-        let newCenter = CGPoint(x: self.FBLoginView.frame.width / 2, y: self.FBLoginView.frame.height / 2)
-            buttonOutletFacebook.center = newCenter
-            self.FBLoginView.addSubview(buttonOutletFacebook)
-            facebookLogged()
     }
-    
     
     @IBAction func buttonForgotPassword(_ sender: Any) {
         if let forgotPassword = UIStoryboard(name: "EsqueceuASenhaViewController", bundle: nil).instantiateInitialViewController() as? EsqueceuASenhaViewController {
@@ -62,6 +54,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
     }
     
+ 
     private func cleanTextFields() {
         textFieldEmail.text = ""
         textFieldPassword.text = ""
@@ -75,15 +68,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     func facebookLogged(){
-        if let token = AccessToken.current,
-                !token.isExpired {
-                // User is logged in, do work such as go to next view controller.
-            if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController{
-                            UIViewController.replaceRootViewController(viewController: tabBarController)
-            }
-        }
+        buttonOutletFacebook = FBLoginButton()
+        buttonOutletFacebook.delegate = self
+        buttonOutletFacebook.permissions = ["public_profile", "email"]
+        let newCenter = CGPoint(x: self.FBLoginView.frame.width / 2, y: self.FBLoginView.frame.height / 2)
+            buttonOutletFacebook.center = newCenter
+            self.FBLoginView.addSubview(buttonOutletFacebook)
+        
+        configureFBButtonContraints(FBButton: buttonOutletFacebook)
+        buttonOutletFacebook.addTarget(self, action: #selector(loginButton), for: .touchUpInside)
+
     }
     
+    
+    func configureFBButtonContraints(FBButton: UIButton){
+        FBButton.translatesAutoresizingMaskIntoConstraints = false
+        FBButton.topAnchor.constraint(equalTo: self.FBLoginView.topAnchor).isActive = true
+        FBButton.leadingAnchor.constraint(equalTo: self.FBLoginView.leadingAnchor).isActive = true
+        FBButton.trailingAnchor.constraint(equalTo: self.FBLoginView.trailingAnchor).isActive = true
+        FBButton.bottomAnchor.constraint(equalTo: self.FBLoginView.bottomAnchor).isActive = true
+        
+    }
     
     func isValidEmail(_ email: String) -> Bool {
             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z.]{2,64}"
@@ -132,18 +137,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
+        facebookLogged()
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-//        let loginButton = FBLoginButton()
-//        loginButton.permissions = ["public_profile", "email"]
-//        let newCenter = CGPoint(x: self.FBLoginView.frame.width / 2, y: self.FBLoginView.frame.height / 2)
-//        loginButton.center = newCenter
-//        self.FBLoginView.addSubview(loginButton)
-        
-        //facebookIsLogged()
-        
-
     }
    
 }
@@ -165,4 +166,25 @@ extension UIViewController {
     }
 }
 
+extension LoginViewController{
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        
+    }
 
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        if error != nil {
+            // error handler
+        
+        }else {
+            if let token = AccessToken.current,
+                    !token.isExpired {
+                    // User is logged in, do work such as go to next view controller.
+                if let tabBarController = UIStoryboard(name: "PesquisarViewController", bundle: nil).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController{
+                                UIViewController.replaceRootViewController(viewController: tabBarController)
+                }
+            }
+        }
+    
+    }
+}

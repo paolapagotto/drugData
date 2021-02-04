@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -876,6 +876,8 @@
 			dependencies = (
 			);
 			name = DrugData;
+			packageProductDependencies = (
+			);
 			productName = DrugData;
 			productReference = F233D0A02559E99500D5CE2D /* DrugData.app */;
 			productType = "com.apple.product-type.application";
@@ -951,6 +953,9 @@
 				Base,
 			);
 			mainGroup = F233D0972559E99500D5CE2D;
+			packageReferences = (
+				84B70B3725CC780200CDE929 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = F233D0A12559E99500D5CE2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1532,6 +1537,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84B70B3725CC780200CDE929 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		F2F314F425B7126200D6B5A1 /* Drugs.xcdatamodeld */ = {

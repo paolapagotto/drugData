@@ -29,11 +29,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zRU-BE-ry3">
-                                <rect key="frame" x="0.0" y="334" width="414" height="562"/>
+                                <rect key="frame" x="0.0" y="258" width="414" height="638"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="562" id="7lD-dp-Xua"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrganicoTableViewCell" rowHeight="126" id="0Vp-If-fn1" customClass="OrganicoTableViewCell" customModule="DrugData" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="126"/>
@@ -82,39 +79,46 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2w-Ts-bMy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2w-Ts-bMy">
                                 <rect key="frame" x="310" y="64" width="69" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="nrA-lC-2E3"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="REMÉDIOS ORGÂNICOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S24-Qd-fC1">
-                                <rect key="frame" x="0.0" y="213" width="414" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMÉDIOS ORGÂNICOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S24-Qd-fC1">
+                                <rect key="frame" x="0.0" y="157" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Digite o nome do remédio aqui" translatesAutoresizingMaskIntoConstraints="NO" id="HmM-0U-S8p">
-                                <rect key="frame" x="0.0" y="278" width="414" height="44"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Digite o nome do remédio aqui" translatesAutoresizingMaskIntoConstraints="NO" id="HmM-0U-S8p">
+                                <rect key="frame" x="0.0" y="198" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6ja-pi-88z"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vtK-zx-U3H"/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HsT-ES-7M6" firstAttribute="leading" secondItem="vtK-zx-U3H" secondAttribute="leading" constant="35" id="11z-OI-Yye"/>
-                            <constraint firstItem="S24-Qd-fC1" firstAttribute="leading" secondItem="vtK-zx-U3H" secondAttribute="leading" id="46f-4i-Dys"/>
-                            <constraint firstItem="zRU-BE-ry3" firstAttribute="trailing" secondItem="S24-Qd-fC1" secondAttribute="trailing" id="5Mh-Uz-Ry4"/>
-                            <constraint firstItem="zRU-BE-ry3" firstAttribute="leading" secondItem="HmM-0U-S8p" secondAttribute="leading" id="628-TI-4KS"/>
-                            <constraint firstItem="v2w-Ts-bMy" firstAttribute="top" secondItem="vtK-zx-U3H" secondAttribute="top" constant="20" id="CUw-PZ-Fy0"/>
-                            <constraint firstItem="S24-Qd-fC1" firstAttribute="top" secondItem="v2w-Ts-bMy" secondAttribute="bottom" constant="80" id="TNw-Cz-Gqh"/>
-                            <constraint firstItem="vtK-zx-U3H" firstAttribute="trailing" secondItem="v2w-Ts-bMy" secondAttribute="trailing" constant="35" id="Vde-Td-bQc"/>
-                            <constraint firstItem="zRU-BE-ry3" firstAttribute="leading" secondItem="S24-Qd-fC1" secondAttribute="leading" id="WJf-yA-5BI"/>
-                            <constraint firstItem="6oC-Nc-nOD" firstAttribute="top" secondItem="HsT-ES-7M6" secondAttribute="bottom" constant="4" id="XxC-2i-zoB"/>
-                            <constraint firstItem="zRU-BE-ry3" firstAttribute="top" secondItem="HmM-0U-S8p" secondAttribute="bottom" constant="12" id="hPZ-n9-Wvz"/>
-                            <constraint firstItem="zRU-BE-ry3" firstAttribute="trailing" secondItem="HmM-0U-S8p" secondAttribute="trailing" id="jRB-NY-YjS"/>
-                            <constraint firstItem="6oC-Nc-nOD" firstAttribute="top" secondItem="HsT-ES-7M6" secondAttribute="bottom" constant="4" id="jS9-Wh-B9d"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="zRU-BE-ry3" secondAttribute="bottom" constant="-34" id="oKe-z3-I9g"/>
-                            <constraint firstItem="S24-Qd-fC1" firstAttribute="trailing" secondItem="vtK-zx-U3H" secondAttribute="trailing" id="otS-fp-Ch4"/>
-                            <constraint firstItem="HsT-ES-7M6" firstAttribute="top" secondItem="vtK-zx-U3H" secondAttribute="top" constant="20" id="q1T-jo-duR"/>
-                            <constraint firstItem="6oC-Nc-nOD" firstAttribute="leading" secondItem="vtK-zx-U3H" secondAttribute="leading" constant="35" id="xng-o3-lnu"/>
+                            <constraint firstItem="HmM-0U-S8p" firstAttribute="trailing" secondItem="zRU-BE-ry3" secondAttribute="trailing" id="2cp-qW-zDN"/>
+                            <constraint firstItem="S24-Qd-fC1" firstAttribute="top" secondItem="6oC-Nc-nOD" secondAttribute="bottom" constant="25.5" id="3WF-hg-H6p"/>
+                            <constraint firstItem="HsT-ES-7M6" firstAttribute="leading" secondItem="6oC-Nc-nOD" secondAttribute="leading" id="6HH-BQ-9Lh"/>
+                            <constraint firstItem="S24-Qd-fC1" firstAttribute="leading" secondItem="EQo-R5-flb" secondAttribute="leading" id="8Bp-sB-w7z"/>
+                            <constraint firstItem="S24-Qd-fC1" firstAttribute="trailing" secondItem="HmM-0U-S8p" secondAttribute="trailing" id="Bpy-o4-U8v"/>
+                            <constraint firstItem="S24-Qd-fC1" firstAttribute="leading" secondItem="HmM-0U-S8p" secondAttribute="leading" id="E63-G9-jUo"/>
+                            <constraint firstAttribute="trailing" secondItem="S24-Qd-fC1" secondAttribute="trailing" id="Hqi-3U-RT1"/>
+                            <constraint firstItem="vtK-zx-U3H" firstAttribute="trailing" secondItem="v2w-Ts-bMy" secondAttribute="trailing" constant="35" id="I3E-pQ-tPi"/>
+                            <constraint firstItem="S24-Qd-fC1" firstAttribute="top" secondItem="v2w-Ts-bMy" secondAttribute="bottom" constant="24" id="ZA6-5Y-rji"/>
+                            <constraint firstAttribute="bottom" secondItem="zRU-BE-ry3" secondAttribute="bottom" id="Zyg-aj-X7w"/>
+                            <constraint firstItem="HsT-ES-7M6" firstAttribute="top" secondItem="vtK-zx-U3H" secondAttribute="top" constant="20" id="iTZ-cR-ipk"/>
+                            <constraint firstItem="zRU-BE-ry3" firstAttribute="top" secondItem="HmM-0U-S8p" secondAttribute="bottom" constant="16" id="oO8-0d-GoE"/>
+                            <constraint firstItem="HsT-ES-7M6" firstAttribute="top" secondItem="v2w-Ts-bMy" secondAttribute="top" id="p0S-S2-M6y"/>
+                            <constraint firstItem="HsT-ES-7M6" firstAttribute="leading" secondItem="vtK-zx-U3H" secondAttribute="leading" constant="35" id="t2I-sw-Uma"/>
+                            <constraint firstItem="HmM-0U-S8p" firstAttribute="top" secondItem="S24-Qd-fC1" secondAttribute="bottom" constant="17" id="tGC-zI-LMv"/>
+                            <constraint firstItem="6oC-Nc-nOD" firstAttribute="top" secondItem="HsT-ES-7M6" secondAttribute="bottom" constant="4" id="uA7-sZ-cY9"/>
+                            <constraint firstItem="HmM-0U-S8p" firstAttribute="leading" secondItem="zRU-BE-ry3" secondAttribute="leading" id="zUl-c6-Vd3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pWC-Co-Q2G"/>

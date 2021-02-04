@@ -33,6 +33,8 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonLogOut(_ sender: Any) {
+        let logout = LoginManager()
+        logout.logOut()
         
             do {
                 try Auth.auth().signOut()
@@ -48,6 +50,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     func isLogged() -> Bool {
             return Auth.auth().currentUser != nil
     }
+    
     
     func updateUserLoginFirebase(){
         if textFieldShouldEndEditing(textFieldUserEmail){
@@ -95,6 +98,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
         textFieldUserPassword.placeholder = user?.password
         buttonUIEditUserProfile.isEnabled = false
         buttonUIEditUserProfile.backgroundColor = UIColor.lightGray
+        //buttonLogOut.delegate = self
         
     }
 }
@@ -112,3 +116,9 @@ extension PerfilViewController {
         
     }
 }
+extension LoginButtonDelegate{
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        
+    }
+}
+

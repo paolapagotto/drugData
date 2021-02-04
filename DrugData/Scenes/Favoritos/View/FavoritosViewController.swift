@@ -86,7 +86,6 @@ extension FavoritosViewController: UITableViewDataSource {
         cell.labelProductName.text = drugs.drugsFavorite
         //cell.labelLaboratoryName.text = drugs.drugLab
         
-        
         return cell
     }
     
