@@ -50,7 +50,6 @@ class PesquisarViewController: UIViewController, UISearchBarDelegate {
                 imageViewAvatar.image = UIImage(data: imagedata) ?? UIImage(named: "userplaceholder.png")
                 cornerRadiusView()
             }
-//            imageViewUserProfilePhoto.image = UIImage(named: "\(photoURL)") ?? UIImage(named: "userplaceholder.png")
         }
     }
         
@@ -67,39 +66,18 @@ class PesquisarViewController: UIViewController, UISearchBarDelegate {
         resultadoPesquisaViewModel?.filteredRemedios = resultadoPesquisaViewModel!.arrayRemedios
     }
     @IBAction func buttonSearchMedice(_ sender: Any) {
-        if !filteredRemedios.isEmpty {
-            
-            resultadoPesquisaViewController?.tableViewResult.reloadData()
+      //if !filteredRemedios.isEmpty {
+//
+//            resultadoPesquisaViewController?.tableViewResult.reloadData()
             if let search = UIStoryboard(name: "ResultadoPesquisaViewController", bundle: nil).instantiateInitialViewController() as? ResultadoPesquisaViewController{
                 navigationController?.pushViewController(search, animated: true)
             }
-        }
         
         
         
-    }
-    //MARK: SearchBar Delegate
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        resultadoPesquisaViewModel?.filteredRemedios = []
         
-        if searchText == "" {
-            resultadoPesquisaViewModel?.filteredRemedios = resultadoPesquisaViewModel!.arrayRemedios
-        } else {
-            for remedio in resultadoPesquisaViewModel!.arrayRemedios {
-                if remedio.product.lowercased().contains(searchText.lowercased()) {
-                    resultadoPesquisaViewModel?.filteredRemedios.append(remedio)
-                }
-            }
-        }
-       
     }
     
 }
-extension PesquisarViewController{
+
     
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        return true
-    }
-    
-}
