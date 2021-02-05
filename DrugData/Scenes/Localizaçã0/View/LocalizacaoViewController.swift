@@ -29,7 +29,7 @@ class LocalizacaoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //inicialLocation()
+        inicialLocation()
         userFirebase()
         cornerRadiusView()
     }
@@ -49,14 +49,13 @@ class LocalizacaoViewController: UIViewController {
         let pino = MKPointAnnotation()
         pino.title = name
         pino.coordinate = location.location!.coordinate
-        
-        
+
         return pino
     }
     func cornerRadiusView() {
         imageViewAvatar.layer.cornerRadius = imageViewAvatar.frame.width / 2
         imageViewAvatar.layer.borderWidth = 0.5
-        //imageViewUserProfilePhoto.layer.borderWidth = UIColor.lightGray.cgColor
+       
     }
     func userFirebase(){
         let user = Auth.auth().currentUser
@@ -67,7 +66,7 @@ class LocalizacaoViewController: UIViewController {
           let uid = user.uid
           let name = user.displayName
             let photoURL = user.photoURL
-            labelName.text = "Olá, \(name)!" ?? "Olá, Doutorx"
+            labelName.text = name ?? "Olá"
             labelLocation.text = "São Paulo - SP"
             let data = try? Data(contentsOf: photoURL!)
             if let imagedata = data {
