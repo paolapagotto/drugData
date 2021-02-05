@@ -76,11 +76,11 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
           let name = user.displayName
           let phone = user.phoneNumber
           let email = user.email
-            let photoURL = user.photoURL
+            let photoURL = user.photoURL ?? URL(fileReferenceLiteralResourceName: "userplaceholder.png")
             textFieldUserName.placeholder = name
             textFieldUserPhone.placeholder = phone ?? "(xx)xxxxx-xxxx"
             textFieldUserEmail.placeholder = email
-            let data = try? Data(contentsOf: photoURL!)
+            let data = try? Data(contentsOf: photoURL)
             if let imagedata = data {
                 imageViewUserProfilePhoto.image = UIImage(data: imagedata) ?? UIImage(named: "userplaceholder.png")
                 cornerRadiusView()
@@ -97,7 +97,6 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     func cornerRadiusView() {
         imageViewUserProfilePhoto.layer.cornerRadius = imageViewUserProfilePhoto.frame.width / 2
         imageViewUserProfilePhoto.layer.borderWidth = 0.5
-        //imageViewUserProfilePhoto.layer.borderWidth = UIColor.lightGray.cgColor
     }
     
     override func viewDidLoad() {
