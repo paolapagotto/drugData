@@ -85,9 +85,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="labelNameLaboratory" destination="SSa-rn-KIE" id="4rO-nK-5PV"/>
-                                            <outlet property="labelNameMedice" destination="M8l-4s-xNB" id="rT6-83-opQ"/>
-                                            <outlet property="labelProductType" destination="V3i-Dw-EUD" id="QHs-6X-EvZ"/>
+                                            <outlet property="labelNameLaboratory" destination="V3i-Dw-EUD" id="w0a-nc-i5S"/>
+                                            <outlet property="labelNameProduct" destination="M8l-4s-xNB" id="HDo-8x-mNg"/>
+                                            <outlet property="labelProductType" destination="SSa-rn-KIE" id="0Sm-B9-3Sg"/>
                                             <outlet property="saveFavoriteDrug" destination="Hx2-vG-6WF" id="DNX-VL-qax"/>
                                         </connections>
                                     </tableViewCell>
