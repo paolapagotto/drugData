@@ -75,8 +75,8 @@
                                 <color key="textColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxd-Yb-cmi">
-                                <rect key="frame" x="35" y="525" width="55" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Profissão:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxd-Yb-cmi">
+                                <rect key="frame" x="35" y="525" width="152" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pZV-jW-hVb"/>
                                 </constraints>
@@ -106,15 +106,15 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umm-Zz-kkU">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umm-Zz-kkU">
                                 <rect key="frame" x="35" y="472" width="344" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ChD-W1-pO8">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Developer" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ChD-W1-pO8">
                                 <rect key="frame" x="35" y="554" width="344" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" textContentType="organization-title"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ugC-GJ-7Qa"/>
@@ -128,7 +128,7 @@
                             <constraint firstItem="XRK-A1-IVf" firstAttribute="top" secondItem="6hJ-f9-mVY" secondAttribute="bottom" constant="8.5" id="HaL-6F-ci3"/>
                             <constraint firstItem="hCk-lG-K0h" firstAttribute="leading" secondItem="ugC-GJ-7Qa" secondAttribute="leading" constant="35" id="Mmk-c2-ro0"/>
                             <constraint firstItem="0Pm-8N-YB1" firstAttribute="top" secondItem="8N3-Qs-aAH" secondAttribute="bottom" constant="13" id="OBH-Eg-cmE"/>
-                            <constraint firstItem="3gm-cg-vnr" firstAttribute="centerX" secondItem="zxd-Yb-cmi" secondAttribute="centerX" id="P03-e8-yis"/>
+                            <constraint firstItem="3gm-cg-vnr" firstAttribute="centerX" secondItem="zxd-Yb-cmi" secondAttribute="centerX" constant="-36" id="P03-e8-yis"/>
                             <constraint firstItem="3gm-cg-vnr" firstAttribute="leading" secondItem="Umm-Zz-kkU" secondAttribute="leading" id="RkH-pU-qzl"/>
                             <constraint firstItem="6hJ-f9-mVY" firstAttribute="leading" secondItem="XRK-A1-IVf" secondAttribute="leading" id="Rmy-BB-mf2"/>
                             <constraint firstItem="ugC-GJ-7Qa" firstAttribute="trailing" secondItem="0Pm-8N-YB1" secondAttribute="trailing" constant="60" id="SfR-kB-YJ3"/>
