@@ -38,7 +38,7 @@ class ControladosViewController: UIViewController, UISearchBarDelegate {
           let uid = user.uid
           let name = user.displayName
             let photoURL = user.photoURL
-            labelName.text = "Olá, \(name)!"
+            labelName.text = name ?? "Olá"
             labelLocation.text = "São Paulo - SP"
             let data = try? Data(contentsOf: photoURL!)
             if let imagedata = data {

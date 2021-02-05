@@ -112,6 +112,12 @@
                                 <rect key="frame" x="66" y="743" width="283" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ou acesse aqui " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IW-6E-dXZ">
+                                <rect key="frame" x="0.0" y="682" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KIN-NX-TX6"/>
                         <color key="backgroundColor" red="0.95466549300000003" green="0.9441021127" blue="0.95026408449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -135,10 +141,12 @@
                             <constraint firstItem="z35-nY-nfB" firstAttribute="centerX" secondItem="LMU-eW-THf" secondAttribute="centerX" id="PJU-Fp-K1T"/>
                             <constraint firstItem="LMU-eW-THf" firstAttribute="top" secondItem="z35-nY-nfB" secondAttribute="bottom" constant="43" id="Qce-bO-MMS"/>
                             <constraint firstItem="48P-j1-kxr" firstAttribute="leading" secondItem="7xf-VQ-mOx" secondAttribute="leading" id="SdQ-YN-Ao7"/>
+                            <constraint firstItem="9IW-6E-dXZ" firstAttribute="trailing" secondItem="KIN-NX-TX6" secondAttribute="trailing" id="VQd-k5-Nwh"/>
                             <constraint firstItem="zvY-Q4-gkK" firstAttribute="top" secondItem="INT-CS-EtP" secondAttribute="top" constant="743" id="WIX-Mo-c75"/>
                             <constraint firstItem="u77-Rc-ivM" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" id="WgA-A2-Xrh"/>
                             <constraint firstItem="lMn-Vs-FAu" firstAttribute="trailing" secondItem="48P-j1-kxr" secondAttribute="trailing" id="YMc-fJ-F3q"/>
                             <constraint firstItem="z35-nY-nfB" firstAttribute="centerX" secondItem="mXj-K9-CtB" secondAttribute="centerX" id="ZDW-Mu-jYC"/>
+                            <constraint firstItem="zvY-Q4-gkK" firstAttribute="top" secondItem="9IW-6E-dXZ" secondAttribute="bottom" constant="40" id="Zob-X5-KFM"/>
                             <constraint firstItem="XUC-vn-18q" firstAttribute="centerX" secondItem="n5Q-w5-zWt" secondAttribute="centerX" id="Zua-o9-Zhj"/>
                             <constraint firstItem="7xf-VQ-mOx" firstAttribute="top" secondItem="48P-j1-kxr" secondAttribute="bottom" constant="12" id="c43-BA-tlI"/>
                             <constraint firstItem="lMn-Vs-FAu" firstAttribute="leading" secondItem="48P-j1-kxr" secondAttribute="leading" id="dOo-8f-O6s"/>
@@ -149,6 +157,7 @@
                             <constraint firstItem="lMn-Vs-FAu" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" constant="35" id="oan-6B-zRH"/>
                             <constraint firstItem="zvY-Q4-gkK" firstAttribute="centerX" secondItem="LMU-eW-THf" secondAttribute="centerX" id="sBP-Aq-cAK"/>
                             <constraint firstItem="u77-Rc-ivM" firstAttribute="top" secondItem="KIN-NX-TX6" secondAttribute="top" id="t8B-Sv-XBi"/>
+                            <constraint firstItem="9IW-6E-dXZ" firstAttribute="leading" secondItem="KIN-NX-TX6" secondAttribute="leading" id="tlR-93-Lzu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="JcS-Zd-cnV"/>
