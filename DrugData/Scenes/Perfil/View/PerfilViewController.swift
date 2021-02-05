@@ -10,6 +10,7 @@ import Firebase
 import GoogleSignIn
 import FBSDKLoginKit
 import FBSDKCoreKit
+import FacebookLogin
 
 class PerfilViewController: UIViewController, UITextFieldDelegate {
 
@@ -34,17 +35,18 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonLogOut(_ sender: Any) {
-        let logout = LoginManager()
-        logout.logOut()
         
             do {
                 try Auth.auth().signOut()
+                let logout = LoginManager()
+                logout.logOut()
                 if let loginView = UIStoryboard(name: "LoginViewController", bundle: nil).instantiateInitialViewController() as? LoginViewController {
                     navigationController?.pushViewController(loginView, animated: true)
                 }
             } catch let signOutError as NSError {
               print ("Error signing out: %@", signOutError)
             }
+        
            
     }
     
@@ -54,6 +56,12 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
     
     
     func updateUserLoginFirebase(){
+        
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+//        changeRequest?.displayName = displayName
+        changeRequest?.commitChanges { (error) in
+          // ...
+        }
         if textFieldShouldEndEditing(textFieldUserEmail){
             Auth.auth().currentUser?.updateEmail(to: textFieldUserEmail.text!) { (error) in
               // ...
@@ -85,7 +93,6 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
                 imageViewUserProfilePhoto.image = UIImage(data: imagedata) ?? UIImage(named: "userplaceholder.png")
                 cornerRadiusView()
             }
-//            imageViewUserProfilePhoto.image = UIImage(named: "\(photoURL)") ?? UIImage(named: "userplaceholder.png")
         }
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
 
@@ -108,7 +115,6 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
         textFieldUserPassword.delegate = self
         buttonUIEditUserProfile.isEnabled = false
         buttonUIEditUserProfile.backgroundColor = UIColor.lightGray
-        //buttonLogOut.delegate = self
         userFirebase()
         cornerRadiusView()
         
@@ -130,6 +136,8 @@ extension PerfilViewController {
 }
 extension LoginButtonDelegate{
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        let logout = LoginManager()
+        logout.logOut()
         
     }
 }

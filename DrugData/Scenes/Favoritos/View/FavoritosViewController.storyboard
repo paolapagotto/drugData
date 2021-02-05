@@ -118,11 +118,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageViewMedicine" destination="8AD-tx-PI7" id="NeL-AI-lMY"/>
-                                            <outlet property="labelNameCategory" destination="iZi-nb-bZV" id="BVJ-LE-JAY"/>
-                                            <outlet property="labelNameLaboratory" destination="wie-fw-lUX" id="p15-kf-XKr"/>
-                                            <outlet property="labelNameMedice" destination="Vle-KO-b3M" id="A42-XG-iPR"/>
-                                            <outlet property="labelPreco" destination="EUg-9A-hxp" id="hOx-Ne-Uzs"/>
+                                            <outlet property="imageViewProduct" destination="8AD-tx-PI7" id="3sH-Qq-8OG"/>
+                                            <outlet property="labelLaboratoryName" destination="wie-fw-lUX" id="pPG-pS-91J"/>
+                                            <outlet property="labelProductName" destination="Vle-KO-b3M" id="bMc-fl-ZPT"/>
+                                            <outlet property="labelProductPrice" destination="EUg-9A-hxp" id="LZC-xa-G3U"/>
+                                            <outlet property="labelProductType" destination="iZi-nb-bZV" id="fWY-Ou-QRV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
