@@ -15,7 +15,7 @@ class ResultadoPesquisaViewModel {
     var textSearch : String = ""
     var arrayRemedios = [Remedio] ();
     var filteredRemedios = [Remedio] ()
-    var hashRemedios: [String: [Remedio]] = [:]
+    
     
     // MARK: Métodos
     func loadBrandAPI(completion: @escaping (_ result: Bool, _ error: Error?) -> Void) {
@@ -26,15 +26,10 @@ class ResultadoPesquisaViewModel {
                            for item in arrayDictionary {
                             
                                 let brand = Remedio(json: JSON(item))
-                                let brandLab = brand.nameLaboratory
-                                self.hashRemedios[brandLab, default: [Remedio]()].append(brand)
                                 self.arrayRemedios.append(brand)
+                    
                             
-                                //self.searchByName(name: self.textSearch)
                            }
-                        
-                        
-                            
                            completion(true, nil)
                        } else {
                            completion(false, response.error)
@@ -43,12 +38,6 @@ class ResultadoPesquisaViewModel {
                    }
                    
                }
-    func searchByName(name: String){
-        let brand = Remedio(json: JSON())
-        if name.contains(brand.product){
-            self.filteredRemedios.append(brand)
-        }
-    }
     
     func numberOfRows() -> Int {
             return arrayRemedios.count

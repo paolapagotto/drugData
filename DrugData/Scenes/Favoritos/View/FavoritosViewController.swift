@@ -54,7 +54,6 @@ class FavoritosViewController: UIViewController, NSFetchedResultsControllerDeleg
                 imageViewAvatar.image = UIImage(data: imagedata) ?? UIImage(named: "userplaceholder.png")
                 cornerRadiusView()
             }
-//            imageViewUserProfilePhoto.image = UIImage(named: "\(photoURL)") ?? UIImage(named: "userplaceholder.png")
         }
     }
     
@@ -109,12 +108,14 @@ extension FavoritosViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetalheMedicamentoTableViewCell", for: indexPath) as! DetalheMedicamentoTableViewCell
-        //cell.setup(details: arrayMed[indexPath.row])
+        
         guard let drugs = favoriteManager?.fetchedObjects?[indexPath.row] else { return cell }
         
         cell.labelProductName.text = drugs.drugsFavorite
-        //cell.labelLaboratoryName.text = drugs.drugLab
-        
+        cell.labelLaboratoryName.text = drugs.drugLab
+        cell.labelProductType.text = drugs.drugType
+        cell.labelProductPrice.text = drugs.drugPrice
+        //cell.imageViewProduct.image = UIImage (named: drugs.drugImage!)
         return cell
     }
     

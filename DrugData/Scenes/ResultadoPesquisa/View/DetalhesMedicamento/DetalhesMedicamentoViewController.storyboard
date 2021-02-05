@@ -77,11 +77,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="categoryDrug" destination="kfQ-Jb-bpH" id="N5b-yB-rOr"/>
                         <outlet property="imageView" destination="Qug-he-kjd" id="X78-i5-4BE"/>
-                        <outlet property="laboratoryName" destination="Xy9-6G-wal" id="lCb-Yx-zw5"/>
-                        <outlet property="nameDrug" destination="mrM-Fb-i66" id="ok0-5A-ajS"/>
-                        <outlet property="priceDrug" destination="rSS-xg-zVZ" id="b31-8f-1gq"/>
+                        <outlet property="imageViewProduct" destination="Qug-he-kjd" id="uI3-Vj-HfW"/>
+                        <outlet property="labelLaboratoryName" destination="Xy9-6G-wal" id="TKu-5C-ZhH"/>
+                        <outlet property="labelProductName" destination="mrM-Fb-i66" id="w9S-GP-Qjf"/>
+                        <outlet property="labelProductPrice" destination="rSS-xg-zVZ" id="y1E-bG-n0f"/>
+                        <outlet property="labelProductType" destination="kfQ-Jb-bpH" id="Qi0-dz-7mP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQ3-S1-mf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
