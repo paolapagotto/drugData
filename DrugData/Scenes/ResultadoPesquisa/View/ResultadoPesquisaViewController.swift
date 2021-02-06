@@ -37,6 +37,8 @@ class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
         }
         
         // MARK: Métodos
+    
+        
 
         func loadBrandData() {
             resultadoPesquisaViewModel?.loadBrandAPI(completion: {  (sucess, error) in
@@ -91,6 +93,7 @@ extension ResultadoPesquisaViewController: UITableViewDataSource {
             cell.setup(remedio: resultadoPesquisaViewModel!.filteredRemedios[indexPath.row])
             return cell
             }
+    
         
 }
 extension ResultadoPesquisaViewController {

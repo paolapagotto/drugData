@@ -18,6 +18,7 @@ class Remedio {
     var product: String
     var nameLaboratory: String
     var productType: String
+    var controlled: String
     var description: String
     var price: String
         
@@ -25,6 +26,7 @@ class Remedio {
             self.product = json["PRODUTO"].stringValue
             self.nameLaboratory = json[ "LABORATORIO"].stringValue
             self.productType = json[ "TIPO DE PRODUTO"].stringValue
+            self.controlled = json["TARJA"].stringValue
             self.description = json["APRESENTACAO"].stringValue
             self.price = json["PRECO FINAL"].stringValue
         }
