@@ -25,25 +25,32 @@ class DetalhesMedicamentoViewController: UIViewController {
         self.labelLaboratoryName.text = "Laboratório: \(drugDetail!.nameLaboratory)"
         self.labelProductType.text = "Categoria: \(drugDetail!.productType)"
         self.labelProductPrice.text! = "Preço: \(drugDetail!.price)"
+        //self.setupImage(remedio: labelProductType.text!)
     }
     
-    func setupImage(remedio: Remedio){
-        
-        if remedio.productType == "BIOLÓGICO" || remedio.productType == "FITOTERÁPICO"{
-            return imageViewProduct.image = UIImage(named: "imgorganico.png")
-        } else if remedio.productType == "GENÉRICO" && remedio.productType == "Tarja VERMELHA"{
-            return imageViewProduct.image = UIImage(named: "imggenericotarjavermelha.png")
-        } else if remedio.productType == "GENÉRICO" && remedio.productType == "Tarja PRETA"{
-            return imageViewProduct.image = UIImage(named: "imggenericotarjapreta.png")
-        } else if remedio.productType == "Tarja PRETA"{
-            return imageViewProduct.image = UIImage(named: "imgtarjapreta.png")
-        } else if remedio.productType == "Tarja VERMELHA"{
-            return imageViewProduct.image = UIImage(named: "imgtarjavermelha.png")
-        } else if remedio.productType == "GENÉRICO"{
-            return imageViewProduct.image = UIImage(named: "imggenerico.png")
-        }
+    
+    
+
+
+func setupImage(remedio: String){
+    
+    if remedio == "BIOLÓGICO" || remedio == "FITOTERÁPICO"{
+        return imageViewProduct.image = UIImage(named: "imgorganico.png")
+    } else if remedio == "GENÉRICO" && remedio == "Tarja VERMELHA"{
+        return imageViewProduct.image = UIImage(named: "imggenericotarjavermelha.png")
+    } else if remedio == "GENÉRICO" && remedio == "Tarja PRETA"{
+        return imageViewProduct.image = UIImage(named: "imggenericotarjapreta.png")
+    } else if remedio == "Tarja PRETA"{
+        return imageViewProduct.image = UIImage(named: "imgtarjapreta.png")
+    } else if remedio == "Tarja VERMELHA"{
+        return imageViewProduct.image = UIImage(named: "imgtarjavermelha.png")
+    } else if remedio == "GENÉRICO"{
+        return imageViewProduct.image = UIImage(named: "imggenerico.png")
+    } else {
         return self.imageViewProduct.image = UIImage(named: "imgremedio.png")
     }
+}
+
     
     
     func setup(remedio: Remedio){

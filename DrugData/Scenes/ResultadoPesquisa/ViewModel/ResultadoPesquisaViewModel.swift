@@ -25,10 +25,9 @@ class ResultadoPesquisaViewModel {
                         
                            for item in arrayDictionary {
                             
-                                let brand = Remedio(json: JSON(item))
-                                self.arrayRemedios.append(brand)
-                    
-                            
+                            let brand = Remedio(json: JSON(item))
+                            self.arrayRemedios.append(brand)
+  
                            }
                            completion(true, nil)
                        } else {
@@ -46,4 +45,6 @@ class ResultadoPesquisaViewModel {
     func numberOfRowsSearchByName() -> Int {
             return filteredRemedios.count
         }
+    
+    
 }

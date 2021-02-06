@@ -36,7 +36,6 @@ class FavoritosViewController: UIViewController, NSFetchedResultsControllerDeleg
     func cornerRadiusView() {
         imageViewAvatar.layer.cornerRadius = imageViewAvatar.frame.width / 2
         imageViewAvatar.layer.borderWidth = 0.5
-        //imageViewUserProfilePhoto.layer.borderWidth = UIColor.lightGray.cgColor
     }
     func userFirebase(){
         let user = Auth.auth().currentUser
@@ -110,12 +109,13 @@ extension FavoritosViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetalheMedicamentoTableViewCell", for: indexPath) as! DetalheMedicamentoTableViewCell
         
         guard let drugs = favoriteManager?.fetchedObjects?[indexPath.row] else { return cell }
-        
+
         cell.labelProductName.text = drugs.drugsFavorite
         cell.labelLaboratoryName.text = drugs.drugLab
         cell.labelProductType.text = drugs.drugType
         cell.labelProductPrice.text = drugs.drugPrice
-        //cell.imageViewProduct.image = UIImage (named: drugs.drugImage!)
+        cell.labelProductControl.text = drugs.drugControl
+        cell.imageViewProduct.image = UIImage (named: drugs.drugImage ?? "imgremedio.png")
         return cell
     }
     
