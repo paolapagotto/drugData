@@ -148,7 +148,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msY-RW-pmO">
                                 <rect key="frame" x="0.0" y="155" width="414" height="33"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Seus favoritos ">
+                                    <fragment content="Meus favoritos ">
                                         <attributes>
                                             <color key="NSColor" red="0.96549629579999996" green="0.99759989609999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" metaFont="system" size="27"/>

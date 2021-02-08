@@ -6,7 +6,12 @@
 //
 
 import UIKit
-
+import CoreData
+import Firebase
+import GoogleSignIn
+import FBSDKLoginKit
+import FBSDKCoreKit
+import FacebookLogin
 
 
 class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
@@ -26,7 +31,8 @@ class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            cornerRadiusView()
+            userFirebase()
             resultadoPesquisaViewModel = ResultadoPesquisaViewModel()
             
             tableViewResult.delegate = self
@@ -38,7 +44,29 @@ class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
         
         // MARK: Métodos
     
-        
+    func cornerRadiusView() {
+        imageViewAvatar.layer.cornerRadius = imageViewAvatar.frame.width / 2
+        imageViewAvatar.layer.borderWidth = 0.5
+        //imageViewUserProfilePhoto.layer.borderWidth = UIColor.lightGray.cgColor
+    }
+    func userFirebase(){
+        let user = Auth.auth().currentUser
+        if let user = user {
+          // The user's ID, unique to the Firebase project.
+          // Do NOT use this value to authenticate with your backend server,
+          // if you have one. Use getTokenWithCompletion:completion: instead.
+          let uid = user.uid
+          let name = user.displayName
+            let photoURL = user.photoURL ?? URL(fileReferenceLiteralResourceName: "userplaceholder.png")
+            labelName.text = name ?? "Olá"
+            labelLocation.text = "São Paulo - SP"
+            let data = try? Data(contentsOf: photoURL)
+            if let imagedata = data {
+                imageViewAvatar.image = UIImage(data: imagedata) ?? UIImage(named: "userplaceholder.png")
+                cornerRadiusView()
+            }
+        }
+    }
 
         func loadBrandData() {
             resultadoPesquisaViewModel?.loadBrandAPI(completion: {  (sucess, error) in
