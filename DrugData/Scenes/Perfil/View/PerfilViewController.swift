@@ -11,6 +11,7 @@ import GoogleSignIn
 import FBSDKLoginKit
 import FBSDKCoreKit
 import FacebookLogin
+import Foundation
 
 class PerfilViewController: UIViewController, UITextFieldDelegate {
 
@@ -31,6 +32,7 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
         let user = User(name: textFieldUserName.text!, phone: textFieldUserPhone.text!, email: textFieldUserEmail.text!, password: textFieldUserPassword.text!)
                 user.name = textFieldUserName.text!
                 user.phone = textFieldUserPhone.text!
+        
                 updateUserLoginFirebase()
     }
     
@@ -40,8 +42,9 @@ class PerfilViewController: UIViewController, UITextFieldDelegate {
                 try Auth.auth().signOut()
                 let logout = LoginManager()
                 logout.logOut()
+                
                 if let loginView = UIStoryboard(name: "LoginViewController", bundle: nil).instantiateInitialViewController() as? LoginViewController {
-                    navigationController?.pushViewController(loginView, animated: true)
+                    UIViewController.replaceRootViewController(viewController: loginView)
                 }
             } catch let signOutError as NSError {
               print ("Error signing out: %@", signOutError)
@@ -127,7 +130,8 @@ extension PerfilViewController {
     }
     func textFieldDidBeginEditing(_ textField: UITextField){
         buttonUIEditUserProfile.isEnabled = true
-        buttonUIEditUserProfile.backgroundColor = UIColor.systemTeal
+        buttonUIEditUserProfile.backgroundColor = UIColor(red: 193, green: 198, blue: 255)
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField){
@@ -140,5 +144,14 @@ extension LoginButtonDelegate{
         logout.logOut()
         
     }
+}
+
+extension UIColor {
+   convenience init(red: Int, green: Int, blue: Int) {
+       assert(red >= 0 && red <= 255, "Invalid red component")
+       assert(green >= 0 && green <= 255, "Invalid green component")
+       assert(blue >= 0 && blue <= 255, "Invalid blue component")
+       self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+   }
 }
 

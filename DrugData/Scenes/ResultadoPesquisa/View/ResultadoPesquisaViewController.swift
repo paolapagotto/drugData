@@ -27,8 +27,10 @@ class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: Atributos
         var searchTerm: String = ""
-        var resultadoPesquisaViewModel: ResultadoPesquisaViewModel?
         
+        var resultadoPesquisaViewModel: ResultadoPesquisaViewModel?
+        var getMedicine: Remedio?
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             cornerRadiusView()
@@ -100,7 +102,18 @@ class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
 extension ResultadoPesquisaViewController: UITableViewDelegate {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             if let medicineDetails = UIStoryboard(name: "DetalhesMedicamentoViewController", bundle: nil).instantiateInitialViewController() as? DetalhesMedicamentoViewController {
+                
+                
+                if !searchBarShouldBeginEditing(searchBarAllDrugs){
+                    medicineDetails.getMedicine = (resultadoPesquisaViewModel?.arrayRemedios[indexPath.row])
+                } else if searchBarShouldBeginEditing(searchBarAllDrugs) {
+                    medicineDetails.getMedicine = (resultadoPesquisaViewModel?.filteredRemedios[indexPath.row])
+                }
+                
+        
+                
                 navigationController?.pushViewController(medicineDetails, animated: true)
+                
             }
         }
 }
