@@ -283,6 +283,7 @@
 			children = (
 				F232BC25256B388A00460ADF /* Cell - Detalhe do Medicamento */,
 				F232BC20256B382100460ADF /* DetalhesMedicamentoViewController.storyboard */,
+				F232BC29256B391400460ADF /* DetalheMedicamentoTableViewCell.swift */,
 				F2E745D9256C54E80031D731 /* DetalhesMedicamentoViewController.swift */,
 			);
 			path = DetalhesMedicamento;
@@ -291,7 +292,6 @@
 		F232BC25256B388A00460ADF /* Cell - Detalhe do Medicamento */ = {
 			isa = PBXGroup;
 			children = (
-				F232BC29256B391400460ADF /* DetalheMedicamentoTableViewCell.swift */,
 			);
 			path = "Cell - Detalhe do Medicamento";
 			sourceTree = "<group>";

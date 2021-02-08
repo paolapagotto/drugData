@@ -46,8 +46,11 @@
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonLogOut:" destination="Opo-ui-kTJ" eventType="touchUpInside" id="1xd-UV-iZz"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N3-Qs-aAH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N3-Qs-aAH">
                                 <rect key="frame" x="60" y="650" width="294" height="46"/>
                                 <color key="backgroundColor" red="0.75686274509999996" green="0.77647058820000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -66,7 +69,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonActionEditUserProfile:" destination="Opo-ui-kTJ" eventType="touchUpInside" id="Ggl-hd-B42"/>
-                                    <action selector="buttonLogOut:" destination="Opo-ui-kTJ" eventType="touchUpInside" id="YBR-Ue-goo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCk-lG-K0h">
@@ -163,7 +165,7 @@
                     <navigationItem key="navigationItem" id="PgE-ch-uTY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="buttonLogOut" destination="8N3-Qs-aAH" id="y9Y-bA-xOO"/>
+                        <outlet property="buttonLogOut" destination="0Pm-8N-YB1" id="bxX-vA-v8f"/>
                         <outlet property="buttonUIEditUserProfile" destination="8N3-Qs-aAH" id="KPY-Wj-KQ7"/>
                         <outlet property="imageViewUserProfilePhoto" destination="eE8-He-xuI" id="Plv-SC-Vr5"/>
                         <outlet property="labelTeste" destination="hCk-lG-K0h" id="fWG-6F-2L3"/>

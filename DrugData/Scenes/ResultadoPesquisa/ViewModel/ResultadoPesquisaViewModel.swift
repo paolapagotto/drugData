@@ -27,7 +27,10 @@ class ResultadoPesquisaViewModel {
                             
                             let brand = Remedio(json: JSON(item))
                             self.arrayRemedios.append(brand)
-  
+//                            if let sorted = self.arrayRemedios.sorted {
+//                                $0.product < $1.product
+//                                arrayRemedios.sorted()
+//                            }
                            }
                            completion(true, nil)
                        } else {
@@ -45,6 +48,10 @@ class ResultadoPesquisaViewModel {
     func numberOfRowsSearchByName() -> Int {
             return filteredRemedios.count
         }
+    
+    func getMedicine() {
+       
+    }
     
     
 }

@@ -6,17 +6,49 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    
+    static func isLogged() -> Bool {
+        return Auth.auth().currentUser != nil
+    }
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+//        guard let _ = (scene as? UIWindowScene) else { return }
+        if SceneDelegate.isLogged() {
+           
+        }
+        
+        
+//        if #available(iOS 13.0, *) {
+//                    window?.overrideUserInterfaceStyle = .light
+//                }
+//                
+//                let isShowedResumeScreen = UserDefaults.standard.bool(forKey: "isShowedResumeScreen")
+//                if (!isShowedResumeScreen) {
+//                    if let onboradingVC = ResumeScreenViewController.getFirstScreen() {
+//                        window?.rootViewController = onboradingVC
+//                         //   UINavigationController(rootViewController: viewDefault)
+//                    }
+//                } else {
+//                    //  window?.rootViewController =  UINavigationController(rootViewController: viewDefault) // login view controller
+//                }
+//                
+//                /*else {
+//                    let tabbar = TabBarController.shared
+//                    window?.rootViewController = tabbar
+//                }*/
+//                
+//                window?.makeKeyAndVisible()
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

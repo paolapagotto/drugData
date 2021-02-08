@@ -160,7 +160,7 @@ extension UIViewController {
         viewController.view.frame = rootViewController.view.frame
         viewController.view.layoutIfNeeded()
 
-        UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromLeft, animations: {
+        UIView.transition(with: window, duration: 0.2, options: .transitionFlipFromLeft, animations: {
             window.rootViewController = viewController
         }, completion: nil)
     }
