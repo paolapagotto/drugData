@@ -29,7 +29,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jh8-Kb-6mv">
                                 <rect key="frame" x="0.0" y="257" width="414" height="639"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenericoTableViewCell" rowHeight="130" id="X3g-GC-LeV" customClass="GenericoTableViewCell" customModule="DrugData" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="130"/>
@@ -84,6 +84,9 @@
                                     <constraint firstAttribute="height" constant="69" id="XrZ-Ko-LaK"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dWw-nX-27g">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMÉDIOS GENÉRICOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbW-2e-piI">
                                 <rect key="frame" x="0.0" y="157" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -113,7 +116,9 @@
                             <constraint firstItem="nca-su-nyo" firstAttribute="top" secondItem="lbW-2e-piI" secondAttribute="bottom" constant="17" id="KG1-5e-k42"/>
                             <constraint firstItem="vgD-VS-K19" firstAttribute="trailing" secondItem="Kom-7w-fXj" secondAttribute="trailing" constant="35" id="MzF-6E-fKc"/>
                             <constraint firstAttribute="bottom" secondItem="Jh8-Kb-6mv" secondAttribute="bottom" id="Nhw-8v-ORb"/>
+                            <constraint firstItem="dWw-nX-27g" firstAttribute="centerY" secondItem="Vs4-uP-eA4" secondAttribute="centerY" id="Z0y-WW-HJx"/>
                             <constraint firstItem="Igc-cB-7J7" firstAttribute="top" secondItem="Kom-7w-fXj" secondAttribute="top" id="gta-lX-idT"/>
+                            <constraint firstItem="dWw-nX-27g" firstAttribute="centerX" secondItem="Vs4-uP-eA4" secondAttribute="centerX" id="hvg-zS-tvx"/>
                             <constraint firstItem="Igc-cB-7J7" firstAttribute="leading" secondItem="wGh-Yc-9WX" secondAttribute="leading" id="iqr-8e-J2y"/>
                             <constraint firstItem="lbW-2e-piI" firstAttribute="trailing" secondItem="nca-su-nyo" secondAttribute="trailing" id="lX7-KZ-ljz"/>
                             <constraint firstItem="Igc-cB-7J7" firstAttribute="top" secondItem="vgD-VS-K19" secondAttribute="top" constant="20" id="nbU-MB-2ad"/>
@@ -124,6 +129,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="X0j-32-FTH"/>
                     <connections>
+                        <outlet property="activityIndicatorTableLoading" destination="dWw-nX-27g" id="YJf-LH-nId"/>
                         <outlet property="imageViewAvatar" destination="Kom-7w-fXj" id="bbp-5f-UCv"/>
                         <outlet property="labelLocation" destination="wGh-Yc-9WX" id="Gig-eU-bvg"/>
                         <outlet property="labelName" destination="Igc-cB-7J7" id="Op6-5O-Ggf"/>

@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +29,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4c7-EC-pI4">
                                 <rect key="frame" x="0.0" y="265" width="414" height="631"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ControladosTableViewCell" rowHeight="83" id="La7-bI-Eo8" customClass="ControladosTableViewCell" customModule="DrugData" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="83"/>
@@ -79,6 +78,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="69" id="uUc-W3-igB"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="WLz-Ks-Tk3">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMÉDIOS CONTROLADOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LT-et-uio">
                                 <rect key="frame" x="0.0" y="157" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -109,13 +111,16 @@
                             <constraint firstItem="M0o-Ic-ndO" firstAttribute="top" secondItem="VsR-Wq-Hkg" secondAttribute="top" id="XAN-Pw-Gkd"/>
                             <constraint firstItem="4LT-et-uio" firstAttribute="leading" secondItem="zRJ-zm-203" secondAttribute="leading" id="XRb-Yz-qTN"/>
                             <constraint firstItem="SEu-dw-YQ0" firstAttribute="leading" secondItem="4c7-EC-pI4" secondAttribute="leading" id="YGW-om-i4v"/>
+                            <constraint firstItem="WLz-Ks-Tk3" firstAttribute="centerY" secondItem="zRJ-zm-203" secondAttribute="centerY" id="jJb-Iq-Ts7"/>
                             <constraint firstItem="M0o-Ic-ndO" firstAttribute="top" secondItem="FnA-7G-66b" secondAttribute="top" constant="20" id="jJf-P2-b0A"/>
                             <constraint firstItem="FnA-7G-66b" firstAttribute="trailing" secondItem="VsR-Wq-Hkg" secondAttribute="trailing" constant="35" id="jcL-Zh-7QG"/>
+                            <constraint firstItem="WLz-Ks-Tk3" firstAttribute="centerX" secondItem="zRJ-zm-203" secondAttribute="centerX" id="pvf-pz-PuX"/>
                             <constraint firstItem="M0o-Ic-ndO" firstAttribute="leading" secondItem="Xtd-PI-pcg" secondAttribute="leading" id="tfd-3w-MOl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F74-6b-jil"/>
                     <connections>
+                        <outlet property="activityIndicatorTableLoading" destination="WLz-Ks-Tk3" id="ehh-SA-yEd"/>
                         <outlet property="imageViewAvatar" destination="VsR-Wq-Hkg" id="u20-K1-UVY"/>
                         <outlet property="labelLocation" destination="Xtd-PI-pcg" id="LNK-mb-vn6"/>
                         <outlet property="labelName" destination="M0o-Ic-ndO" id="SME-jM-YdW"/>
@@ -128,9 +133,4 @@
             <point key="canvasLocation" x="413.04347826086962" y="93.75"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

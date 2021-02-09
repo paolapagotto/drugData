@@ -19,6 +19,7 @@ class PesquisaLaboratorioViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var imageViewAvatar: UIImageView!
     @IBOutlet weak var searchBarLaboratory: UISearchBar!
     @IBOutlet weak var tableViewLaboratory: UITableView!
+    @IBOutlet weak var activityIndicatorTableLoading: UIActivityIndicatorView!
     
     
     var arrayLaboratories = [String]()
@@ -71,6 +72,8 @@ class PesquisaLaboratorioViewController: UIViewController, UISearchBarDelegate {
                    if sucess {
                        DispatchQueue.main.async {
                            self.tableViewLaboratory.reloadData()
+                        self.activityIndicatorTableLoading.stopAnimating()
+                        self.activityIndicatorTableLoading.hidesWhenStopped = true
                        }
                    }
         })

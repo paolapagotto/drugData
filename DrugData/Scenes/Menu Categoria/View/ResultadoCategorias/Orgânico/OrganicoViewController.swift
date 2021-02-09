@@ -19,6 +19,7 @@ class OrganicoViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBarOrganic: UISearchBar!
     @IBOutlet weak var imageViewAvatar: UIImageView!
     @IBOutlet weak var tableViewOrganic: UITableView!
+    @IBOutlet weak var activityIndicatorTableLoading: UIActivityIndicatorView!
     
   
     var categoriaViewModel: CategoriaViewModel?
@@ -85,7 +86,8 @@ class OrganicoViewController: UIViewController, UISearchBarDelegate {
                         self.orderArray()
                         self.orderFilteredArray()
                         self.tableViewOrganic.reloadData()
-                        //self.categoriaViewModel?.filteredOrganic = []
+                        self.activityIndicatorTableLoading.stopAnimating()
+                        self.activityIndicatorTableLoading.hidesWhenStopped = true
                         
                        }
                    }

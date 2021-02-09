@@ -24,6 +24,7 @@ class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBarAllDrugs: UISearchBar!
     
+    @IBOutlet weak var activityIndicatorTableLoading: UIActivityIndicatorView!
     
     // MARK: Atributos
         var searchTerm: String = ""
@@ -40,6 +41,7 @@ class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
             tableViewResult.delegate = self
             tableViewResult.dataSource = self
             
+        
             searchBarAllDrugs.delegate = self
             loadBrandData()
         }
@@ -73,9 +75,12 @@ class ResultadoPesquisaViewController: UIViewController, UISearchBarDelegate {
         func loadBrandData() {
             resultadoPesquisaViewModel?.loadBrandAPI(completion: {  (sucess, error) in
                        if sucess {
-                           DispatchQueue.main.async {
+                        DispatchQueue.main.async { [self] in
                             self.resultadoPesquisaViewModel?.filteredRemedios = self.resultadoPesquisaViewModel!.arrayRemedios
                                self.tableViewResult.reloadData()
+                            self.activityIndicatorTableLoading.stopAnimating()
+                            self.activityIndicatorTableLoading.hidesWhenStopped = true
+                            
                            }
                        }
                    })
