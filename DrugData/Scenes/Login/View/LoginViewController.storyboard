@@ -21,11 +21,17 @@
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="INSIRA SEU E-MAIL AQUI" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48P-j1-kxr">
                                 <rect key="frame" x="35" y="403" width="344" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="AOM-RD-fMv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SENHA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-K9-CtB">
                                 <rect key="frame" x="35" y="474" width="344" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="RZb-w4-CHI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>

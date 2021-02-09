@@ -29,10 +29,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zua-9X-TJS">
-                                <rect key="frame" x="0.0" y="268" width="414" height="545"/>
+                                <rect key="frame" x="0.0" y="263" width="414" height="550"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="545" id="XLl-qx-kzt"/>
+                                    <constraint firstAttribute="height" constant="550" id="9kc-Em-BZb"/>
+                                    <constraint firstAttribute="width" constant="414" id="LYh-2V-gQf"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NomeRemediosTableViewCell" rowHeight="159" id="N8L-xY-85v" customClass="NomeRemediosTableViewCell" customModule="DrugData" customModuleProvider="target">
@@ -125,7 +126,7 @@
                                 </constraints>
                             </imageView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3IB-iz-8Cv">
-                                <rect key="frame" x="0.0" y="212" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="207" width="414" height="56"/>
                                 <color key="backgroundColor" white="0.90892491369999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -135,18 +136,18 @@
                         <color key="backgroundColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="o06-2F-jUf" firstAttribute="leading" secondItem="JEr-SD-Mej" secondAttribute="leading" constant="35" id="06x-QQ-j1V"/>
-                            <constraint firstItem="Zua-9X-TJS" firstAttribute="bottom" secondItem="JEr-SD-Mej" secondAttribute="bottom" id="1Ol-p7-S54"/>
-                            <constraint firstItem="3IB-iz-8Cv" firstAttribute="trailing" secondItem="JEr-SD-Mej" secondAttribute="trailing" id="2Rj-IX-WHK"/>
-                            <constraint firstItem="Zua-9X-TJS" firstAttribute="leading" secondItem="JEr-SD-Mej" secondAttribute="leading" id="BKO-Qn-Gbf"/>
+                            <constraint firstItem="3IB-iz-8Cv" firstAttribute="top" secondItem="86C-9i-yzH" secondAttribute="bottom" constant="30" id="38z-sR-ifs"/>
+                            <constraint firstItem="3IB-iz-8Cv" firstAttribute="leading" secondItem="JEr-SD-Mej" secondAttribute="leading" id="BUo-Fn-T4H"/>
                             <constraint firstItem="Bso-i6-TPO" firstAttribute="top" secondItem="o06-2F-jUf" secondAttribute="bottom" constant="4" id="HCP-8t-NsY"/>
-                            <constraint firstItem="3IB-iz-8Cv" firstAttribute="leading" secondItem="JEr-SD-Mej" secondAttribute="leading" id="KEA-qd-GtR"/>
+                            <constraint firstItem="Zua-9X-TJS" firstAttribute="top" secondItem="3IB-iz-8Cv" secondAttribute="bottom" id="Hcl-c6-4vt"/>
                             <constraint firstItem="JEr-SD-Mej" firstAttribute="trailing" secondItem="86C-9i-yzH" secondAttribute="trailing" constant="35" id="M1j-3I-NNh"/>
-                            <constraint firstItem="Zua-9X-TJS" firstAttribute="bottom" secondItem="JEr-SD-Mej" secondAttribute="bottom" id="OhY-iE-u9d"/>
+                            <constraint firstItem="Zua-9X-TJS" firstAttribute="leading" secondItem="JEr-SD-Mej" secondAttribute="leading" id="MHO-Tv-MHH"/>
                             <constraint firstItem="o06-2F-jUf" firstAttribute="leading" secondItem="Bso-i6-TPO" secondAttribute="leading" id="P9J-En-cU9"/>
+                            <constraint firstItem="3IB-iz-8Cv" firstAttribute="trailing" secondItem="JEr-SD-Mej" secondAttribute="trailing" id="WJc-ON-gPI"/>
                             <constraint firstItem="o06-2F-jUf" firstAttribute="top" secondItem="JEr-SD-Mej" secondAttribute="top" constant="20" id="oeU-e2-Zub"/>
-                            <constraint firstItem="Zua-9X-TJS" firstAttribute="trailing" secondItem="JEr-SD-Mej" secondAttribute="trailing" id="qmQ-dl-Rx8"/>
-                            <constraint firstItem="Zua-9X-TJS" firstAttribute="top" secondItem="3IB-iz-8Cv" secondAttribute="bottom" id="xfK-YN-DzI"/>
+                            <constraint firstItem="Zua-9X-TJS" firstAttribute="bottom" secondItem="JEr-SD-Mej" secondAttribute="bottom" id="rJA-nQ-fYW"/>
                             <constraint firstItem="o06-2F-jUf" firstAttribute="top" secondItem="86C-9i-yzH" secondAttribute="top" id="xic-0s-veK"/>
+                            <constraint firstItem="Zua-9X-TJS" firstAttribute="trailing" secondItem="JEr-SD-Mej" secondAttribute="trailing" id="zfq-rL-KIN"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -172,6 +173,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AbU-NJ-SQ3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

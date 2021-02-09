@@ -27,11 +27,12 @@ class ResultadoPesquisaViewModel {
                             
                             let brand = Remedio(json: JSON(item))
                             self.arrayRemedios.append(brand)
-//                            if let sorted = self.arrayRemedios.sorted {
-//                                $0.product < $1.product
-//                                arrayRemedios.sorted()
-//                            }
                            }
+                        let sortedArray = self.arrayRemedios.sorted{
+                            return $0.product < $1.product
+                            
+                        }
+                        self.arrayRemedios = sortedArray
                            completion(true, nil)
                        } else {
                            completion(false, response.error)

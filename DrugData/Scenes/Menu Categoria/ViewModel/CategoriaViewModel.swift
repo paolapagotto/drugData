@@ -25,10 +25,11 @@ class CategoriaViewModel {
     var filteredGeneric = [Categoria] ()
     var filteredControlled = [Categoria] ()
     var filteredLab: [String: [Categoria]] = [:]
-    
+//    var array = [Categoria] ()
+    var dictionary = ["LABORATORIO": [Categoria]()]
     
     func loadCategoryAPI(completion: @escaping (_ result: Bool, _ error: Error?) -> Void) {
-                   AF.request("https://raw.githubusercontent.com/paolapagotto/csvtojson/master/medicamentos.json").responseJSON { response in
+        AF.request("https://raw.githubusercontent.com/paolapagotto/csvtojson/master/medicamentos.json").responseJSON { [self] response in
                        if let arrayDictionary = response.value as? [[String: String]] {
                            
                            for item in arrayDictionary {
@@ -56,6 +57,10 @@ class CategoriaViewModel {
                                     self.arrayTarjaVermelha.append(brand)
                                 }
                            }
+                        
+                        
+                        
+                        
                            completion(true, nil)
                        } else {
                            completion(false, response.error)
