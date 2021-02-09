@@ -64,12 +64,27 @@ class OrganicoViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
+    func orderArray() {
+        let sortedArray = categoriaViewModel?.arrayOrganicos.sorted{
+            return $0.produto < $1.produto
+        }
+        categoriaViewModel?.arrayOrganicos = sortedArray!
+    }
+    func orderFilteredArray() {
+        let sortedArray = categoriaViewModel?.filteredOrganic.sorted{
+            return $0.produto < $1.produto
+        }
+        categoriaViewModel?.filteredOrganic = sortedArray!
+    }
+    
     func loadOrganicData() {
         categoriaViewModel?.loadCategoryAPI(completion: {  (sucess, error) in
                    if sucess {
                        DispatchQueue.main.async {
                         self.categoriaViewModel?.filteredOrganic = self.categoriaViewModel!.arrayOrganicos
-                           self.tableViewOrganic.reloadData()
+                        self.orderArray()
+                        self.orderFilteredArray()
+                        self.tableViewOrganic.reloadData()
                         //self.categoriaViewModel?.filteredOrganic = []
                         
                        }

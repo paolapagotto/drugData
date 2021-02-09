@@ -24,7 +24,7 @@ class DetalhesMedicamentoViewController: UIViewController {
         super.viewDidLoad()
         
         
-        self.labelProductName.text = "Nome: \(getMedicine!.product)"
+        self.labelProductName.text = getMedicine!.product
         self.labelLaboratoryName.text = "Laboratório: \(getMedicine!.nameLaboratory)"
         self.labelProductType.text = "Categoria: \(getMedicine!.productType)"
         self.labelProductPrice.text! = "Preço: \(getMedicine!.price)"

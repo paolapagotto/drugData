@@ -34,7 +34,7 @@ class GenericoViewController: UIViewController, UISearchBarDelegate {
     
         tableViewGeneric.delegate = self
         tableViewGeneric.dataSource = self
-    
+        
         loadGenericData()
         
     }
@@ -63,11 +63,27 @@ class GenericoViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
+    
+    func orderArray() {
+        let sortedArray = categoriaViewModel?.arrayGenericos.sorted{
+            return $0.produto < $1.produto
+        }
+        categoriaViewModel?.arrayGenericos = sortedArray!
+    }
+    func orderFilteredArray() {
+        let sortedArray = categoriaViewModel?.filteredGeneric.sorted{
+            return $0.produto < $1.produto
+        }
+        categoriaViewModel?.filteredGeneric = sortedArray!
+    }
+    
     func loadGenericData() {
         categoriaViewModel?.loadCategoryAPI(completion: {  (sucess, error) in
                    if sucess {
                        DispatchQueue.main.async {
                         self.categoriaViewModel?.filteredGeneric = self.categoriaViewModel!.arrayGenericos
+                            self.orderArray()
+                            self.orderFilteredArray()
                            self.tableViewGeneric.reloadData()
                        }
                    }

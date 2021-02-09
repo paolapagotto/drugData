@@ -61,8 +61,23 @@ class ControladosViewController: UIViewController, UISearchBarDelegate {
         tableViewControll.delegate = self
         tableViewControll.dataSource = self
 
-        
+        orderArray()
+        orderFilteredArray()
         loadControllData()
+    }
+    
+    
+    func orderArray() {
+        let sortedArray = categoriaViewModel?.arrayControlados.sorted{
+            return $0.produto < $1.produto
+        }
+        categoriaViewModel?.arrayControlados = sortedArray!
+    }
+    func orderFilteredArray() {
+        let sortedArray = categoriaViewModel?.filteredControlled.sorted{
+            return $0.produto < $1.produto
+        }
+        categoriaViewModel?.filteredControlled = sortedArray!
     }
     
     
@@ -72,6 +87,8 @@ class ControladosViewController: UIViewController, UISearchBarDelegate {
                    if sucess {
                        DispatchQueue.main.async {
                         self.categoriaViewModel?.filteredControlled = self.categoriaViewModel!.arrayControlados
+                        self.orderArray()
+                        self.orderFilteredArray()
                            self.tableViewControll.reloadData()
                        }
                    }
@@ -91,7 +108,7 @@ class ControladosViewController: UIViewController, UISearchBarDelegate {
                 }
             }
         }
-
+       
         tableViewControll.reloadData()
        
     }
