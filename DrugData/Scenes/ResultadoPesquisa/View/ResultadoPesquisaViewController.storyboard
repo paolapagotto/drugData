@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +29,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zua-9X-TJS">
                                 <rect key="frame" x="0.0" y="263" width="414" height="550"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="550" id="9kc-Em-BZb"/>
                                     <constraint firstAttribute="width" constant="414" id="LYh-2V-gQf"/>
@@ -125,6 +124,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="69" id="c5b-vk-8uB"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Kco-as-9VE">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3IB-iz-8Cv">
                                 <rect key="frame" x="0.0" y="207" width="414" height="56"/>
                                 <color key="backgroundColor" white="0.90892491369999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,10 +139,12 @@
                         <constraints>
                             <constraint firstItem="o06-2F-jUf" firstAttribute="leading" secondItem="JEr-SD-Mej" secondAttribute="leading" constant="35" id="06x-QQ-j1V"/>
                             <constraint firstItem="3IB-iz-8Cv" firstAttribute="top" secondItem="86C-9i-yzH" secondAttribute="bottom" constant="30" id="38z-sR-ifs"/>
+                            <constraint firstItem="Kco-as-9VE" firstAttribute="centerY" secondItem="8Ls-W9-zcW" secondAttribute="centerY" id="Afl-rZ-zAz"/>
                             <constraint firstItem="3IB-iz-8Cv" firstAttribute="leading" secondItem="JEr-SD-Mej" secondAttribute="leading" id="BUo-Fn-T4H"/>
                             <constraint firstItem="Bso-i6-TPO" firstAttribute="top" secondItem="o06-2F-jUf" secondAttribute="bottom" constant="4" id="HCP-8t-NsY"/>
                             <constraint firstItem="Zua-9X-TJS" firstAttribute="top" secondItem="3IB-iz-8Cv" secondAttribute="bottom" id="Hcl-c6-4vt"/>
                             <constraint firstItem="JEr-SD-Mej" firstAttribute="trailing" secondItem="86C-9i-yzH" secondAttribute="trailing" constant="35" id="M1j-3I-NNh"/>
+                            <constraint firstItem="Kco-as-9VE" firstAttribute="centerX" secondItem="8Ls-W9-zcW" secondAttribute="centerX" id="M32-Rd-VfR"/>
                             <constraint firstItem="Zua-9X-TJS" firstAttribute="leading" secondItem="JEr-SD-Mej" secondAttribute="leading" id="MHO-Tv-MHH"/>
                             <constraint firstItem="o06-2F-jUf" firstAttribute="leading" secondItem="Bso-i6-TPO" secondAttribute="leading" id="P9J-En-cU9"/>
                             <constraint firstItem="3IB-iz-8Cv" firstAttribute="trailing" secondItem="JEr-SD-Mej" secondAttribute="trailing" id="WJc-ON-gPI"/>
@@ -154,6 +158,7 @@
                     <navigationItem key="navigationItem" id="PbL-fr-Mre"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicatorTableLoading" destination="Kco-as-9VE" id="wiu-RD-kih"/>
                         <outlet property="imageViewAvatar" destination="86C-9i-yzH" id="2A9-RI-Ygp"/>
                         <outlet property="labelLocation" destination="Bso-i6-TPO" id="dBq-eT-Umc"/>
                         <outlet property="labelName" destination="o06-2F-jUf" id="NXq-ec-dvO"/>
@@ -187,8 +192,5 @@
     </scenes>
     <resources>
         <image name="pills.fill" catalog="system" width="128" height="106"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

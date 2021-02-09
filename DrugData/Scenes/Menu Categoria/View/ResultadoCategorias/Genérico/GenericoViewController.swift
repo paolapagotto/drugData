@@ -19,7 +19,7 @@ class GenericoViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBarGenerics: UISearchBar!
     @IBOutlet weak var imageViewAvatar: UIImageView!
     @IBOutlet weak var tableViewGeneric: UITableView!
-    
+    @IBOutlet weak var activityIndicatorTableLoading: UIActivityIndicatorView!
 
     var categoriaViewModel: CategoriaViewModel?
     
@@ -85,6 +85,8 @@ class GenericoViewController: UIViewController, UISearchBarDelegate {
                             self.orderArray()
                             self.orderFilteredArray()
                            self.tableViewGeneric.reloadData()
+                        self.activityIndicatorTableLoading.stopAnimating()
+                        self.activityIndicatorTableLoading.hidesWhenStopped = true
                        }
                    }
         })

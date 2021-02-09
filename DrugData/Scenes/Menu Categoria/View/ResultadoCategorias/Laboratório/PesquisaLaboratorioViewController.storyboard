@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +29,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ct2-PQ-pId">
                                 <rect key="frame" x="0.0" y="255" width="414" height="641"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LaboratorioTableViewCell" id="r5s-Yb-oJb" customClass="LaboratorioTableViewCell" customModule="DrugData" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="53"/>
@@ -68,6 +67,10 @@
                                     <constraint firstAttribute="height" constant="69" id="eyH-1Y-vPq"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="CQh-uk-dfY">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LISTA DE LABORATÓRIOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhQ-dd-6yN">
                                 <rect key="frame" x="0.0" y="157" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -106,6 +109,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="m2I-KA-FhB"/>
                     <connections>
+                        <outlet property="activityIndicatorTableLoading" destination="CQh-uk-dfY" id="JHf-jn-G4e"/>
                         <outlet property="imageViewAvatar" destination="UZC-jr-F5Z" id="Hv1-ov-5UL"/>
                         <outlet property="labelLocation" destination="eDh-Xz-2ps" id="JZT-Vy-mUk"/>
                         <outlet property="labelName" destination="See-mS-vG9" id="I10-wd-209"/>
@@ -118,9 +122,4 @@
             <point key="canvasLocation" x="413.04347826086962" y="93.75"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

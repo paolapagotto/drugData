@@ -19,6 +19,7 @@ class ControladosViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBarControll: UISearchBar!
     @IBOutlet weak var imageViewAvatar: UIImageView!
     @IBOutlet weak var tableViewControll: UITableView!
+    @IBOutlet weak var activityIndicatorTableLoading: UIActivityIndicatorView!
     
     
     var categoriaViewModel: CategoriaViewModel?
@@ -89,7 +90,9 @@ class ControladosViewController: UIViewController, UISearchBarDelegate {
                         self.categoriaViewModel?.filteredControlled = self.categoriaViewModel!.arrayControlados
                         self.orderArray()
                         self.orderFilteredArray()
-                           self.tableViewControll.reloadData()
+                        self.tableViewControll.reloadData()
+                        self.activityIndicatorTableLoading.stopAnimating()
+                        self.activityIndicatorTableLoading.hidesWhenStopped = true
                        }
                    }
         })

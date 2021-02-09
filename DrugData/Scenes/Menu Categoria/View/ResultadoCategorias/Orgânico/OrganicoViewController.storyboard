@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +29,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zRU-BE-ry3">
                                 <rect key="frame" x="0.0" y="258" width="414" height="638"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrganicoTableViewCell" rowHeight="126" id="0Vp-If-fn1" customClass="OrganicoTableViewCell" customModule="DrugData" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="126"/>
@@ -87,6 +86,9 @@
                                     <constraint firstAttribute="width" constant="69" id="nrA-lC-2E3"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jQ6-RS-K2X">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REMÉDIOS ORGÂNICOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S24-Qd-fC1">
                                 <rect key="frame" x="0.0" y="157" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -114,17 +116,20 @@
                             <constraint firstItem="vtK-zx-U3H" firstAttribute="trailing" secondItem="v2w-Ts-bMy" secondAttribute="trailing" constant="35" id="I3E-pQ-tPi"/>
                             <constraint firstItem="S24-Qd-fC1" firstAttribute="top" secondItem="v2w-Ts-bMy" secondAttribute="bottom" constant="24" id="ZA6-5Y-rji"/>
                             <constraint firstAttribute="bottom" secondItem="zRU-BE-ry3" secondAttribute="bottom" id="Zyg-aj-X7w"/>
+                            <constraint firstItem="jQ6-RS-K2X" firstAttribute="centerY" secondItem="EQo-R5-flb" secondAttribute="centerY" id="aRG-sb-t2W"/>
                             <constraint firstItem="HsT-ES-7M6" firstAttribute="top" secondItem="vtK-zx-U3H" secondAttribute="top" constant="20" id="iTZ-cR-ipk"/>
                             <constraint firstItem="zRU-BE-ry3" firstAttribute="top" secondItem="HmM-0U-S8p" secondAttribute="bottom" constant="16" id="oO8-0d-GoE"/>
                             <constraint firstItem="HsT-ES-7M6" firstAttribute="top" secondItem="v2w-Ts-bMy" secondAttribute="top" id="p0S-S2-M6y"/>
                             <constraint firstItem="HsT-ES-7M6" firstAttribute="leading" secondItem="vtK-zx-U3H" secondAttribute="leading" constant="35" id="t2I-sw-Uma"/>
                             <constraint firstItem="HmM-0U-S8p" firstAttribute="top" secondItem="S24-Qd-fC1" secondAttribute="bottom" constant="17" id="tGC-zI-LMv"/>
+                            <constraint firstItem="jQ6-RS-K2X" firstAttribute="centerX" secondItem="EQo-R5-flb" secondAttribute="centerX" id="tK5-Cf-PC4"/>
                             <constraint firstItem="6oC-Nc-nOD" firstAttribute="top" secondItem="HsT-ES-7M6" secondAttribute="bottom" constant="4" id="uA7-sZ-cY9"/>
                             <constraint firstItem="HmM-0U-S8p" firstAttribute="leading" secondItem="zRU-BE-ry3" secondAttribute="leading" id="zUl-c6-Vd3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pWC-Co-Q2G"/>
                     <connections>
+                        <outlet property="activityIndicatorTableLoading" destination="jQ6-RS-K2X" id="v23-1r-cUU"/>
                         <outlet property="imageViewAvatar" destination="v2w-Ts-bMy" id="hRF-d9-zOV"/>
                         <outlet property="labelLocation" destination="6oC-Nc-nOD" id="zJu-MF-dR2"/>
                         <outlet property="labelName" destination="HsT-ES-7M6" id="xQt-cL-QZy"/>
@@ -137,9 +142,4 @@
             <point key="canvasLocation" x="413.04347826086962" y="93.75"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
