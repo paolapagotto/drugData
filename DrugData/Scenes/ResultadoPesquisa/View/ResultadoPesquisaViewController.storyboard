@@ -60,8 +60,8 @@
                                                     <color key="textColor" red="0.47958846830000001" green="0.44451474470000002" blue="0.75885783449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3i-Dw-EUD">
-                                                    <rect key="frame" x="90" y="56.5" width="36" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3i-Dw-EUD">
+                                                    <rect key="frame" x="90" y="56.5" width="35.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egR-Cs-uls">
-                                                    <rect key="frame" x="257" y="116" width="37" height="17"/>
+                                                    <rect key="frame" x="327" y="116" width="37" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -90,15 +90,15 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Hx2-vG-6WF" secondAttribute="bottom" constant="5" id="17Z-7V-J6K"/>
                                                 <constraint firstItem="M8l-4s-xNB" firstAttribute="leading" secondItem="Hx2-vG-6WF" secondAttribute="trailing" constant="31.5" id="1n9-Vk-0Ai"/>
                                                 <constraint firstItem="Hx2-vG-6WF" firstAttribute="top" secondItem="dMU-5j-Mb2" secondAttribute="topMargin" constant="5" id="3gB-jR-A4M"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="egR-Cs-uls" secondAttribute="trailing" constant="30" id="59C-hx-j0I"/>
                                                 <constraint firstItem="SSa-rn-KIE" firstAttribute="leading" secondItem="80K-gK-U2p" secondAttribute="leading" id="8x8-tW-3NN"/>
                                                 <constraint firstItem="M8l-4s-xNB" firstAttribute="leading" secondItem="V3i-Dw-EUD" secondAttribute="leading" id="DaP-hv-cSU"/>
                                                 <constraint firstItem="V3i-Dw-EUD" firstAttribute="leading" secondItem="SSa-rn-KIE" secondAttribute="leading" id="DfZ-Q1-uTS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="egR-Cs-uls" secondAttribute="bottom" constant="15" id="HAe-a3-yyb"/>
                                                 <constraint firstItem="SSa-rn-KIE" firstAttribute="top" secondItem="V3i-Dw-EUD" secondAttribute="bottom" constant="15.5" id="HRS-P6-17W"/>
                                                 <constraint firstItem="80K-gK-U2p" firstAttribute="top" secondItem="SSa-rn-KIE" secondAttribute="bottom" constant="10" id="LhT-UV-2wx"/>
                                                 <constraint firstItem="Hx2-vG-6WF" firstAttribute="leading" secondItem="dMU-5j-Mb2" secondAttribute="leadingMargin" constant="15" id="OkZ-NQ-pQP"/>
                                                 <constraint firstItem="Hx2-vG-6WF" firstAttribute="leading" secondItem="dMU-5j-Mb2" secondAttribute="leadingMargin" constant="15" id="QE8-MA-7pk"/>
-                                                <constraint firstItem="80K-gK-U2p" firstAttribute="baseline" secondItem="egR-Cs-uls" secondAttribute="baseline" id="c4e-bb-vQO"/>
-                                                <constraint firstAttribute="trailing" secondItem="egR-Cs-uls" secondAttribute="trailing" constant="120" id="f61-uh-Bit"/>
                                                 <constraint firstItem="M8l-4s-xNB" firstAttribute="top" secondItem="dMU-5j-Mb2" secondAttribute="topMargin" constant="15" id="jwV-HW-ZXV"/>
                                                 <constraint firstItem="V3i-Dw-EUD" firstAttribute="top" secondItem="M8l-4s-xNB" secondAttribute="bottom" constant="10" id="tYV-hU-eeK"/>
                                                 <constraint firstItem="Hx2-vG-6WF" firstAttribute="top" secondItem="dMU-5j-Mb2" secondAttribute="topMargin" constant="5" id="zDw-6L-NKY"/>
