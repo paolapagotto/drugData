@@ -20,6 +20,7 @@
 		84672E1125C06EED00B1C21C /* imggenericotarjapreta.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1025C06EEC00B1C21C /* imggenericotarjapreta.png */; };
 		84672E1325C06F0200B1C21C /* imggenerico.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1225C06F0200B1C21C /* imggenerico.png */; };
 		84672E1825C06F2500B1C21C /* imggenericotarjavermelha.png in Resources */ = {isa = PBXBuildFile; fileRef = 84672E1725C06F2400B1C21C /* imggenericotarjavermelha.png */; };
+		847F4F3D25D3395B00185DA1 /* imgorganico.png in Resources */ = {isa = PBXBuildFile; fileRef = 847F4F3C25D3395600185DA1 /* imgorganico.png */; };
 		84B70B2525CAE0B900CDE929 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B70B2425CAE0B900CDE929 /* User.swift */; };
 		84B70B2D25CB328700CDE929 /* imgremedio.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B70B2C25CB328700CDE929 /* imgremedio.png */; };
 		E00D826CB978BA7A11BA3076 /* Pods_DrugData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */; };
@@ -117,6 +118,7 @@
 		84672E1025C06EEC00B1C21C /* imggenericotarjapreta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenericotarjapreta.png; sourceTree = "<group>"; };
 		84672E1225C06F0200B1C21C /* imggenerico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenerico.png; sourceTree = "<group>"; };
 		84672E1725C06F2400B1C21C /* imggenericotarjavermelha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imggenericotarjavermelha.png; sourceTree = "<group>"; };
+		847F4F3C25D3395600185DA1 /* imgorganico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgorganico.png; sourceTree = "<group>"; };
 		84B70B2425CAE0B900CDE929 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84B70B2C25CB328700CDE929 /* imgremedio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgremedio.png; sourceTree = "<group>"; };
 		98F2868C9F0B7FF3780C08E4 /* Pods_DrugData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -457,6 +459,7 @@
 				84672E1725C06F2400B1C21C /* imggenericotarjavermelha.png */,
 				84672E0B25C06ECF00B1C21C /* imgtarjapreta.png */,
 				84672E0625C06EBF00B1C21C /* imgtarjavermelha.png */,
+				847F4F3C25D3395600185DA1 /* imgorganico.png */,
 				84672E0125BF408400B1C21C /* facebook.png */,
 			);
 			path = Image;
@@ -998,6 +1001,7 @@
 				F232BC21256B382100460ADF /* DetalhesMedicamentoViewController.storyboard in Resources */,
 				F2D2D563255E08280025BEF3 /* PesquisarViewController.storyboard in Resources */,
 				F2E745C8256C44E60031D731 /* EditarPerfilViewController.storyboard in Resources */,
+				847F4F3D25D3395B00185DA1 /* imgorganico.png in Resources */,
 				F247408925670FF400D18DE0 /* PesquisaLaboratorioViewController.storyboard in Resources */,
 				F233D0AD2559E99900D5CE2D /* Assets.xcassets in Resources */,
 				F2E282C0255C89BB00460304 /* LoginViewController.storyboard in Resources */,

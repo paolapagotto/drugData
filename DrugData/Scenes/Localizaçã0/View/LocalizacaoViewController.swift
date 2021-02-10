@@ -33,13 +33,15 @@ class LocalizacaoViewController: UIViewController {
         userFirebase()
         cornerRadiusView()
     }
+ 
     
     // MARK: Métodos
     func inicialLocation() {
+        let user = Auth.auth().currentUser
         Location().convertLocation(endereco: "São Paulo - SP") { (findLocation) in
-            let pino = self.confPino(name: "Paola", location: findLocation)
+            let pino = self.confPino(name: (user?.displayName ?? "Você"), location: findLocation)
             
-            let place = MKCoordinateRegion(center: pino.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
+            let place = MKCoordinateRegion(center: pino.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
             self.mapkitMap.setRegion(place, animated: true)
             self.mapkitMap.addAnnotation(pino)
         }
